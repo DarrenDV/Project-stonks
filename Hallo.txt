@@ -1,4 +1,8 @@
 Haha loser
 ben je zelf
 tomas is dik
+<<<<<<< HEAD
 Je bent zelf dik kut jong
+=======
+*Jiminy
+>>>>>>> a2f5efcf530447965b3480723431119e55b586f7

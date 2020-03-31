@@ -34,10 +34,12 @@ public class cameracontroller : MonoBehaviour
 
     void LateUpdate()
     {
-        if (pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z)
+        if ((pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z) && inplay < 5)
         {
             inplay++;
         }
+
+        
 
         //Raycast Actions
         if (Input.GetMouseButtonDown(0))

@@ -23,7 +23,7 @@ public class NumberDiceRoll : MonoBehaviour
             float dirX = Random.Range(0, 500);
             float dirY = Random.Range(0, 500);
             float dirZ = Random.Range(0, 500);
-            transform.position = new Vector3(0, 5, 8);
+            transform.position = new Vector3(0, 5, 11);
             transform.rotation = Quaternion.identity;
             rb.AddForce(transform.up * 500);
             rb.AddTorque(dirX, dirY, dirZ);

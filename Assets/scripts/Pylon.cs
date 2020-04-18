@@ -31,15 +31,23 @@ public class Pylon : MonoBehaviour
                     {
 
                         selected1 = hit.collider.gameObject;
+                        selected1.transform.position = new Vector3(selected1.transform.position.x, selected1.transform.position.y + 0.1f, selected1.transform.position.z);
+                        selected1.GetComponent<Rigidbody>().useGravity = false;
 
                     }
-                    else selected1 = null;
+                    else
+                    {
+                        selected1.GetComponent<Rigidbody>().useGravity = true;
+                        selected1 = null;
+                    }
                 }
                 if (hit.collider.CompareTag("playerLevel"))
                 {
                     if (selected1 != null)
                     {
-                        selected1.transform.position = new Vector3(hit.collider.transform.position.x, 0.1f, selected1.transform.position.z);
+                        selected1.transform.position = new Vector3(hit.collider.transform.position.x, selected1.transform.position.y , selected1.transform.position.z);
+                        selected1.GetComponent<Rigidbody>().useGravity = true;
+                        selected1 = null;
                     }
                 }
 

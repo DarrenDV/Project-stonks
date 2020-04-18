@@ -19,7 +19,6 @@ public class cameracontroller : MonoBehaviour
     #region Private Vars
 
     GameObject selected;
-
     #endregion
 
 
@@ -27,8 +26,6 @@ public class cameracontroller : MonoBehaviour
 
     void Start()
     {
-
-
     }
 
 
@@ -39,7 +36,7 @@ public class cameracontroller : MonoBehaviour
             inplay++;
         }
 
-        
+
 
         //Raycast Actions
         if (Input.GetMouseButtonDown(0))
@@ -48,28 +45,53 @@ public class cameracontroller : MonoBehaviour
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
-
-                if (hit.collider.CompareTag("pawn"))
+                if (selected == null)
                 {
+                    if (hit.collider.CompareTag("pawn"))
+                    {
                         if (hit.collider.gameObject == pawns[inplay])
                         {
                             if (selected == null)
+                            {
                                 selected = hit.collider.gameObject;
+                                selected.transform.position = new Vector3(selected.transform.position.x, selected.transform.position.y + 0.5f, selected.transform.position.z);
+                                selected.GetComponent<Rigidbody>().useGravity = false;
+                            }
                         }
-                        else selected = null;
                     }
-
+                    else
+                    {
+                        selected.GetComponent<Rigidbody>().useGravity = true;
+                        selected = null;
+                    }
+                }
                 if (hit.collider.CompareTag("paddestoel"))
                 {
                     if (selected != null)
                     {
-                        selected.transform.position = new Vector3(hit.collider.transform.position.x, 2f, hit.collider.transform.position.z);
+                        selected.transform.position = new Vector3(hit.collider.transform.position.x, 1f, hit.collider.transform.position.z);
+                        selected.GetComponent<Rigidbody>().useGravity = true;
                         selected = null;
+                        
                     }
                 }
+                if (hit.collider.CompareTag("pawn") && pawns[inplay] != selected)
+                {
+                    if (selected != null)
+                    {
+                        selected.transform.position = new Vector3(hit.collider.transform.position.x, selected.transform.position.y, hit.collider.transform.position.z);
+                        selected.GetComponent<Rigidbody>().useGravity = true;
+                        selected = null;
+                        Debug.Log(hit.collider);
+                    }
+                }
+                Debug.Log(selected);
             }
         }
-
-        if (Input.GetMouseButtonDown(1)) selected = null;
+        if (Input.GetMouseButtonDown(1))
+        {
+            selected.GetComponent<Rigidbody>().useGravity = true; 
+            selected = null;
+        }
     }
 }

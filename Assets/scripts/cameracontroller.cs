@@ -36,61 +36,45 @@ public class cameracontroller : MonoBehaviour
             inplay++;
         }
 
-
-
         //Raycast Actions
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
+            int layerMask1 = LayerMask.GetMask("Water");
+            int layerMask2 = LayerMask.GetMask("lokaties");
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            if (selected == null)
             {
-                if (selected == null)
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit,1000, layerMask1))
                 {
                     if (hit.collider.CompareTag("pawn"))
                     {
                         if (hit.collider.gameObject == pawns[inplay])
                         {
-                            if (selected == null)
-                            {
-                                selected = hit.collider.gameObject;
-                                selected.transform.position = new Vector3(selected.transform.position.x, selected.transform.position.y + 0.5f, selected.transform.position.z);
-                                selected.GetComponent<Rigidbody>().useGravity = false;
-                            }
+                            selected = hit.collider.gameObject;
+                            selected.transform.position = new Vector3(selected.transform.position.x, selected.transform.position.y + 0.5f, selected.transform.position.z);
+                            selected.GetComponent<Rigidbody>().useGravity = false;
                         }
                     }
-                    else
-                    {
-                        selected.GetComponent<Rigidbody>().useGravity = true;
-                        selected = null;
-                    }
                 }
-                if (hit.collider.CompareTag("paddestoel"))
+            }
+            else
+            {
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask2))
                 {
-                    if (selected != null)
+                    if (hit.collider.CompareTag("paddestoel"))
                     {
-                        selected.transform.position = new Vector3(hit.collider.transform.position.x, 1f, hit.collider.transform.position.z);
+                        selected.transform.position = new Vector3(hit.collider.transform.position.x, 2f, hit.collider.transform.position.z);
                         selected.GetComponent<Rigidbody>().useGravity = true;
                         selected = null;
-                        
                     }
+                    Debug.Log(selected);
                 }
-                if (hit.collider.CompareTag("pawn") && pawns[inplay] != selected)
-                {
-                    if (selected != null)
-                    {
-                        selected.transform.position = new Vector3(hit.collider.transform.position.x, selected.transform.position.y, hit.collider.transform.position.z);
-                        selected.GetComponent<Rigidbody>().useGravity = true;
-                        selected = null;
-                        Debug.Log(hit.collider);
-                    }
-                }
-                Debug.Log(selected);
             }
         }
         if (Input.GetMouseButtonDown(1))
         {
-            selected.GetComponent<Rigidbody>().useGravity = true; 
+            selected.GetComponent<Rigidbody>().useGravity = true;
             selected = null;
         }
     }

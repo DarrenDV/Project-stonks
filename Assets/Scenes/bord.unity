@@ -539,7 +539,7 @@ GameObject:
   - component: {fileID: 23701021}
   - component: {fileID: 23701020}
   - component: {fileID: 23701019}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fiesje (3)
   m_TagString: pawn
   m_Icon: {fileID: 0}
@@ -847,7 +847,7 @@ GameObject:
   - component: {fileID: 74608903}
   - component: {fileID: 74608902}
   - component: {fileID: 74608901}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1319,7 +1319,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086664642227178823, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -2021,7 +2021,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1871351567982073715, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -2196,7 +2196,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1871351567982073715, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -2496,7 +2496,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1871351567982073715, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -3051,7 +3051,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086664642227178823, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -4964,7 +4964,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086664642227178823, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -5459,7 +5459,7 @@ GameObject:
   - component: {fileID: 833997639}
   - component: {fileID: 833997638}
   - component: {fileID: 833997637}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5963,7 +5963,7 @@ GameObject:
   - component: {fileID: 932089696}
   - component: {fileID: 932089699}
   - component: {fileID: 932089695}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fiesje
   m_TagString: pawn
   m_Icon: {fileID: 0}
@@ -6947,7 +6947,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086664642227178823, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -9066,7 +9066,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1871351567982073715, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -10034,7 +10034,7 @@ GameObject:
   - component: {fileID: 1544914123}
   - component: {fileID: 1544914122}
   - component: {fileID: 1544914121}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fiesje (4)
   m_TagString: pawn
   m_Icon: {fileID: 0}
@@ -10527,7 +10527,7 @@ GameObject:
   - component: {fileID: 1692609823}
   - component: {fileID: 1692609822}
   - component: {fileID: 1692609821}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11169,7 +11169,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086664642227178823, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -11313,7 +11313,7 @@ GameObject:
   - component: {fileID: 1804636652}
   - component: {fileID: 1804636651}
   - component: {fileID: 1804636650}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fiesje (1)
   m_TagString: pawn
   m_Icon: {fileID: 0}
@@ -12343,7 +12343,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086664642227178823, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -12603,7 +12603,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1871351567982073715, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -13038,7 +13038,7 @@ GameObject:
   - component: {fileID: 2088006377}
   - component: {fileID: 2088006376}
   - component: {fileID: 2088006375}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13492,7 +13492,7 @@ GameObject:
   - component: {fileID: 2122631605}
   - component: {fileID: 2122631604}
   - component: {fileID: 2122631603}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: fiesje (2)
   m_TagString: pawn
   m_Icon: {fileID: 0}
@@ -13635,7 +13635,7 @@ GameObject:
   - component: {fileID: 2125275034}
   - component: {fileID: 2125275033}
   - component: {fileID: 2125275032}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13961,7 +13961,7 @@ PrefabInstance:
     - target: {fileID: -94133530927624133, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_Center.y
-      value: -0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2086664642227178823, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}

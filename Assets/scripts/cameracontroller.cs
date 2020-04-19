@@ -11,6 +11,7 @@ public class cameracontroller : MonoBehaviour
     public GameObject[] b;
     public GameObject[] pawns;
     public int inplay;
+    public bool SecondDice;
     #endregion
 
     #region Serialized Vars
@@ -31,9 +32,14 @@ public class cameracontroller : MonoBehaviour
 
     void LateUpdate()
     {
-        if ((pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z) && inplay < 5)
+        if ((pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z) && inplay < 4)
         {
             inplay++;
+        }
+
+        if (inplay > 2)
+        {
+            SecondDice = true;
         }
 
         //Raycast Actions

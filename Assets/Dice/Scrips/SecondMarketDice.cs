@@ -26,7 +26,7 @@ public class SecondMarketDice : MonoBehaviour
         {
             if(moveTimer == 0)
             {
-                transform.position = new Vector3(0, 5, 14);
+                transform.position = new Vector3(2, 5, 10);
                 moveTimer++;
             }
 
@@ -37,7 +37,7 @@ public class SecondMarketDice : MonoBehaviour
                 float dirX = Random.Range(0, 500);
                 float dirY = Random.Range(0, 500);
                 float dirZ = Random.Range(0, 500);
-                transform.position = new Vector3(0, 5, 14);
+                transform.position = new Vector3(2, 5, 10);
                 transform.rotation = Quaternion.identity;
                 rb.AddForce(transform.up * 500);
                 rb.AddTorque(dirX, dirY, dirZ);

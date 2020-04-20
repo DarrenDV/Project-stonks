@@ -9,31 +9,37 @@ public class SecondMarketDice : MonoBehaviour
     public static Vector3 diceVelocity;
     public int moveTimer;
     public GameObject camera;
+    bool Throwable;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody>();
         
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         SecondDice = camera.GetComponent<cameracontroller>().SecondDice;
 
         if (SecondDice)
         {
-            if(moveTimer == 0)
+            if (moveTimer == 0)
             {
+                Throwable = true;
                 transform.position = new Vector3(2, 5, 10);
                 moveTimer++;
             }
-
-            diceVelocity = rb.velocity;
-
-            if (Input.GetKeyDown(KeyCode.Space))
+        }
+    }  
+    
+    public void Throw()
+        {
+            if (Throwable)
             {
+                diceVelocity = rb.velocity;
+
                 float dirX = Random.Range(0, 500);
                 float dirY = Random.Range(0, 500);
                 float dirZ = Random.Range(0, 500);
@@ -43,5 +49,5 @@ public class SecondMarketDice : MonoBehaviour
                 rb.AddTorque(dirX, dirY, dirZ);
             }
         }
-    }
+
 }

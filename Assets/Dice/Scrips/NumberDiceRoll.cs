@@ -8,18 +8,16 @@ public class NumberDiceRoll : MonoBehaviour
     public static Vector3 diceVelocity;
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Throw()
     {
         diceVelocity = rb.velocity;
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
             float dirX = Random.Range(0, 500);
             float dirY = Random.Range(0, 500);
             float dirZ = Random.Range(0, 500);
@@ -27,6 +25,5 @@ public class NumberDiceRoll : MonoBehaviour
             transform.rotation = Quaternion.identity;
             rb.AddForce(transform.up * 500);
             rb.AddTorque(dirX, dirY, dirZ);
-        }
     }
 }

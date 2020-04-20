@@ -7,6 +7,9 @@ public class ButtonPress : MonoBehaviour
     int MoveTimer;
     Vector3 pos;
     bool Pressed;
+   [SerializeField] private MarketDiceRoll MarketDR;
+   [SerializeField] private NumberDiceRoll NumberDR;
+   [SerializeField] private SecondMarketDice SecondMD;
 
     void Start()
     {
@@ -33,7 +36,9 @@ public class ButtonPress : MonoBehaviour
 
     void Throw()
     {
-
+        MarketDR.Throw();
+        NumberDR.Throw();
+        SecondMD.Throw();
     }
 
     void ButtonDown()
@@ -47,11 +52,11 @@ public class ButtonPress : MonoBehaviour
             }
             if (MoveTimer < 53)
             {
-                pos.y -= 0.005f;
+                pos.y -= 0.008f;
             }
             else if (MoveTimer < 105)
             {
-                pos.y += 0.005f;
+                pos.y += 0.008f;
             }
             else
             {

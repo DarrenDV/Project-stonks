@@ -5,38 +5,58 @@ using UnityEngine;
 public class ButtonPress : MonoBehaviour
 {
     int MoveTimer;
-    float posY = 0.14f;
     Vector3 pos;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         pos = transform.position;
     }
 
-    // Update is called once per frame
     void Update()
-    {
+    {  
         if (Input.GetMouseButtonDown(0))
         {
-            MoveTimer = 0;
-            if(MoveTimer < 14)
+            RaycastHit hit;
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
-                posY -= 0.01f;
-                MoveTimer++;
+                if (hit.collider.CompareTag("DiceButton"))
+                {
+                    Pressed = true;
+                }
             }
-            if(MoveTimer >= 14 && MoveTimer < 29)
-            {
-                posY += 0.01f;
-                MoveTimer++;
-            }
-            pos.y = posY;
-            transform.position = pos;
-
-         
-
         }
 
-        
+        ButtonDown();
+        transform.position = pos;
+    }
+
+    void Throw()
+    {
+
+    }
+
+    void ButtonDown()
+    {
+        if (Pressed)
+        {
+            MoveTimer++;
+            if(MoveTimer == 1)
+            {
+                Throw();
+            }
+            if (MoveTimer < 53)
+            {
+                pos.y -= 0.005f;
+            }
+            else if (MoveTimer < 105)
+            {
+                pos.y += 0.005f;
+            }
+            else
+            {
+                Pressed = false;
+                MoveTimer = 0;
+            }
+        }
     }
 }

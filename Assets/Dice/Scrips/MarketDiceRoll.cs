@@ -14,11 +14,11 @@ public class MarketDiceRoll : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Update()
+    public void Update ()
     {
-        diceVelocity = rb.velocity;
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
+            diceVelocity = rb.velocity;
+            //if(Input.GetKeyDown(KeyCode.Space))
+            //{
             float dirX = Random.Range(0, 500);
             float dirY = Random.Range(0, 500);
             float dirZ = Random.Range(0, 500);
@@ -26,6 +26,7 @@ public class MarketDiceRoll : MonoBehaviour
             transform.rotation = Quaternion.identity;
             rb.AddForce(transform.up * 500);
             rb.AddTorque(dirX, dirY, dirZ);
-        }
+            //}
+
     }
 }

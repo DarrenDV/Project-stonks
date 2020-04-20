@@ -6,6 +6,9 @@ TagManager:
   tags:
   - pawn
   - paddestoel
+  - Pylon
+  - playerLevel
+  - DiceButton
   layers:
   - Default
   - TransparentFX

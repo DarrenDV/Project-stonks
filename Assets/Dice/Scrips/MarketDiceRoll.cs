@@ -14,17 +14,17 @@ public class MarketDiceRoll : MonoBehaviour
     }
 
     // Update is called once per frame
-    public void Throw ()
+    public void Throw()
     {
-            diceVelocity = rb.velocity;
+        diceVelocity = rb.velocity;
 
-            float dirX = Random.Range(0, 500);
-            float dirY = Random.Range(0, 500);
-            float dirZ = Random.Range(0, 500);
-            transform.position = new Vector3(0, 5, 8);
-            transform.rotation = Quaternion.identity;
-            rb.AddForce(transform.up * 500);
-            rb.AddTorque(dirX, dirY, dirZ);
+        float dirX = Random.Range(0, 500);
+        float dirY = Random.Range(0, 500);
+        float dirZ = Random.Range(0, 500);
+        transform.position = new Vector3(0, 5, 8);
+        transform.rotation = Quaternion.identity;
+        rb.AddForce(transform.up * 500);
+        rb.AddTorque(dirX, dirY, dirZ);
 
     }
 }

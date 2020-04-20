@@ -6,6 +6,7 @@ public class ButtonPress : MonoBehaviour
 {
     int MoveTimer;
     Vector3 pos;
+    bool Pressed;
 
     void Start()
     {

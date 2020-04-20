@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 546, y: -150}
+  m_AnchoredPosition: {x: 300, y: -150}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &569463283
@@ -400,7 +400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -472.9, y: -150}
+  m_AnchoredPosition: {x: -300, y: -150}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &786261652
@@ -691,6 +691,25 @@ MonoBehaviour:
   tutorial3: {fileID: 21300000, guid: 75d2a6398f5a0f84d89b2ab8053fbd7d, type: 3}
   tutorial4: {fileID: 21300000, guid: 70c4248b78c65334ba9306ae06b6bcba, type: 3}
   tutorial5: {fileID: 21300000, guid: 05d4060cf95b9a3449713823fd83e94c, type: 3}
+  tutorial6: {fileID: 21300000, guid: 56d48ec31bdd1d446899e0e9cbb595a2, type: 3}
+  tutorial7: {fileID: 21300000, guid: 5d29df7c2e8314a42adcdf12c5aabc79, type: 3}
+  tutorial8: {fileID: 21300000, guid: f109be043b328fb498b021c9690d8bed, type: 3}
+  tutorial9: {fileID: 21300000, guid: 561ba3a025deada42aca3dd0f30d2189, type: 3}
+  tutorial10: {fileID: 21300000, guid: 57d00984be58c5146ae009d9801f0a70, type: 3}
+  tutorial11: {fileID: 21300000, guid: ca5c8ad81aef9fb42851375d08a18247, type: 3}
+  tutorial12: {fileID: 21300000, guid: 1641bb233a8f1d04580c56667678a3fc, type: 3}
+  tutorial13: {fileID: 21300000, guid: 1f1e35e31636e1d44adfa97df6205671, type: 3}
+  tutorial14: {fileID: 21300000, guid: 285ea3bda67b56548b41dbdcda80ad20, type: 3}
+  tutorial15: {fileID: 21300000, guid: 5762913f993a13b46a98cc572eb84340, type: 3}
+  tutorial16: {fileID: 21300000, guid: 3228330fb2b6d734a97660ffea32a6e7, type: 3}
+  tutorial17: {fileID: 21300000, guid: d4962eed082ea3e4799c623dd506f2a1, type: 3}
+  tutorial18: {fileID: 21300000, guid: 8aa3318d3b69b364a8721e2d31af0506, type: 3}
+  tutorial19: {fileID: 21300000, guid: 74ff00b046e5117449a77da0a9e76bae, type: 3}
+  tutorial20: {fileID: 21300000, guid: 145902765f80c854bbf87269f03fce35, type: 3}
+  tutorial21: {fileID: 21300000, guid: 55166e4c5308a334789167f062b92d65, type: 3}
+  tutorial22: {fileID: 21300000, guid: dc5b431a7f9a89c459e27acc8a12e168, type: 3}
+  tutorial23: {fileID: 21300000, guid: 5c3020bcb0df74d45a4221306a2f1b1b, type: 3}
+  tutorial24: {fileID: 21300000, guid: 4ff17633009f26a47ae0e48f23feb690, type: 3}
 --- !u!1 &1684417838
 GameObject:
   m_ObjectHideFlags: 0

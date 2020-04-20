@@ -13,6 +13,25 @@ public class ButtonHandler : MonoBehaviour
     public Sprite tutorial3;
     public Sprite tutorial4;
     public Sprite tutorial5;
+    public Sprite tutorial6;
+    public Sprite tutorial7;
+    public Sprite tutorial8;
+    public Sprite tutorial9;
+    public Sprite tutorial10;
+    public Sprite tutorial11;
+    public Sprite tutorial12;
+    public Sprite tutorial13;
+    public Sprite tutorial14;
+    public Sprite tutorial15;
+    public Sprite tutorial16;
+    public Sprite tutorial17;
+    public Sprite tutorial18;
+    public Sprite tutorial19;
+    public Sprite tutorial20;
+    public Sprite tutorial21;
+    public Sprite tutorial22;
+    public Sprite tutorial23;
+    public Sprite tutorial24;
 
     void Start()
     {
@@ -38,12 +57,72 @@ public class ButtonHandler : MonoBehaviour
             case 4:
                 GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial5;
                 break;
+            case 5:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial6;
+                break;
+            case 6:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial7;
+                break;
+            case 7:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial8;
+                break;
+            case 8:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial9;
+                break;
+            case 9:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial10;
+                break;
+            case 10:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial11;
+                break;
+            case 11:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial12;
+                break;
+            case 12:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial13;
+                break;
+            case 13:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial14;
+                break;
+            case 14:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial15;
+                break;
+            case 15:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial16;
+                break;
+            case 16:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial17;
+                break;
+            case 17:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial18;
+                break;
+            case 18:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial19;
+                break;
+            case 19:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial20;
+                break;
+            case 20:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial21;
+                break;
+            case 21:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial22;
+                break;
+            case 22:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial23;
+                break;
+            case 23:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial24;
+                break;
+            case 24:
+                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial5;
+                break;
         }
     }
 
     public void ChangeForward()
     {
-        counter++;
+        if (counter < 24) counter++;
     }
 
     public void ChangeBackward()

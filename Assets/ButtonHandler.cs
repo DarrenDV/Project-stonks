@@ -114,15 +114,12 @@ public class ButtonHandler : MonoBehaviour
             case 23:
                 GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial24;
                 break;
-            case 24:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial5;
-                break;
         }
     }
 
     public void ChangeForward()
     {
-        if (counter < 24) counter++;
+        if (counter < 23) counter++;
     }
 
     public void ChangeBackward()

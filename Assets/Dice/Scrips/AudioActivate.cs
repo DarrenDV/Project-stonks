@@ -17,10 +17,11 @@ public class AudioActivate : MonoBehaviour
 
     void Update()
     {
+        Konami.Play();
         if (code.success)
         {
-            Activated = true;
-            Konami.Play();
+                Activated = true;
+                Konami.Play();
         }
     }
 }

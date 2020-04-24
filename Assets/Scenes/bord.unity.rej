@@ -1,0 +1,9 @@
+diff a/Assets/Scenes/bord.unity b/Assets/Scenes/bord.unity	(rejected hunks)
+@@ -2310,6 +2310,7 @@
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 254895148}
+   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
++<<<<<<< HEAD
+ --- !u!1 &264261623
+ GameObject:
+   m_ObjectHideFlags: 0

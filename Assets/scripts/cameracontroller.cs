@@ -9,8 +9,10 @@ public class cameracontroller : MonoBehaviour
 
     #region Public Vars
     public GameObject[] b;
+    public GameObject[] a;
     public GameObject[] pawns;
     public int inplay;
+    public int plase;
     public bool SecondDice;
     #endregion
 
@@ -27,11 +29,24 @@ public class cameracontroller : MonoBehaviour
 
     void Start()
     {
+        for (int i = 0; i < 5; i++)
+        {
+            pawns[i].transform.position = new Vector3(a[3].transform.position.x, pawns[i].transform.position.y, a[3].transform.position.z);
+        }
     }
 
 
     void LateUpdate()
     {
+
+        for (int i = 0; i < 12; i++)
+        {
+            if (pawns[inplay].transform.position.x > a[i].transform.position.x-1 && pawns[inplay].transform.position.x < a[i].transform.position.x+1 && pawns[inplay].transform.position.z > a[i].transform.position.z - 1 && pawns[inplay].transform.position.z < a[i].transform.position.z + 1)
+            {
+                plase = i;
+            }
+        }
+
         if ((pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z) && inplay < 4)
         {
             inplay++;
@@ -51,7 +66,7 @@ public class cameracontroller : MonoBehaviour
 
             if (selected == null)
             {
-                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit,1000, layerMask1))
+                if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask1))
                 {
                     if (hit.collider.CompareTag("pawn"))
                     {
@@ -74,14 +89,29 @@ public class cameracontroller : MonoBehaviour
                         selected.GetComponent<Rigidbody>().useGravity = true;
                         selected = null;
                     }
-                    Debug.Log(selected);
+                    
                 }
             }
         }
         if (Input.GetMouseButtonDown(1))
         {
-            selected.GetComponent<Rigidbody>().useGravity = true;
-            selected = null;
+            if (selected != null)
+            {
+                selected.GetComponent<Rigidbody>().useGravity = true;
+                selected = null;
+            }
         }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            pawns[inplay].transform.position = new Vector3(a[plase + 1].transform.position.x, 2f, a[plase + 1].transform.position.z);
+            Debug.Log("up");
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            pawns[inplay].transform.position = new Vector3(a[plase - 1].transform.position.x, 2f, a[plase - 1].transform.position.z);
+            Debug.Log("down");
+        }
+
     }
 }

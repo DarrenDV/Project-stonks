@@ -17,6 +17,10 @@ public class popupscript : MonoBehaviour
         this.playerCount = playerCount;
     }
 
+    public int getPlayerCount()
+    {
+        return playerCount;
+    }
     // Update is called once per frame
     void Update()
     {

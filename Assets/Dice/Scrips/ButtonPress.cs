@@ -6,7 +6,8 @@ public class ButtonPress : MonoBehaviour
 {
     int MoveTimer;
     Vector3 pos;
-    bool Pressed;
+    public bool Pressed;
+    public bool AutomaticEnabled;
     [SerializeField] private MarketDiceRoll MarketDR;
     [SerializeField] private NumberDiceRoll NumberDR;
     [SerializeField] private SecondMarketDice SecondMD;
@@ -27,6 +28,7 @@ public class ButtonPress : MonoBehaviour
                 if (hit.collider.CompareTag("DiceButton"))
                 {
                     Pressed = true;
+                    AutomaticEnabled = true;
                 }
             }
         }

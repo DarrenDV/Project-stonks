@@ -40,9 +40,9 @@ public class SecondMarketDice : MonoBehaviour
             {
                 diceVelocity = rb.velocity;
 
-                float dirX = Random.Range(0, 500);
-                float dirY = Random.Range(0, 500);
-                float dirZ = Random.Range(0, 500);
+                float dirX = Random.Range(0, 1000);
+                float dirY = Random.Range(0, 1000);
+                float dirZ = Random.Range(0, 1000);
                 transform.position = new Vector3(2, 5, 10);
                 transform.rotation = Quaternion.identity;
                 rb.AddForce(transform.up * 500);

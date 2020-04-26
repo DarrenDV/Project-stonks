@@ -7,6 +7,8 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
 
     Vector3 diceVelocity;
     public bool blueDice;
+    public bool AutoEN;
+    [SerializeField] private ButtonPress ButtonPress;
 
     void FixedUpdate()
     {
@@ -15,7 +17,8 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        AutoEN = ButtonPress.AutomaticEnabled;
+        if (ButtonPress.Pressed)
         {
             blueDice = false;
         }
@@ -23,24 +26,27 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        if (diceVelocity.x == 0f && diceVelocity.y == 0f && diceVelocity.z == 0f)
+        if (AutoEN)
         {
-            switch (col.gameObject.name)
+            if (diceVelocity.x == 0f && diceVelocity.y == 0f && diceVelocity.z == 0f)
             {
-                case "Side1":
-                    blueDice = true;
-                    break;
-                case "Side2":
-                    break;
-                case "Side3":
-                    break;
-                case "Side4":
-                    break;
-                case "Side5":
-                    break;
-                case "Side6":
-                    blueDice = true;
-                    break;
+                switch (col.gameObject.name)
+                {
+                    case "Side1":
+                        blueDice = true;
+                        break;
+                    case "Side2":
+                        break;
+                    case "Side3":
+                        break;
+                    case "Side4":
+                        break;
+                    case "Side5":
+                        break;
+                    case "Side6":
+                        blueDice = true;
+                        break;
+                }
             }
         }
     }

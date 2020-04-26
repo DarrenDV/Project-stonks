@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class popupscript : MonoBehaviour
+public class Popupscript : MonoBehaviour
 {
-    public int playerCount = 0;
+    public int playerCount;
     public bool rood;
     public bool blauw;
     public bool paars;
@@ -17,6 +18,18 @@ public class popupscript : MonoBehaviour
 
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "bord")
+        {
+            this.gameObject.SetActive(false);
+        }
+
+    }
+    /*
     public void setPlayerCount(int playerCount)
     {
         this.playerCount = playerCount;
@@ -26,15 +39,11 @@ public class popupscript : MonoBehaviour
     {
         return playerCount;
     }
-
-    // Update is called once per frame
-    void Update()
+    */
+    public void Rood()
     {
-    
-    }
-
-    public void Rood() {
-        if (rood == true) {
+        if (rood == true)
+        {
             rood = false;
             playerCount--;
         }
@@ -113,5 +122,9 @@ public class popupscript : MonoBehaviour
             groen = true;
             playerCount++;
         }
+    }
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
     }
 }

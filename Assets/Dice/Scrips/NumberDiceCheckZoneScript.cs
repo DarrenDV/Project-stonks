@@ -6,7 +6,7 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
 {
 
     Vector3 diceVelocity;
-    public bool blueDice = false;
+    public bool blueDice;
 
     void FixedUpdate()
     {

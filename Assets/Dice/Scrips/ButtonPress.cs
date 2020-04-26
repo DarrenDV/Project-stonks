@@ -7,9 +7,9 @@ public class ButtonPress : MonoBehaviour
     int MoveTimer;
     Vector3 pos;
     bool Pressed;
-   [SerializeField] private MarketDiceRoll MarketDR;
-   [SerializeField] private NumberDiceRoll NumberDR;
-   [SerializeField] private SecondMarketDice SecondMD;
+    [SerializeField] private MarketDiceRoll MarketDR;
+    [SerializeField] private NumberDiceRoll NumberDR;
+    [SerializeField] private SecondMarketDice SecondMD;
 
     void Start()
     {
@@ -17,7 +17,8 @@ public class ButtonPress : MonoBehaviour
     }
 
     void Update()
-    {  
+    {
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;

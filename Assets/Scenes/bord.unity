@@ -7901,6 +7901,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915918aea6193f247857ac680ae85957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Pressed: 0
+  AutomaticEnabled: 0
   MarketDR: {fileID: 520248558}
   NumberDR: {fileID: 1281929097}
   SecondMD: {fileID: 2106316522}
@@ -9776,7 +9778,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueDice: 0
-  button: {fileID: 963194225}
+  AutoEN: 0
+  ButtonPress: {fileID: 938753965}
 --- !u!65 &1072434437
 BoxCollider:
   m_ObjectHideFlags: 0

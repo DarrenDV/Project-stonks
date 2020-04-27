@@ -7984,7 +7984,6 @@ GameObject:
   - component: {fileID: 938753962}
   - component: {fileID: 938753965}
   - component: {fileID: 938753966}
-  - component: {fileID: 938753967}
   m_Layer: 0
   m_Name: ThrowButton
   m_TagString: DiceButton
@@ -8097,18 +8096,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   success: 0
---- !u!114 &938753967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938753960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e32ec9874773c64fbfb6717d0753c84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   Activated: 0
   plane: {fileID: 1479218943}
 --- !u!1001 &943043835

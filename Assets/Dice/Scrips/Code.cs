@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KonamiCode : MonoBehaviour
+public class Code : MonoBehaviour
 {
+    //Float for max time to wait
     private const float WaitTime = 0.5f;
 
+    //KonamiCode in order
     private KeyCode[] keys = new KeyCode[]
     {
         KeyCode.UpArrow,
@@ -21,6 +23,9 @@ public class KonamiCode : MonoBehaviour
     };
 
     public bool success;
+
+    public bool Activated;
+    public GameObject plane;
 
     IEnumerator Start()
     {
@@ -63,6 +68,24 @@ public class KonamiCode : MonoBehaviour
             }
 
             yield return null;
+        }
+    }
+
+    void Update()
+    {
+        if (success)
+        {
+            Activated = true;
+        }
+        if (Activated == true)
+        {
+            plane.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                plane.SetActive(false);
+                success = false;
+                Activated = false;
+            }
         }
     }
 }

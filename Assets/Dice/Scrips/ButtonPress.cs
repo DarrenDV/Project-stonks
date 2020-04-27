@@ -8,6 +8,8 @@ public class ButtonPress : MonoBehaviour
     Vector3 pos;
     public bool Pressed;
     public bool AutomaticEnabled;
+
+    //Creates dices to be linked for throwing
     [SerializeField] private MarketDiceRoll MarketDR;
     [SerializeField] private NumberDiceRoll NumberDR;
     [SerializeField] private SecondMarketDice SecondMD;
@@ -19,7 +21,7 @@ public class ButtonPress : MonoBehaviour
 
     void Update()
     {
-
+        //Checks if the mouse is pressed on the button
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -28,6 +30,8 @@ public class ButtonPress : MonoBehaviour
                 if (hit.collider.CompareTag("DiceButton"))
                 {
                     Pressed = true;
+
+                    //Sets a boolean on so that the bluedice detection can start
                     AutomaticEnabled = true;
                 }
             }
@@ -39,6 +43,7 @@ public class ButtonPress : MonoBehaviour
 
     void Throw()
     {
+        //Executes each dices script for throwing the die
         MarketDR.Throw();
         NumberDR.Throw();
         SecondMD.Throw();
@@ -46,6 +51,7 @@ public class ButtonPress : MonoBehaviour
 
     void ButtonDown()
     {
+        //Moves the button down and up to give a "pressed" effect
         if (Pressed)
         {
             MoveTimer++;

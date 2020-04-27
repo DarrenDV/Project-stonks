@@ -16,6 +16,7 @@ public class PylonUsed : MonoBehaviour
     public GameObject orange;
     public GameObject grey;
     public GameObject green;
+    public int timer;
 
     void Start()
     {
@@ -33,81 +34,84 @@ public class PylonUsed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (rood == true)
+        timer++;
+        if (timer < 8)
         {
-            red.SetActive(true);
-            GameObject.FindWithTag("pylonRed").SetActive(true);
-        }
-        else
-        {
-            red.SetActive(false);
-            GameObject.FindWithTag("pylonRed").SetActive(false);
-        }
-
-      
-        if (blauw == true)
-        {
-            blue.SetActive(true);
-            GameObject.FindWithTag("pylonBlue").SetActive(true);
-
-        }
-        else
-        {
-            blue.SetActive(false);
-            GameObject.FindWithTag("pylonBlue").SetActive(false);
-        }
-      
-        
-        if (paars == true)
-        {
-            purple.SetActive(true);
-            GameObject.FindWithTag("pylonPurple").SetActive(true);
-
-        }
-        else
-        {
-            purple.SetActive(false);
-            GameObject.FindWithTag("pylonPurple").SetActive(false);
-        }
-       
-        
-        if (geel == true)
-        {
-            orange.SetActive(true);
-            GameObject.FindWithTag("pylonOrange").SetActive(true);
-
-        }
-        else
-        {
-            orange.SetActive(false);
-            GameObject.FindWithTag("pylonOrange").SetActive(false);
-        }
+            if (rood == true)
+            {
+                red.SetActive(true);
+                GameObject.FindWithTag("pylonRed").SetActive(true);
+            }
+            else
+            {
+                red.SetActive(false);
+                GameObject.FindWithTag("pylonRed").SetActive(false);
+            }
 
 
-        if (zwart == true)
-        {
-            grey.SetActive(true);
-            GameObject.FindWithTag("pylonGrey").SetActive(true);
+            if (blauw == true)
+            {
+                blue.SetActive(true);
+                GameObject.FindWithTag("pylonBlue").SetActive(true);
 
-        }
-        else
-        {
-            grey.SetActive(false);
-            GameObject.FindWithTag("pylonGrey").SetActive(false);
-        }
+            }
+            else
+            {
+                blue.SetActive(false);
+                GameObject.FindWithTag("pylonBlue").SetActive(false);
+            }
 
 
-        if (groen == true)
-        {
-            green.SetActive(true);
-            GameObject.FindWithTag("pylonGreen").SetActive(true);
+            if (paars == true)
+            {
+                purple.SetActive(true);
+                GameObject.FindWithTag("pylonPurple").SetActive(true);
 
-        }
-        else
-        {
-            green.SetActive(false);
-            GameObject.FindWithTag("pylonGreen").SetActive(false);
+            }
+            else
+            {
+                purple.SetActive(false);
+                GameObject.FindWithTag("pylonPurple").SetActive(false);
+            }
+
+
+            if (geel == true)
+            {
+                orange.SetActive(true);
+                GameObject.FindWithTag("pylonOrange").SetActive(true);
+
+            }
+            else
+            {
+                orange.SetActive(false);
+                GameObject.FindWithTag("pylonOrange").SetActive(false);
+            }
+
+
+            if (zwart == true)
+            {
+                grey.SetActive(true);
+                GameObject.FindWithTag("pylonGrey").SetActive(true);
+
+            }
+            else
+            {
+                grey.SetActive(false);
+                GameObject.FindWithTag("pylonGrey").SetActive(false);
+            }
+
+
+            if (groen == true)
+            {
+                green.SetActive(true);
+                GameObject.FindWithTag("pylonGreen").SetActive(true);
+
+            }
+            else
+            {
+                green.SetActive(false);
+                GameObject.FindWithTag("pylonGreen").SetActive(false);
+            }
         }
     }
 }

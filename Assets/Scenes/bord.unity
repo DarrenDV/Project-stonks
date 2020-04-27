@@ -235,7 +235,7 @@ GameObject:
   - component: {fileID: 5468536}
   m_Layer: 4
   m_Name: Orange place 5
-  m_TagString: Untagged
+  m_TagString: pylonOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -473,7 +473,7 @@ PrefabInstance:
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
       propertyPath: m_Name
-      value: Pylon 4 Purple
+      value: Pylon4Purple
       objectReference: {fileID: 0}
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 91734720}
   m_Layer: 4
   m_Name: Red place 6
-  m_TagString: Untagged
+  m_TagString: pylonRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1665,7 +1665,7 @@ GameObject:
   - component: {fileID: 104349890}
   m_Layer: 4
   m_Name: Purple place 0
-  m_TagString: Untagged
+  m_TagString: pylonPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2014,7 +2014,7 @@ GameObject:
   - component: {fileID: 155122970}
   m_Layer: 4
   m_Name: Blue place 6
-  m_TagString: Untagged
+  m_TagString: pylonBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2139,7 +2139,7 @@ GameObject:
   - component: {fileID: 183490788}
   m_Layer: 4
   m_Name: Grey place 6
-  m_TagString: Untagged
+  m_TagString: pylonGrey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2263,7 +2263,7 @@ PrefabInstance:
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
       propertyPath: m_Name
-      value: Pylon 1 Red
+      value: Pylon1Red
       objectReference: {fileID: 0}
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
@@ -2573,7 +2573,7 @@ GameObject:
   - component: {fileID: 254895150}
   m_Layer: 4
   m_Name: Red place 5
-  m_TagString: Untagged
+  m_TagString: pylonRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2971,7 +2971,7 @@ GameObject:
   - component: {fileID: 299607710}
   m_Layer: 4
   m_Name: Orange place 3
-  m_TagString: Untagged
+  m_TagString: pylonOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3276,7 +3276,7 @@ GameObject:
   - component: {fileID: 316630724}
   m_Layer: 4
   m_Name: Blue place 0
-  m_TagString: Untagged
+  m_TagString: pylonBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3499,7 +3499,7 @@ GameObject:
   - component: {fileID: 349305257}
   m_Layer: 4
   m_Name: Purple place 6
-  m_TagString: Untagged
+  m_TagString: pylonPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3642,7 +3642,7 @@ GameObject:
   - component: {fileID: 402559292}
   m_Layer: 4
   m_Name: Orange place 4
-  m_TagString: Untagged
+  m_TagString: pylonOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3917,7 +3917,7 @@ GameObject:
   - component: {fileID: 448420817}
   m_Layer: 4
   m_Name: Green place 4
-  m_TagString: Untagged
+  m_TagString: pylonGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4042,7 +4042,7 @@ GameObject:
   - component: {fileID: 449162534}
   m_Layer: 4
   m_Name: Blue place 3
-  m_TagString: Untagged
+  m_TagString: pylonBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4167,7 +4167,7 @@ GameObject:
   - component: {fileID: 460785807}
   m_Layer: 4
   m_Name: Orange place 0
-  m_TagString: Untagged
+  m_TagString: pylonOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4542,7 +4542,7 @@ GameObject:
   - component: {fileID: 510156716}
   m_Layer: 4
   m_Name: Red place 2
-  m_TagString: Untagged
+  m_TagString: pylonRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4720,7 +4720,7 @@ GameObject:
   - component: {fileID: 523272845}
   m_Layer: 4
   m_Name: Green place 2
-  m_TagString: Untagged
+  m_TagString: pylonGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5187,7 +5187,7 @@ GameObject:
   - component: {fileID: 587264507}
   m_Layer: 4
   m_Name: Blue place 2
-  m_TagString: Untagged
+  m_TagString: pylonBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5658,7 +5658,7 @@ GameObject:
   - component: {fileID: 709934544}
   m_Layer: 4
   m_Name: Grey place 2
-  m_TagString: Untagged
+  m_TagString: pylonGrey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5783,7 +5783,7 @@ GameObject:
   - component: {fileID: 712379326}
   m_Layer: 4
   m_Name: Grey place 4
-  m_TagString: Untagged
+  m_TagString: pylonGrey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7069,7 +7069,7 @@ GameObject:
   - component: {fileID: 832335196}
   m_Layer: 4
   m_Name: Purple place 1
-  m_TagString: Untagged
+  m_TagString: pylonPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7448,7 +7448,7 @@ GameObject:
   - component: {fileID: 899901733}
   m_Layer: 4
   m_Name: Blue place 1
-  m_TagString: Untagged
+  m_TagString: pylonBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7573,7 +7573,7 @@ GameObject:
   - component: {fileID: 913957953}
   m_Layer: 4
   m_Name: Green place 5
-  m_TagString: Untagged
+  m_TagString: pylonGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8240,7 +8240,7 @@ GameObject:
   - component: {fileID: 968895640}
   m_Layer: 4
   m_Name: Grey place 3
-  m_TagString: Untagged
+  m_TagString: pylonGrey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8365,7 +8365,7 @@ GameObject:
   - component: {fileID: 982701235}
   m_Layer: 4
   m_Name: Red place 1
-  m_TagString: Untagged
+  m_TagString: pylonRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8696,7 +8696,7 @@ PrefabInstance:
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
       propertyPath: m_Name
-      value: Pylon 5 Grey
+      value: Pylon5Grey
       objectReference: {fileID: 0}
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
@@ -9724,7 +9724,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blueDice: 0
   AutoEN: 0
-  ButtonPress: {fileID: 0}
+  ButtonPress: {fileID: 938753965}
 --- !u!65 &1072434437
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9753,7 +9753,7 @@ PrefabInstance:
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
       propertyPath: m_Name
-      value: Pylon 2 Blue
+      value: Pylon2Blue
       objectReference: {fileID: 0}
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
@@ -10485,7 +10485,7 @@ GameObject:
   - component: {fileID: 1169632385}
   m_Layer: 4
   m_Name: Red place 0
-  m_TagString: Untagged
+  m_TagString: pylonRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10610,7 +10610,7 @@ GameObject:
   - component: {fileID: 1170004006}
   m_Layer: 4
   m_Name: Grey place 5
-  m_TagString: Untagged
+  m_TagString: pylonGrey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10735,7 +10735,7 @@ GameObject:
   - component: {fileID: 1186769627}
   m_Layer: 4
   m_Name: Green place 0
-  m_TagString: Untagged
+  m_TagString: pylonGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10856,6 +10856,7 @@ GameObject:
   - component: {fileID: 1201828005}
   - component: {fileID: 1201828004}
   - component: {fileID: 1201828003}
+  - component: {fileID: 1201828002}
   m_Layer: 0
   m_Name: Playerlevel
   m_TagString: Untagged
@@ -10863,6 +10864,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1201828002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201828001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f1ff76032a07d24b9f9fc36e8113b39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rood: 0
+  blauw: 0
+  paars: 0
+  geel: 0
+  zwart: 0
+  groen: 0
+  red: {fileID: 1882393771}
+  blue: {fileID: 2082814842}
+  purple: {fileID: 1421157118}
+  orange: {fileID: 1256098141}
+  grey: {fileID: 817512169}
+  green: {fileID: 1855700377}
 --- !u!65 &1201828003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11090,7 +11115,7 @@ GameObject:
   - component: {fileID: 1243417075}
   m_Layer: 4
   m_Name: Purple place 2
-  m_TagString: Untagged
+  m_TagString: pylonPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11221,7 +11246,7 @@ GameObject:
   - component: {fileID: 1253304395}
   m_Layer: 4
   m_Name: Green place 6
-  m_TagString: Untagged
+  m_TagString: pylonGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12049,7 +12074,7 @@ GameObject:
   - component: {fileID: 1388776003}
   m_Layer: 4
   m_Name: Blue place 5
-  m_TagString: Untagged
+  m_TagString: pylonBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12666,7 +12691,7 @@ GameObject:
   - component: {fileID: 1504401510}
   m_Layer: 4
   m_Name: Orange place 1
-  m_TagString: Untagged
+  m_TagString: pylonOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12791,7 +12816,7 @@ GameObject:
   - component: {fileID: 1521286606}
   m_Layer: 4
   m_Name: Orange place 2
-  m_TagString: Untagged
+  m_TagString: pylonOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13285,7 +13310,7 @@ GameObject:
   - component: {fileID: 1649257874}
   m_Layer: 4
   m_Name: Red place 4
-  m_TagString: Untagged
+  m_TagString: pylonRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13982,7 +14007,7 @@ PrefabInstance:
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
       propertyPath: m_Name
-      value: Pylon 6 Green
+      value: Pylon6Green
       objectReference: {fileID: 0}
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
@@ -14165,7 +14190,7 @@ GameObject:
   - component: {fileID: 1755543920}
   m_Layer: 4
   m_Name: Green place 3
-  m_TagString: Untagged
+  m_TagString: pylonGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14422,7 +14447,7 @@ GameObject:
   - component: {fileID: 1778036352}
   m_Layer: 4
   m_Name: Grey place 0
-  m_TagString: Untagged
+  m_TagString: pylonGrey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14814,7 +14839,7 @@ GameObject:
   - component: {fileID: 1825754587}
   m_Layer: 4
   m_Name: Green place 1
-  m_TagString: Untagged
+  m_TagString: pylonGreen
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14938,7 +14963,7 @@ PrefabInstance:
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
       propertyPath: m_Name
-      value: Pylon 3 Orange
+      value: Pylon3Orange
       objectReference: {fileID: 0}
     - target: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
         type: 3}
@@ -15149,7 +15174,7 @@ GameObject:
   - component: {fileID: 1867273953}
   m_Layer: 4
   m_Name: Purple place 4
-  m_TagString: Untagged
+  m_TagString: pylonPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15274,7 +15299,7 @@ GameObject:
   - component: {fileID: 1872588790}
   m_Layer: 4
   m_Name: Red place 3
-  m_TagString: Untagged
+  m_TagString: pylonRed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15399,7 +15424,7 @@ GameObject:
   - component: {fileID: 1872772926}
   m_Layer: 4
   m_Name: Purple place 3
-  m_TagString: Untagged
+  m_TagString: pylonPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15584,7 +15609,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!4 &1890621894 stripped
 Transform:
@@ -15608,7 +15633,7 @@ GameObject:
   - component: {fileID: 1893662220}
   m_Layer: 4
   m_Name: Orange place 6
-  m_TagString: Untagged
+  m_TagString: pylonOrange
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16173,7 +16198,7 @@ GameObject:
   - component: {fileID: 1942205084}
   m_Layer: 4
   m_Name: Blue place 4
-  m_TagString: Untagged
+  m_TagString: pylonBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17056,7 +17081,7 @@ GameObject:
   - component: {fileID: 2105164281}
   m_Layer: 4
   m_Name: Purple place 5
-  m_TagString: Untagged
+  m_TagString: pylonPurple
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17237,7 +17262,7 @@ GameObject:
   - component: {fileID: 2112697565}
   m_Layer: 4
   m_Name: Grey place 1
-  m_TagString: Untagged
+  m_TagString: pylonGrey
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

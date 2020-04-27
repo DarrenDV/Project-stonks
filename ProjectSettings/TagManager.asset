@@ -9,6 +9,12 @@ TagManager:
   - Pylon
   - playerLevel
   - DiceButton
+  - pylonGreen
+  - pylonGrey
+  - pylonPurple
+  - pylonOrange
+  - pylonBlue
+  - pylonRed
   layers:
   - Default
   - TransparentFX

@@ -1904,7 +1904,6 @@ MonoBehaviour:
   geel: 0
   zwart: 0
   groen: 0
-  poort: {fileID: 1571108242}
 --- !u!1 &1845078759
 GameObject:
   m_ObjectHideFlags: 0
@@ -7190,7 +7189,6 @@ MonoBehaviour:
   geel: 0
   zwart: 0
   groen: 0
-  poort: {fileID: 0}
 --- !u!1 &2111158618
 GameObject:
   m_ObjectHideFlags: 0

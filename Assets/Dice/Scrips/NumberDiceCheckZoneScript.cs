@@ -64,8 +64,11 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
         {
             if (Timer >= 600)
             {
+
+                //Checks what object collides with the checkzone and acts according to the name
                 switch (col.gameObject.name)
                 {
+                    //Numbered dices
                     case "Side1":
                         blueDice = true;
                         Blue20 = true;
@@ -82,7 +85,8 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
                         blueDice = true;
                         Blue10 = true;
                         break;
-
+                    
+                    //First MarketDice
                     case "Windmill":
                         Stones = true;
                         break;
@@ -101,7 +105,8 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
                     case "Stones":
                         Windmill = true;
                         break;
-
+                    
+                    //Second MarketDice
                     case "Windmill2":
                         Stones2 = true;
                         break;

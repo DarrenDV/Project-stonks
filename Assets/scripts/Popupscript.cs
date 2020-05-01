@@ -38,6 +38,7 @@ public class Popupscript : MonoBehaviour
     public int getPlayerCount()
     {
         return playerCount;
+        .material.color = new Color
     }
     */
     public void Rood()

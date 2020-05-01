@@ -24,8 +24,11 @@ public class ButtonPress : MonoBehaviour
         //Checks if the mouse is pressed on the button
         if (Input.GetMouseButtonDown(0))
         {
+            
             RaycastHit hit;
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
+            int layerMask1 = LayerMask.GetMask("Water");
+
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask1))
             {
                 if (hit.collider.CompareTag("DiceButton"))
                 {

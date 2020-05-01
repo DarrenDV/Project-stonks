@@ -22,6 +22,7 @@ public class cameracontroller : MonoBehaviour
     public bool moving;
 
     public GameObject activator;
+    public GameObject cam;
     public GameObject popup;
     public bool blueDice;
     public GameObject[] knoppies;
@@ -49,11 +50,13 @@ public class cameracontroller : MonoBehaviour
         {
             pawns[i].transform.position = new Vector3(a[startPos].transform.position.x, pawns[i].transform.position.y, a[startPos].transform.position.z);
         }
+
     }
 
 
     void LateUpdate()
     {
+
         blueDice = activator.GetComponent<NumberDiceCheckZoneScript>().blueDice;
 
         for (int i = 0; i < 12; i++)
@@ -136,7 +139,7 @@ public class cameracontroller : MonoBehaviour
                 selected = null;
             }
         }
-
+        /*
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             pawns[inplay].transform.position = new Vector3(a[plase + 1].transform.position.x, 2f, a[plase + 1].transform.position.z);
@@ -147,7 +150,7 @@ public class cameracontroller : MonoBehaviour
             pawns[inplay].transform.position = new Vector3(a[plase - 1].transform.position.x, 2f, a[plase - 1].transform.position.z);
             Debug.Log("down");
         }
-
+        */
         if (toMove > 0)
         {
             if (time % 60 == 0)
@@ -171,5 +174,6 @@ public class cameracontroller : MonoBehaviour
             popup.SetActive(false);
             kijk = 0;
         }
+
     }
 }

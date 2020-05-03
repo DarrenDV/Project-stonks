@@ -10778,7 +10778,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: u heeft blauw gegooit hoeveel mensen kunnen niet af betalen?
+  m_text: U heeft blauw gegooid, hoeveel mensen kunnen niet afbetalen?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -10823,7 +10823,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 30
+  m_firstOverflowCharacterIndex: 23
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -10849,10 +10849,10 @@ MonoBehaviour:
     textComponent: {fileID: 1167034855}
     characterCount: 60
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 8
+    wordCount: 9
     linkCount: 0
-    lineCount: 4
+    lineCount: 5
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -17090,17 +17090,17 @@ PrefabInstance:
     - target: {fileID: 2424492022489863813, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_text
-      value: 1st
+      value: 1e
       objectReference: {fileID: 0}
     - target: {fileID: 2424492022489863813, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2424492022489863813, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2424492022489863813, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
@@ -17120,12 +17120,12 @@ PrefabInstance:
     - target: {fileID: 2424492022489863813, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2424492022489863813, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5623864594387347248, guid: 9ac7fd90aead08e4dabd6dc392332289,
         type: 3}

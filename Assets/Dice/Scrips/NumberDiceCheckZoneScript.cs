@@ -5,6 +5,7 @@ using UnityEngine;
 public class NumberDiceCheckZoneScript : MonoBehaviour
 {
     public int Timer;
+    public int CheckTime = 450;
 
     public bool blueDice;
     public bool Blue10;
@@ -62,7 +63,7 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
     {
         if (AutoEN)
         {
-            if (Timer >= 600)
+            if (Timer >= CheckTime)
             {
 
                 //Checks what object collides with the checkzone and acts according to the name

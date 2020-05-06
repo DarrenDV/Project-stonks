@@ -161,7 +161,7 @@ public class cameracontroller : MonoBehaviour
                     {
                         if (hit.collider.gameObject == knoppies[i])
                         {
-                            toMove = i + 1;
+                            toMove = i;
                             if (location == 0)
                             {
                                 numDice.transform.rotation = Quaternion.Euler(60, 270, 0);

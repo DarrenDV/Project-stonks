@@ -13709,7 +13709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 490512, guid: 13e22a42054f993489586833930e9513, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.2895777
+      value: 4.26314
       objectReference: {fileID: 0}
     - target: {fileID: 11490512, guid: 13e22a42054f993489586833930e9513, type: 3}
       propertyPath: speedWaveSpread

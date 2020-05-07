@@ -82,7 +82,7 @@ public class CamMove : MonoBehaviour
             links = false;
             location = -1;
         }
-        if (transform.rotation.y > -0.0045 && transform.rotation.y < 0.0045)
+        if (transform.rotation.y > -0.006 && transform.rotation.y < 0.006)
         {
             speed = 0;
             rechts = false;

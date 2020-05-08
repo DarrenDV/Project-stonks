@@ -5223,7 +5223,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577132831}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.4793}
+  m_LocalPosition: {x: 0, y: 0, z: -0.482}
   m_LocalScale: {x: 0.024999997, y: 0.08, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1201828006}
@@ -5231,7 +5231,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.6672, y: 0.59}
+  m_AnchoredPosition: {x: 0.4376, y: 0.59}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &577132833
@@ -5297,7 +5297,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5318,7 +5318,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -0.46218112, y: 0.5333237, z: 17.59118, w: 3.3790808}
+  m_margin: {x: 8.658088, y: 0.5333237, z: 8.820733, w: 2.482407}
   m_textInfo:
     textComponent: {fileID: 577132833}
     characterCount: 4
@@ -5815,7 +5815,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687667489}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.466}
+  m_LocalPosition: {x: 0, y: 0, z: -0.402}
   m_LocalScale: {x: 0.024999997, y: 0.08, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1201828006}
@@ -5823,7 +5823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.2468, y: 0.5085997}
+  m_AnchoredPosition: {x: 0.0215, y: 0.51}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &687667491
@@ -5889,7 +5889,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -5910,7 +5910,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.8928993, z: 17.59118, w: 3.3790808}
+  m_margin: {x: 8.987757, y: 1.804611, z: 9.560665, w: 0.7648789}
   m_textInfo:
     textComponent: {fileID: 687667491}
     characterCount: 3
@@ -6713,7 +6713,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744666259}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.472}
+  m_LocalPosition: {x: 0, y: 0, z: -0.381}
   m_LocalScale: {x: 0.024999997, y: 0.08, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1201828006}
@@ -6721,7 +6721,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.097, y: 0.5085997}
+  m_AnchoredPosition: {x: -0.1301, y: 0.51}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &744666261
@@ -6787,7 +6787,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -6808,7 +6808,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.8928993, z: 17.59118, w: 3.3790808}
+  m_margin: {x: 8.913706, y: 1.9733152, z: 9.417005, w: 1.1853251}
   m_textInfo:
     textComponent: {fileID: 744666261}
     characterCount: 2
@@ -10036,7 +10036,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054133042}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.459}
+  m_LocalPosition: {x: 0, y: 0, z: -0.475}
   m_LocalScale: {x: 0.024999997, y: 0.08, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1201828006}
@@ -10044,7 +10044,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.4013, y: 0.5085997}
+  m_AnchoredPosition: {x: 0.1639, y: 0.5085997}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054133044
@@ -10110,7 +10110,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -10131,7 +10131,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.8928993, z: 17.59118, w: 3.3790808}
+  m_margin: {x: 9.465149, y: 0.8928993, z: 9.384011, w: 1.573763}
   m_textInfo:
     textComponent: {fileID: 1054133044}
     characterCount: 2
@@ -11894,7 +11894,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1270378816}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.4721}
+  m_LocalPosition: {x: 0, y: 0, z: -0.397}
   m_LocalScale: {x: 0.024999997, y: 0.08, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1201828006}
@@ -11902,7 +11902,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0535, y: 0.5085997}
+  m_AnchoredPosition: {x: -0.2883, y: 0.51}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1270378818
@@ -11989,7 +11989,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.8928993, z: 17.59118, w: 3.3790808}
+  m_margin: {x: 9.314391, y: 1.8837179, z: 9.310231, w: 1.619567}
   m_textInfo:
     textComponent: {fileID: 1270378818}
     characterCount: 1
@@ -12948,7 +12948,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432969410}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.472}
+  m_LocalPosition: {x: 0, y: 0, z: -0.411}
   m_LocalScale: {x: 0.024999997, y: 0.08, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1201828006}
@@ -12956,7 +12956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.2083, y: 0.5085997}
+  m_AnchoredPosition: {x: -0.432, y: 0.51}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432969412
@@ -13043,7 +13043,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.8928993, z: 17.59118, w: 3.3790808}
+  m_margin: {x: 8.900825, y: 1.5520293, z: 9.320563, w: 1.9105664}
   m_textInfo:
     textComponent: {fileID: 1432969412}
     characterCount: 2
@@ -14799,7 +14799,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686979872}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: -0.454}
+  m_LocalPosition: {x: 0, y: 0, z: -0.482}
   m_LocalScale: {x: 0.024999997, y: 0.08, z: 0.2}
   m_Children: []
   m_Father: {fileID: 1201828006}
@@ -14807,7 +14807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5575, y: 0.5085997}
+  m_AnchoredPosition: {x: 0.311, y: 0.5085997}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1686979874
@@ -14873,7 +14873,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 0
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -14894,7 +14894,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0.8928993, z: 17.59118, w: 3.3790808}
+  m_margin: {x: 9.794001, y: 0.8928993, z: 9.557129, w: 0.5274042}
   m_textInfo:
     textComponent: {fileID: 1686979874}
     characterCount: 1

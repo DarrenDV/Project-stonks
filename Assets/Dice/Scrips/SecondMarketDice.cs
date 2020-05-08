@@ -9,7 +9,7 @@ public class SecondMarketDice : MonoBehaviour
     static Rigidbody rb;
     public static Vector3 diceVelocity;
     public int moveTimer;
-    public GameObject camera;
+    public GameObject Camera;
     bool Throwable;
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class SecondMarketDice : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        SecondDice = camera.GetComponent<cameracontroller>().SecondDice;
+        SecondDice = Camera.GetComponent<cameracontroller>().SecondDice;
 
         if (SecondDice)
         {

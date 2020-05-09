@@ -6,11 +6,12 @@ using UnityEngine;
 public class Popupscript : MonoBehaviour
 {
     public int playerCount;
-    public bool rood;
+    public int bankrunCount;
+    public bool oranje;
     public bool blauw;
     public bool paars;
-    public bool geel;
-    public bool zwart;
+    public bool roze;
+    public bool grijs;
     public bool groen;
     // Start is called before the first frame update
     void Start()
@@ -41,16 +42,16 @@ public class Popupscript : MonoBehaviour
         .material.color = new Color
     }
     */
-    public void Rood()
+    public void Orange()
     {
-        if (rood == true)
+        if (oranje == true)
         {
-            rood = false;
+            oranje = false;
             playerCount--;
         }
         else
         {
-            rood = true;
+            oranje = true;
             playerCount++;
         }
     }
@@ -69,16 +70,16 @@ public class Popupscript : MonoBehaviour
         }
     }
 
-    public void Geel()
+    public void Pink()
     {
-        if (geel == true)
+        if (roze == true)
         {
-            geel = false;
+            roze = false;
             playerCount--;
         }
         else
         {
-            geel = true;
+            roze = true;
             playerCount++;
         }
     }
@@ -97,16 +98,16 @@ public class Popupscript : MonoBehaviour
         }
     }
 
-    public void Zwart()
+    public void Grijs()
     {
-        if (zwart == true)
+        if (grijs == true)
         {
-            zwart = false;
+            grijs = false;
             playerCount--;
         }
         else
         {
-            zwart = true;
+            grijs = true;
             playerCount++;
         }
     }

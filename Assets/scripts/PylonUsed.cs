@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class PylonUsed : MonoBehaviour
 {
-    public bool rood;
+    public bool oranje;
     public bool blauw;
     public bool paars;
-    public bool geel;
-    public bool zwart;
+    public bool roze;
+    public bool grijs;
     public bool groen;
-    public GameObject red;
+    public GameObject orange;
     public GameObject blue;
     public GameObject purple;
-    public GameObject orange;
+    public GameObject pink;
     public GameObject grey;
     public GameObject green;
     public int timer;
@@ -23,11 +23,11 @@ public class PylonUsed : MonoBehaviour
         GameObject PopUpPanelColor = GameObject.Find("PopUpPanelColor");
         Popupscript popupscript = PopUpPanelColor.GetComponent<Popupscript>();
 
-        rood = popupscript.rood;
+        oranje = popupscript.oranje;
         blauw = popupscript.blauw;
         paars = popupscript.paars;
-        geel = popupscript.geel;
-        zwart = popupscript.zwart;
+        roze = popupscript.roze;
+        grijs = popupscript.grijs;
         groen = popupscript.groen;
     }
 
@@ -37,14 +37,14 @@ public class PylonUsed : MonoBehaviour
         timer++;
         if (timer < 8)
         {
-            if (rood == true)
+            if (oranje == true)
             {
-                red.SetActive(true);
+                orange.SetActive(true);
                 GameObject.FindWithTag("pylonRed").SetActive(true);
             }
             else
             {
-                red.SetActive(false);
+                orange.SetActive(false);
                 GameObject.FindWithTag("pylonRed").SetActive(false);
             }
 
@@ -75,20 +75,20 @@ public class PylonUsed : MonoBehaviour
             }
 
 
-            if (geel == true)
+            if (roze == true)
             {
-                orange.SetActive(true);
+                pink.SetActive(true);
                 GameObject.FindWithTag("pylonOrange").SetActive(true);
 
             }
             else
             {
-                orange.SetActive(false);
+                pink.SetActive(false);
                 GameObject.FindWithTag("pylonOrange").SetActive(false);
             }
 
 
-            if (zwart == true)
+            if (grijs == true)
             {
                 grey.SetActive(true);
                 GameObject.FindWithTag("pylonGrey").SetActive(true);

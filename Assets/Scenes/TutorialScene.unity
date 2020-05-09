@@ -1045,7 +1045,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1765398326}
-        m_MethodName: Geel
+        m_MethodName: Pink
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1232,7 +1232,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1765398326}
-        m_MethodName: Zwart
+        m_MethodName: Grijs
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1814,7 +1814,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1765398326}
-        m_MethodName: Rood
+        m_MethodName: Orange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2705,11 +2705,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCount: 0
-  rood: 0
+  bankrunCount: 0
+  oranje: 0
   blauw: 0
   paars: 0
-  geel: 0
-  zwart: 0
+  roze: 0
+  grijs: 0
   groen: 0
 --- !u!1 &1781644630
 GameObject:
@@ -8226,9 +8227,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCount: 0
-  rood: 0
+  bankrunCount: 0
+  oranje: 0
   blauw: 0
   paars: 0
-  geel: 0
-  zwart: 0
+  roze: 0
+  grijs: 0
   groen: 0

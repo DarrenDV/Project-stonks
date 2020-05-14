@@ -157,7 +157,7 @@ public class cameracontroller : MonoBehaviour
             {
                 if (hit.collider.CompareTag("GameController"))
                 {
-                    for (int i = 0; i < 9; i++)
+                    for (int i = 0; i < 7; i++)
                     {
                         if (hit.collider.gameObject == knoppies[i])
                         {

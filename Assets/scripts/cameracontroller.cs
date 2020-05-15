@@ -17,6 +17,7 @@ public class cameracontroller : MonoBehaviour
     public int kijk;
     public int plase;
     public int startPos = 0;
+    public int bankrunCount;
     public int toMove;
     public int playerCount;
     public int location;
@@ -72,12 +73,56 @@ public class cameracontroller : MonoBehaviour
         Popupscript popupscript = PopUpPanelColor.GetComponent<Popupscript>();
 
         startPos = (popupscript.playerCount - 6) * -1;
+        bankrunCount = popupscript.bankrunCount;
 
         for (int i = 0; i < 6; i++)
         {
             pawns[i].transform.position = new Vector3(a[startPos].transform.position.x, pawns[i].transform.position.y, a[startPos].transform.position.z);
         }
-        
+
+        if (bankrunCount==1)
+        {
+            pawns[0].SetActive(true);
+            pawns[1].SetActive(false);
+            pawns[2].SetActive(false);
+            pawns[3].SetActive(false);
+            pawns[4].SetActive(false);
+        }
+        else if (bankrunCount == 2)
+        {
+            pawns[0].SetActive(true);
+            pawns[1].SetActive(true);
+            pawns[2].SetActive(false);
+            pawns[3].SetActive(false);
+            pawns[4].SetActive(false);
+
+        }
+        else if (bankrunCount == 3)
+        {
+            pawns[0].SetActive(true);
+            pawns[1].SetActive(true);
+            pawns[2].SetActive(true);
+            pawns[3].SetActive(false);
+            pawns[4].SetActive(false);
+        }
+        else if (bankrunCount == 4)
+        {
+            pawns[0].SetActive(true);
+            pawns[1].SetActive(true);
+            pawns[2].SetActive(true);
+            pawns[3].SetActive(true);
+            pawns[4].SetActive(false);
+
+        }
+        else if (bankrunCount == 5)
+        {
+            pawns[0].SetActive(true);
+            pawns[1].SetActive(true);
+            pawns[2].SetActive(true);
+            pawns[3].SetActive(true);
+            pawns[4].SetActive(true);
+        }
+
     }
 
 

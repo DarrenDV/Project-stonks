@@ -6,15 +6,15 @@ TagManager:
   tags:
   - pawn
   - paddestoel
+  - pylonOrange
+  - pylonRed
+  - pylonPurple
+  - pylonBlue
+  - pylonGrey
+  - pylonGreen
+  - DiceButton
   - Pylon
   - playerLevel
-  - DiceButton
-  - pylonGreen
-  - pylonGrey
-  - pylonPurple
-  - pylonOrange
-  - pylonBlue
-  - pylonRed
   layers:
   - Default
   - TransparentFX

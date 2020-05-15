@@ -2138,17 +2138,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1527727744}
-        m_MethodName: switchScreen
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1765398322}
         m_MethodName: SetActive
         m_Mode: 6
@@ -2159,6 +2148,28 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1765398326}
+        m_MethodName: switchScreen
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1549997287}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1527727746
 MonoBehaviour:
@@ -2406,7 +2417,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1571108244}
+      - m_Target: {fileID: 1765398326}
         m_MethodName: switchScreen
         m_Mode: 1
         m_Arguments:
@@ -3096,6 +3107,8 @@ MonoBehaviour:
   groen: 0
   bankrunSlider: {fileID: 0}
   text: {fileID: 0}
+  button: {fileID: 0}
+  tutorial: {fileID: 0}
 --- !u!1 &1781644630
 GameObject:
   m_ObjectHideFlags: 0
@@ -8682,7 +8695,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108417504}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6bbffb299b7f7d4aaf7fc86fcc68b46, type: 3}
   m_Name: 
@@ -8697,3 +8710,5 @@ MonoBehaviour:
   groen: 0
   bankrunSlider: {fileID: 0}
   text: {fileID: 0}
+  button: {fileID: 0}
+  tutorial: {fileID: 0}

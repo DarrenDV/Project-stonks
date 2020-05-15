@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
+using System.Diagnostics;
+using System.Collections.Specialized;
 
 public class Popupscript : MonoBehaviour
 {
@@ -16,11 +19,15 @@ public class Popupscript : MonoBehaviour
     public bool groen;
     public Slider bankrunSlider;
     public Text text;
+    public Button button;
+    public Button tutorial;
     // Start is called before the first frame update
     void Start()
     {
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
         text = GameObject.Find("BankrunText").GetComponent<Text>();
+        button = GameObject.Find("Spel").GetComponent<Button>();
+        tutorial = GameObject.Find("Tutorial").GetComponent<Button>();
     }
 
     // Update is called once per frame
@@ -37,19 +44,18 @@ public class Popupscript : MonoBehaviour
             bankrunCount = (int)bankrunSlider.value;
             text.text = text.text = bankrunCount.ToString() + " Bankruns";
         }
-    }
-    /*
-    public void setPlayerCount(int playerCount)
-    {
-        this.playerCount = playerCount;
+        if (playerCount<3)
+        {
+            button.enabled = false;
+            tutorial.enabled = false;
+        }
+        else
+        {
+            button.enabled = true;
+            tutorial.enabled = true;
+        }
     }
 
-    public int getPlayerCount()
-    {
-        return playerCount;
-        .material.color = new Color
-    }
-    */
     public void Orange()
     {
         if (oranje == true)
@@ -136,5 +142,13 @@ public class Popupscript : MonoBehaviour
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
+    }
+
+    public void switchScreen()
+    {
+        if (playerCount > 2)
+        {
+            SceneManager.LoadScene("bord");
+        }
     }
 }

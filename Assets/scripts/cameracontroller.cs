@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class cameracontroller : MonoBehaviour
 {
@@ -36,6 +37,8 @@ public class cameracontroller : MonoBehaviour
     public GameObject makDice2B;
     public GameObject klaar;
     public GameObject regels;
+    public GameObject exit;
+    public GameObject tutorial;
 
     public bool blueDice;
     public bool Blue10;
@@ -241,6 +244,14 @@ public class cameracontroller : MonoBehaviour
                         bank.SetActive(false);
                     }
                     if (hit.collider.gameObject == regels)
+                    {
+
+                    }
+                    if (hit.collider.gameObject == tutorial)
+                    {
+                        SceneManager.LoadScene("TutorialScene");
+                    }
+                    if (hit.collider.gameObject == exit)
                     {
 
                     }

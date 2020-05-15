@@ -11,6 +11,7 @@ public class cameracontroller : MonoBehaviour
     public GameObject[] b;
     public GameObject[] a;
     public GameObject[] pawns;
+    public GameObject[] knoppies;
     public int inplay;
     public int time;
     public int kijk;
@@ -26,10 +27,14 @@ public class cameracontroller : MonoBehaviour
     public GameObject cam;
     public GameObject rotator;
     public GameObject popup;
-    public GameObject[] knoppies;
+    public GameObject bank;
     public GameObject numDice;
     public GameObject makDice1;
     public GameObject makDice2;
+    public GameObject makDice1B;
+    public GameObject makDice2B;
+    public GameObject klaar;
+    public GameObject regels;
 
     public bool blueDice;
     public bool Blue10;
@@ -68,11 +73,11 @@ public class cameracontroller : MonoBehaviour
 
         startPos = (popupscript.playerCount - 6) * -1;
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < 6; i++)
         {
             pawns[i].transform.position = new Vector3(a[startPos].transform.position.x, pawns[i].transform.position.y, a[startPos].transform.position.z);
         }
-
+        
     }
 
 
@@ -106,9 +111,10 @@ public class cameracontroller : MonoBehaviour
             }
         }
 
-        if ((pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z) && inplay < 4)
+        if ((pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z) && inplay < 5)
         {
             inplay++;
+            Bankrun();
         }
 
         if (inplay > 2)
@@ -183,6 +189,15 @@ public class cameracontroller : MonoBehaviour
 
                             popup.SetActive(false);
                         }
+                    }
+
+                    if (hit.collider.gameObject == klaar)
+                    {
+                        bank.SetActive(false);
+                    }
+                    if (hit.collider.gameObject == regels)
+                    {
+
                     }
                 }
             }
@@ -298,6 +313,87 @@ public class cameracontroller : MonoBehaviour
         else
         {
             makDice2.SetActive(false);
+        }
+    }
+
+    void Bankrun()
+    {
+        toMove = 0;
+        bank.SetActive(true);
+
+        if (SecondDice)
+        {
+            makDice2B.SetActive(true);
+        }
+        else
+        {
+            makDice2B.SetActive(false);
+        }
+
+        if (location == 0)
+        {
+            makDice1B.transform.rotation = Quaternion.Euler(60, 270, 0);
+            makDice2B.transform.rotation = Quaternion.Euler(60, 270, 0);
+        }
+        else if (location == 1)
+        {
+            makDice1B.transform.rotation = Quaternion.Euler(60, 0, 0);
+            makDice2B.transform.rotation = Quaternion.Euler(60, 0, 0);
+        }
+        else if (location == -1)
+        {
+            makDice1B.transform.rotation = Quaternion.Euler(60, 180, 0);
+            makDice2B.transform.rotation = Quaternion.Euler(60, 180, 0);
+        }
+
+        if (Windmill)
+        {
+            makDice1B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+        }
+        else if (Fish)
+        {
+            makDice1B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+        }
+        else if (Flower)
+        {
+            makDice1B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
+        }
+        else if (Boat)
+        {
+            makDice1B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+        }
+        else if (Wheel)
+        {
+            makDice1B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
+        }
+        else if (Stones)
+        {
+            makDice1B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
+        }
+
+        if (Windmill2)
+        {
+            makDice2B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+        }
+        else if (Fish2)
+        {
+            makDice2B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+        }
+        else if (Flower2)
+        {
+            makDice2B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
+        }
+        else if (Boat2)
+        {
+            makDice2B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+        }
+        else if (Wheel2)
+        {
+            makDice2B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
+        }
+        else if (Stones2)
+        {
+            makDice2B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
         }
     }
 }

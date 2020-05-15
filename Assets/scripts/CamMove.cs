@@ -20,8 +20,6 @@ public class CamMove : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            int layerMask1 = LayerMask.GetMask("Water");
-            int layerMask2 = LayerMask.GetMask("lokaties");
             int layerMask3 = LayerMask.GetMask("UI");
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask3))
             {

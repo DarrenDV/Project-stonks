@@ -15,10 +15,12 @@ public class Popupscript : MonoBehaviour
     public bool grijs;
     public bool groen;
     public Slider bankrunSlider;
+    public Text text;
     // Start is called before the first frame update
     void Start()
     {
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
+        text = GameObject.Find("BankrunText").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -33,8 +35,8 @@ public class Popupscript : MonoBehaviour
         else
         {
             bankrunCount = (int)bankrunSlider.value;
+            text.text = text.text = bankrunCount.ToString() + " Bankruns";
         }
-
     }
     /*
     public void setPlayerCount(int playerCount)

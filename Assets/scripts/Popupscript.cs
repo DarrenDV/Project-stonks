@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Popupscript : MonoBehaviour
 {
@@ -13,10 +14,11 @@ public class Popupscript : MonoBehaviour
     public bool roze;
     public bool grijs;
     public bool groen;
+    public Slider bankrunSlider;
     // Start is called before the first frame update
     void Start()
     {
-
+        bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
     }
 
     // Update is called once per frame
@@ -27,6 +29,10 @@ public class Popupscript : MonoBehaviour
         if (scene.name == "bord")
         {
             this.gameObject.SetActive(false);
+        }
+        else
+        {
+            bankrunCount = (int)bankrunSlider.value;
         }
 
     }

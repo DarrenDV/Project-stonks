@@ -253,7 +253,7 @@ public class cameracontroller : MonoBehaviour
                     }
                     if (hit.collider.gameObject == exit)
                     {
-
+                        Application.Quit();
                     }
                 }
             }

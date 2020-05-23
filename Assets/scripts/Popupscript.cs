@@ -17,17 +17,23 @@ public class Popupscript : MonoBehaviour
     public bool roze;
     public bool grijs;
     public bool groen;
+    public bool bordActive;
     public Slider bankrunSlider;
     public Text text;
     public Button button;
     public Button tutorial;
+
+    GameObject CameraBord;
+    GameObject CameraTutorial;
+    GameObject LichtTutorial;
+
     // Start is called before the first frame update
     void Start()
     {
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
         text = GameObject.Find("BankrunText").GetComponent<Text>();
         button = GameObject.Find("Spel").GetComponent<Button>();
-        tutorial = GameObject.Find("Tutorial").GetComponent<Button>();
+        // tutorial = GameObject.Find("Tutorial").GetComponent<Button>();
     }
 
     // Update is called once per frame
@@ -37,7 +43,7 @@ public class Popupscript : MonoBehaviour
 
         if (scene.name == "bord")
         {
-            this.gameObject.SetActive(false);
+           //this.gameObject.SetActive(false);
         }
         else
         {
@@ -141,14 +147,23 @@ public class Popupscript : MonoBehaviour
     }
     private void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);
+        CameraTutorial = GameObject.Find("Main CameraT");
+        LichtTutorial = GameObject.Find("Directional Light");
     }
 
     public void switchScreen()
     {
-        if (playerCount > 2)
+        if (playerCount > 2 && !bordActive)
         {
             SceneManager.LoadScene("bord");
+            bordActive = true;
+        }
+        else if (bordActive)
+        {
+            CameraTutorial.gameObject.SetActive(false);
+            LichtTutorial.gameObject.SetActive(false);
+            //CameraBord.gameObject.SetActive(true);
+            this.gameObject.SetActive(false);
         }
     }
 }

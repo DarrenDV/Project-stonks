@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CamMove : MonoBehaviour
 {
@@ -17,6 +18,13 @@ public class CamMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Scene scene = SceneManager.GetActiveScene();
+
+        if (scene.name == "TutorialScene")
+        {
+            this.gameObject.SetActive(false);
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -25,18 +33,15 @@ public class CamMove : MonoBehaviour
             {
                 if (hit.collider.CompareTag("GameController"))
                 {
-                    for (int i = 0; i < 9; i++)
+                    if (hit.collider.gameObject == R)
                     {
-                        if (hit.collider.gameObject == R)
-                        {
-                            rechts = true;
-                            links = false;
-                        }
-                        if (hit.collider.gameObject == L)
-                        {
-                            rechts = false;
-                            links = true;
-                        }
+                        rechts = true;
+                        links = false;
+                    }
+                    if (hit.collider.gameObject == L)
+                    {
+                        rechts = false;
+                        links = true;
                     }
                 }
             }
@@ -87,6 +92,5 @@ public class CamMove : MonoBehaviour
             links = false;
             location = 0;
         }
-        Debug.Log(transform.rotation.y);
     }
 }

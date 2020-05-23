@@ -40,6 +40,10 @@ public class cameracontroller : MonoBehaviour
     public GameObject exit;
     public GameObject tutorial;
 
+    GameObject PopUpPanelColor;
+    GameObject CameraTutorial;
+    GameObject LichtTutorial;
+
     public bool blueDice;
     public bool Blue10;
     public bool Blue20;
@@ -72,7 +76,11 @@ public class cameracontroller : MonoBehaviour
 
     void Start()
     {
-        GameObject PopUpPanelColor = GameObject.Find("PopUpPanelColor");
+        PopUpPanelColor = GameObject.Find("PopUpPanelColor");
+        CameraTutorial = GameObject.Find("Main CameraT");
+        LichtTutorial = GameObject.Find("Directional Light");
+
+
         Popupscript popupscript = PopUpPanelColor.GetComponent<Popupscript>();
 
         startPos = (popupscript.playerCount - 6) * -1;
@@ -128,9 +136,17 @@ public class cameracontroller : MonoBehaviour
 
     }
 
+    void Awake()
+    {
+        PopUpPanelColor = GameObject.Find("PopUpPanelColor");
+        CameraTutorial = GameObject.Find("Main CameraT");
+        LichtTutorial = GameObject.Find("Directional Light");
+        //DontDestroyOnLoad(this.gameObject);
+    }
 
     void LateUpdate()
     {
+
         blueDice = activator.GetComponent<NumberDiceCheckZoneScript>().blueDice;
         Blue10 = activator.GetComponent<NumberDiceCheckZoneScript>().Blue10;
         Blue20 = activator.GetComponent<NumberDiceCheckZoneScript>().Blue20;
@@ -249,7 +265,10 @@ public class cameracontroller : MonoBehaviour
                     }
                     if (hit.collider.gameObject == tutorial)
                     {
-                        SceneManager.LoadScene("TutorialScene");
+                        PopUpPanelColor.gameObject.SetActive(true);
+                        CameraTutorial.gameObject.SetActive(true);
+                        LichtTutorial.gameObject.SetActive(true);
+                       // this.gameObject.SetActive(false);
                     }
                     if (hit.collider.gameObject == exit)
                     {

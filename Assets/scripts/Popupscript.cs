@@ -26,6 +26,7 @@ public class Popupscript : MonoBehaviour
     GameObject CameraBord;
     GameObject CameraTutorial;
     GameObject LichtTutorial;
+    GameObject Canvas;
 
     // Start is called before the first frame update
     void Start()
@@ -149,6 +150,7 @@ public class Popupscript : MonoBehaviour
     {
         CameraTutorial = GameObject.Find("Main CameraT");
         LichtTutorial = GameObject.Find("Directional Light");
+        Canvas = GameObject.Find("Canvas");
     }
 
     public void switchScreen()
@@ -162,6 +164,7 @@ public class Popupscript : MonoBehaviour
         {
             CameraTutorial.gameObject.SetActive(false);
             LichtTutorial.gameObject.SetActive(false);
+            Canvas.gameObject.SetActive(false);
             //CameraBord.gameObject.SetActive(true);
             this.gameObject.SetActive(false);
         }

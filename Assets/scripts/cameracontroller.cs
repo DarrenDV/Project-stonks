@@ -43,6 +43,7 @@ public class cameracontroller : MonoBehaviour
     GameObject PopUpPanelColor;
     GameObject CameraTutorial;
     GameObject LichtTutorial;
+    GameObject Canvas;
 
     public bool blueDice;
     public bool Blue10;
@@ -141,6 +142,7 @@ public class cameracontroller : MonoBehaviour
         PopUpPanelColor = GameObject.Find("PopUpPanelColor");
         CameraTutorial = GameObject.Find("Main CameraT");
         LichtTutorial = GameObject.Find("Directional Light");
+        Canvas =  GameObject.Find("Canvas");
         //DontDestroyOnLoad(this.gameObject);
     }
 
@@ -268,6 +270,7 @@ public class cameracontroller : MonoBehaviour
                         PopUpPanelColor.gameObject.SetActive(true);
                         CameraTutorial.gameObject.SetActive(true);
                         LichtTutorial.gameObject.SetActive(true);
+                        Canvas.gameObject.SetActive(true);
                        // this.gameObject.SetActive(false);
                     }
                     if (hit.collider.gameObject == exit)

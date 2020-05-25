@@ -23,11 +23,14 @@ public class PylonUsed : MonoBehaviour
         GameObject PopUpPanelColor = GameObject.Find("PopUpPanelColor");
         GameObject  CameraTutorial = GameObject.Find("Main CameraT");
         GameObject LichtTutorial = GameObject.Find("Directional Light");
+        GameObject Canvas = GameObject.Find("Canvas");
 
         Popupscript popupscript = PopUpPanelColor.GetComponent<Popupscript>();
         PopUpPanelColor.gameObject.SetActive(false);
         CameraTutorial.gameObject.SetActive(false);
         LichtTutorial.gameObject.SetActive(false);
+        Canvas.gameObject.SetActive(false);
+
 
         oranje = popupscript.oranje;
         blauw = popupscript.blauw;

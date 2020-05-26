@@ -4,7 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ButtonHandler : MonoBehaviour
-{  public int counter = 0;
+{
+    [SerializeField]
+    public TutorialData tutorialData;
+    public int counter = 0;
+    public int counterMin = 0;
+    public int counterMax = 15;
 
     Image myImageComponent;
 
@@ -38,9 +43,15 @@ public class ButtonHandler : MonoBehaviour
         myImageComponent = GetComponent<Image>();
     }
 
+    public void Init(TutorialData tutorialData)
+    {
+        counter = tutorialData.getCounter;
+        counterMin = tutorialData.getCounterMin;
+        counterMax = tutorialData.getCounterMax;
+    }
+
     public void Switch()
     {
-
             switch (counter)
             {
                 case 0:
@@ -121,12 +132,12 @@ public class ButtonHandler : MonoBehaviour
 
     public void ChangeForward()
     {
-        if (counter < 23) counter++;
+        if (counter < counterMax) counter++;
     }
 
     public void ChangeBackward()
     {
-        if(counter >0) counter--;
+        if(counter >counterMin) counter--;
     }
 
     public void SetText(string text)

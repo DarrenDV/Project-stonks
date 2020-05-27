@@ -44,6 +44,8 @@ public class cameracontroller : MonoBehaviour
     GameObject LichtTutorial;
     GameObject Canvas;
 
+    public float display;
+
     public bool blueDice;
     public bool Blue10;
     public bool Blue20;
@@ -313,6 +315,8 @@ public class cameracontroller : MonoBehaviour
 
         if (blueDice)
         {
+            if (display == 1)
+            {
                 popup.SetActive(true);
                 if (Blue10)
                 {
@@ -372,10 +376,13 @@ public class cameracontroller : MonoBehaviour
                 {
                     makDice2.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
                 }
+            }
+            display++;
         }
         else
         {
             popup.SetActive(false);
+            display = 0;
         }
 
         if (SecondDice)

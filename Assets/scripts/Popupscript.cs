@@ -65,85 +65,103 @@ public class Popupscript : MonoBehaviour
 
     public void Orange()
     {
-        if (oranje == true)
+        if (!bordActive)
         {
-            oranje = false;
-            playerCount--;
-        }
-        else
-        {
-            oranje = true;
-            playerCount++;
+            if (oranje == true)
+            {
+                oranje = false;
+                playerCount--;
+            }
+            else
+            {
+                oranje = true;
+                playerCount++;
+            }
         }
     }
 
     public void Blauw()
     {
-        if (blauw == true)
+        if (!bordActive)
         {
-            blauw = false;
-            playerCount--;
-        }
-        else
-        {
-            blauw = true;
-            playerCount++;
+            if (blauw == true)
+            {
+                blauw = false;
+                playerCount--;
+            }
+            else
+            {
+                blauw = true;
+                playerCount++;
+            }
         }
     }
 
     public void Pink()
     {
-        if (roze == true)
+        if (!bordActive)
         {
-            roze = false;
-            playerCount--;
-        }
-        else
-        {
-            roze = true;
-            playerCount++;
+            if (roze == true)
+            {
+                roze = false;
+                playerCount--;
+            }
+            else
+            {
+                roze = true;
+                playerCount++;
+            }
         }
     }
 
     public void Paars()
     {
-        if (paars == true)
+        if (!bordActive)
         {
-            paars = false;
-            playerCount--;
-        }
-        else
-        {
-            paars = true;
-            playerCount++;
+            if (paars == true)
+            {
+                paars = false;
+                playerCount--;
+            }
+            else
+            {
+                paars = true;
+                playerCount++;
+            }
         }
     }
 
     public void Grijs()
     {
-        if (grijs == true)
+        if (!bordActive)
         {
-            grijs = false;
-            playerCount--;
-        }
-        else
-        {
-            grijs = true;
-            playerCount++;
+            if (grijs == true)
+            {
+                grijs = false;
+                playerCount--;
+            }
+            else
+            {
+                grijs = true;
+                playerCount++;
+            }
         }
     }
 
     public void Groen()
     {
-        if (groen == true)
+        if (!bordActive)
         {
-            groen = false;
-            playerCount--;
-        }
-        else
-        {
-            groen = true;
-            playerCount++;
+            if (groen == true)
+            {
+                groen = false;
+                playerCount--;
+            }
+            else
+            {
+                groen = true;
+                playerCount++;
+            }
         }
     }
     private void Awake()

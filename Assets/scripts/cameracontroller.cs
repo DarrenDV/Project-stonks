@@ -15,7 +15,6 @@ public class cameracontroller : MonoBehaviour
     public GameObject[] knoppies;
     public int inplay;
     public int time;
-    public int kijk;
     public int plase;
     public int startPos = 0;
     public int bankrunCount;
@@ -314,8 +313,6 @@ public class cameracontroller : MonoBehaviour
 
         if (blueDice)
         {
-            if (kijk == 120)
-            {
                 popup.SetActive(true);
                 if (Blue10)
                 {
@@ -375,13 +372,10 @@ public class cameracontroller : MonoBehaviour
                 {
                     makDice2.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
                 }
-            }
-            kijk++;
         }
         else
         {
             popup.SetActive(false);
-            kijk = 0;
         }
 
         if (SecondDice)

@@ -10,6 +10,7 @@ public class MarketDiceRoll : MonoBehaviour
 
     public void Start()
     {
+        //Gets the RigidBody from the Dice
         rb = GetComponent<Rigidbody>();
     }
 
@@ -28,6 +29,5 @@ public class MarketDiceRoll : MonoBehaviour
         transform.rotation = UnityEngine.Random.rotation;
         rb.AddForce(transform.up * 500);
         rb.AddTorque(dirX, dirY, dirZ);
-
     }
 }

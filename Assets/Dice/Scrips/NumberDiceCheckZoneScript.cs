@@ -7,10 +7,12 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
     public int Timer;
     public int CheckTime = 450;
 
+    //Bools for numberdice
     public bool blueDice;
     public bool Blue10;
     public bool Blue20;
 
+    //Bools for firstmarketdice
     public bool Windmill;
     public bool Fish;
     public bool Flower;
@@ -18,6 +20,7 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
     public bool Wheel;
     public bool Stones;
 
+    //Bools for secondmarketdice
     public bool Windmill2;
     public bool Fish2;
     public bool Flower2;
@@ -33,6 +36,7 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
     {
         AutoEN = ButtonPress.AutomaticEnabled;
 
+        //Resets all bools when the button is pressed
         if (ButtonPress.Pressed)
         {
             blueDice = false;

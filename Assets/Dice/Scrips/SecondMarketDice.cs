@@ -12,18 +12,16 @@ public class SecondMarketDice : MonoBehaviour
     public GameObject Camera;
     bool Throwable;
 
-    // Start is called before the first frame update
     public void Start()
     {
         rb = GetComponent<Rigidbody>();
         
     }
 
-    // Update is called once per frame
     public void Update()
     {
         SecondDice = Camera.GetComponent<cameracontroller>().SecondDice;
-
+        //Checks if the second marketdice is throwable
         if (SecondDice)
         {
             if (moveTimer == 0)
@@ -36,19 +34,22 @@ public class SecondMarketDice : MonoBehaviour
     }  
     
     public void Throw()
+    {
+        if (Throwable)
         {
-            if (Throwable)
-            {
-                diceVelocity = rb.velocity;
+            diceVelocity = rb.velocity;
 
-                float dirX = UnityEngine.Random.Range(0, 1000);
-                float dirY = UnityEngine.Random.Range(0, 1000);
-                float dirZ = UnityEngine.Random.Range(0, 1000);
-                transform.position = new Vector3(2, 5, 10);
-                transform.rotation = UnityEngine.Random.rotation;
-                rb.AddForce(transform.up * 500);
-                rb.AddTorque(dirX, dirY, dirZ);
-            }
+            //Makes random dirs for the torque
+            float dirX = UnityEngine.Random.Range(0, 1000);
+            float dirY = UnityEngine.Random.Range(0, 1000);
+            float dirZ = UnityEngine.Random.Range(0, 1000);
+
+            //Standard position for the die
+            transform.position = new Vector3(2, 5, 10);
+
+            transform.rotation = UnityEngine.Random.rotation;
+            rb.AddForce(transform.up * 500);
+            rb.AddTorque(dirX, dirY, dirZ);
         }
-
+    }
 }

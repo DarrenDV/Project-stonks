@@ -73,6 +73,7 @@ public class Code : MonoBehaviour
 
     void Update()
     {
+        //Plays Rick Astley when Konami Code succeeds
         if (success)
         {
             Activated = true;

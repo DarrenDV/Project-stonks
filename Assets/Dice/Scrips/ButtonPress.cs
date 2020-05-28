@@ -52,11 +52,6 @@ public class ButtonPress : MonoBehaviour
         SecondMD.Throw();
     }
 
-    public void MarketThrow(){
-        MarketDR.Throw();
-        SecondMD.Throw();
-    }
-
     void ButtonDown()
     {
         //Moves the button down and up to give a "pressed" effect

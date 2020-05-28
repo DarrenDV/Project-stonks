@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ButtonHandler : MonoBehaviour
 {
-    [SerializeField]
-    public TutorialData tutorialData;
     public int counter = 16;
     public int counterMin = 0;
     public int counterMax = 15;
@@ -49,12 +47,6 @@ public class ButtonHandler : MonoBehaviour
         turorial = GameObject.Find("Panel");
     }
 
-        public void Init(TutorialData tutorialData)
-    {
-        counter = tutorialData.getCounter;
-        counterMin = tutorialData.getCounterMin;
-        counterMax = tutorialData.getCounterMax;
-    }
 
     public void Switch()
     {

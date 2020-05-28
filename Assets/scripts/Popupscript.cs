@@ -25,17 +25,23 @@ public class Popupscript : MonoBehaviour
     public Button spel;
     public Button bankrun;
     public Button promote;
+    public Button tutorialChooseB;
+    public Button back;
+    public GameObject mindrie;
 
     GameObject CameraBord;
     GameObject CameraTutorial;
     GameObject LichtTutorial;
     GameObject Canvas;
     public GameObject Panel;
+    public GameObject tutorialChoose;
 
     // Start is called before the first frame update
     void Start()
     {
         Panel.gameObject.SetActive(false);
+        tutorialChoose.SetActive(false);
+
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
         text = GameObject.Find("BankrunText").GetComponent<Text>();
         button = GameObject.Find("Spel").GetComponent<Button>();
@@ -63,6 +69,8 @@ public class Popupscript : MonoBehaviour
             spel.enabled = false;
             bankrun.enabled = false;
             promote.enabled = false;
+            tutorialChooseB.enabled = false;
+            mindrie.SetActive(true);
         }
         else
         {
@@ -71,6 +79,8 @@ public class Popupscript : MonoBehaviour
             spel.enabled = true;
             bankrun.enabled = true;
             promote.enabled = true;
+            tutorialChooseB.enabled = true;
+            mindrie.SetActive(false);
         }
     }
 
@@ -188,6 +198,7 @@ public class Popupscript : MonoBehaviour
         {
             SceneManager.LoadScene("bord");
             bordActive = true;
+            back.enabled = false;
         }
         else if (bordActive)
         {
@@ -196,6 +207,7 @@ public class Popupscript : MonoBehaviour
             Canvas.gameObject.SetActive(false);
             //CameraBord.gameObject.SetActive(true);
             this.gameObject.SetActive(false);
+
         }
     }
 }

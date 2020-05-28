@@ -38,12 +38,14 @@ public class cameracontroller : MonoBehaviour
     public GameObject regels;
     public GameObject exit;
     public GameObject tutorial;
+    //public GameObject tutorialChoose;
 
     GameObject PopUpPanelColor;
     GameObject CameraTutorial;
     GameObject LichtTutorial;
     GameObject Canvas;
     GameObject turorial;
+    GameObject tutorialChoose;
 
     public float display;
 
@@ -146,6 +148,7 @@ public class cameracontroller : MonoBehaviour
         LichtTutorial = GameObject.Find("Directional Light");
         Canvas =  GameObject.Find("Canvas");
         turorial = GameObject.Find("Panel");
+        tutorialChoose = GameObject.Find("TutorialChoose");
 
         //DontDestroyOnLoad(this.gameObject);
     }
@@ -271,18 +274,20 @@ public class cameracontroller : MonoBehaviour
                         CameraTutorial.gameObject.SetActive(true);
                         LichtTutorial.gameObject.SetActive(true);
                         Canvas.gameObject.SetActive(true);
-                        turorial.gameObject.SetActive(true);
+                        //turorial.gameObject.SetActive(true);
+                        tutorialChoose.gameObject.SetActive(false);
 
                         ButtonHandler other = (ButtonHandler)turorial.GetComponent(typeof(ButtonHandler));
                         other.TutorialBankrun();
                     }
                     if (hit.collider.gameObject == tutorial)
                     {
-                        PopUpPanelColor.gameObject.SetActive(true);
+                        PopUpPanelColor.gameObject.SetActive(false);
                         CameraTutorial.gameObject.SetActive(true);
                         LichtTutorial.gameObject.SetActive(true);
                         Canvas.gameObject.SetActive(true);
                         turorial.gameObject.SetActive(false);
+                        tutorialChoose.gameObject.SetActive(true);
                         // this.gameObject.SetActive(false);
                     }
                     if (hit.collider.gameObject == exit)

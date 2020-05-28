@@ -37,5 +37,29 @@ public class TutorialData : ScriptableObject
         }
     }
 
+    public void tutorialSetup()
+    {
+        counter = 0;
+        counterMin = 0;
+        counterMax = 4;
+    }
 
+    public void tutorialSpel()
+    {
+        counter = 5;
+        counterMin = 5;
+        counterMax = 15;
+    }
+    public void tutorialBankrunl()
+    {
+        counter = 16;
+        counterMin = 16;
+        counterMax = 19;
+    }
+    public void tutorialPromote()
+    {
+        counter = 20;
+        counterMin = 20;
+        counterMax = 23;
+    }
 }

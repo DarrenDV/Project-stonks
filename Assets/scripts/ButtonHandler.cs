@@ -7,7 +7,7 @@ public class ButtonHandler : MonoBehaviour
 {
     [SerializeField]
     public TutorialData tutorialData;
-    public int counter = 0;
+    public int counter = 16;
     public int counterMin = 0;
     public int counterMax = 15;
 
@@ -163,6 +163,7 @@ public class ButtonHandler : MonoBehaviour
         counter = 16;
         counterMin = 16;
         counterMax = 19;
+        
     }
     public void Tutorialpromote()
     {

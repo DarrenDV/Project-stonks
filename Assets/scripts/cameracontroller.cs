@@ -43,6 +43,7 @@ public class cameracontroller : MonoBehaviour
     GameObject CameraTutorial;
     GameObject LichtTutorial;
     GameObject Canvas;
+    GameObject turorial;
 
     public float display;
 
@@ -144,6 +145,8 @@ public class cameracontroller : MonoBehaviour
         CameraTutorial = GameObject.Find("Main CameraT");
         LichtTutorial = GameObject.Find("Directional Light");
         Canvas =  GameObject.Find("Canvas");
+        turorial = GameObject.Find("Panel");
+
         //DontDestroyOnLoad(this.gameObject);
     }
 
@@ -264,7 +267,14 @@ public class cameracontroller : MonoBehaviour
                     }
                     if (hit.collider.gameObject == regels)
                     {
+                        
+                        CameraTutorial.gameObject.SetActive(true);
+                        LichtTutorial.gameObject.SetActive(true);
+                        Canvas.gameObject.SetActive(true);
+                        turorial.gameObject.SetActive(true);
 
+                        ButtonHandler other = (ButtonHandler)turorial.GetComponent(typeof(ButtonHandler));
+                        other.TutorialBankrun();
                     }
                     if (hit.collider.gameObject == tutorial)
                     {

@@ -30,10 +30,12 @@ public class Popupscript : MonoBehaviour
     GameObject CameraTutorial;
     GameObject LichtTutorial;
     GameObject Canvas;
+    public GameObject Panel;
 
     // Start is called before the first frame update
     void Start()
     {
+        Panel.gameObject.SetActive(false);
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
         text = GameObject.Find("BankrunText").GetComponent<Text>();
         button = GameObject.Find("Spel").GetComponent<Button>();

@@ -20,7 +20,7 @@ public class scenesSafer : MonoBehaviour
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("TutorialScene"));
         }
         */
-
+        //Panal.gameObject.SetActive(false);
     }
 
     private void Awake()

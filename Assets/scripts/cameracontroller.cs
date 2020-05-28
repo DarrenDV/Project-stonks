@@ -282,7 +282,8 @@ public class cameracontroller : MonoBehaviour
                         CameraTutorial.gameObject.SetActive(true);
                         LichtTutorial.gameObject.SetActive(true);
                         Canvas.gameObject.SetActive(true);
-                       // this.gameObject.SetActive(false);
+                        turorial.gameObject.SetActive(false);
+                        // this.gameObject.SetActive(false);
                     }
                     if (hit.collider.gameObject == exit)
                     {

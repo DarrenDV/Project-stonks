@@ -38,12 +38,18 @@ public class ButtonHandler : MonoBehaviour
     public Sprite tutorial23;
     public Sprite tutorial24;
 
+    GameObject turorial;
+
     void Start()
     {
         myImageComponent = GetComponent<Image>();
     }
+    void Awake()
+    {
+        turorial = GameObject.Find("Panel");
+    }
 
-    public void Init(TutorialData tutorialData)
+        public void Init(TutorialData tutorialData)
     {
         counter = tutorialData.getCounter;
         counterMin = tutorialData.getCounterMin;
@@ -127,7 +133,8 @@ public class ButtonHandler : MonoBehaviour
                 GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial24;
                 break;
         }
-
+        counter++;
+        counter--;
     }
 
     public void ChangeForward()
@@ -160,10 +167,12 @@ public class ButtonHandler : MonoBehaviour
     }
     public void TutorialBankrun()
     {
+        
         counter = 16;
         counterMin = 16;
         counterMax = 19;
-        
+        turorial.GetComponent<Image>().sprite = tutorial17;
+
     }
     public void Tutorialpromote()
     {

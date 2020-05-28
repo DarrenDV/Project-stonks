@@ -22,6 +22,9 @@ public class Popupscript : MonoBehaviour
     public Text text;
     public Button button;
     public Button tutorial;
+    public Button spel;
+    public Button bankrun;
+    public Button promote;
 
     GameObject CameraBord;
     GameObject CameraTutorial;
@@ -55,11 +58,17 @@ public class Popupscript : MonoBehaviour
         {
             button.enabled = false;
             tutorial.enabled = false;
+            spel.enabled = false;
+            bankrun.enabled = false;
+            promote.enabled = false;
         }
         else
         {
             button.enabled = true;
             tutorial.enabled = true;
+            spel.enabled = true;
+            bankrun.enabled = true;
+            promote.enabled = true;
         }
     }
 

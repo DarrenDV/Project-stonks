@@ -40,7 +40,6 @@ public class PylonUsed : MonoBehaviour
         groen = popupscript.groen;
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer++;

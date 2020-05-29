@@ -276,6 +276,7 @@ public class cameracontroller : MonoBehaviour
                         Canvas.gameObject.SetActive(true);
                         //turorial.gameObject.SetActive(true);
                         tutorialChoose.gameObject.SetActive(false);
+                        PopUpPanelColor.gameObject.SetActive(false);
 
                         ButtonHandler other = (ButtonHandler)turorial.GetComponent(typeof(ButtonHandler));
                         other.TutorialBankrun();

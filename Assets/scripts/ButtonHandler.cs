@@ -36,18 +36,21 @@ public class ButtonHandler : MonoBehaviour
     public Sprite tutorial23;
     public Sprite tutorial24;
 
-    GameObject turorial;
+    GameObject tutorial;
 
+    // Start wordt aangeroepen voor het eerste frame
     void Start()
     {
         myImageComponent = GetComponent<Image>();
     }
+
+    // awake wordt gebruikt om te zorgen dat objecten te vinden zijn als ze niet actief zijn
     void Awake()
     {
-        turorial = GameObject.Find("Panel");
+        tutorial = GameObject.Find("Panel");
     }
 
-
+    // switch veranderd de achtergrond van de tutorial naar de juiste sprite
     public void Switch()
     {
         switch (counter)
@@ -145,6 +148,7 @@ public class ButtonHandler : MonoBehaviour
         txt.text = text;
     }
 
+    // zet de tutorial op de juiste achtergrond voor het juiste tutorial onderdeel
     public void TutorialSetup()
     {
         counter = 0;
@@ -163,7 +167,7 @@ public class ButtonHandler : MonoBehaviour
         counter = 16;
         counterMin = 16;
         counterMax = 19;
-        turorial.GetComponent<Image>().sprite = tutorial17;
+        tutorial.GetComponent<Image>().sprite = tutorial17;
 
     }
     public void Tutorialpromote()

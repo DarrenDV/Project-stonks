@@ -36,7 +36,7 @@ public class Popupscript : MonoBehaviour
     public GameObject Panel;
     public GameObject tutorialChoose;
 
-    // Start is called before the first frame update
+    // Start wordt aangeroepen voor het eerste frame
     void Start()
     {
         Panel.gameObject.SetActive(false);
@@ -45,25 +45,21 @@ public class Popupscript : MonoBehaviour
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
         text = GameObject.Find("BankrunText").GetComponent<Text>();
         button = GameObject.Find("Spel").GetComponent<Button>();
-        // tutorial = GameObject.Find("Tutorial").GetComponent<Button>();
     }
 
-    // Update is called once per frame
+    // Update wordt 1x per frame aangeroepen
     void Update()
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        if (scene.name == "bord")
-        {
-           //this.gameObject.SetActive(false);
-        }
-        else
+        if (scene.name != "bord")
         {
             bankrunCount = (int)bankrunSlider.value;
             text.text = text.text = bankrunCount.ToString() + " Bankruns";
         }
         if (playerCount<3)
         {
+            // buttons werken niet bij minder dan drie spelers
             button.enabled = false;
             tutorial.enabled = false;
             spel.enabled = false;
@@ -84,6 +80,7 @@ public class Popupscript : MonoBehaviour
         }
     }
 
+    // kleuren om aan het bord door te geven hoeveel spelers er mee spelen
     public void Orange()
     {
         if (!bordActive)
@@ -185,6 +182,8 @@ public class Popupscript : MonoBehaviour
             }
         }
     }
+
+    // awake wordt gebruikt om te zorgen dat objecten te vinden zijn als ze niet actief zijn
     private void Awake()
     {
         CameraTutorial = GameObject.Find("Main CameraT");
@@ -192,6 +191,7 @@ public class Popupscript : MonoBehaviour
         Canvas = GameObject.Find("Canvas");
     }
 
+    // verandert de scene naar het bord
     public void switchScreen()
     {
         if (playerCount > 2 && !bordActive)
@@ -205,7 +205,6 @@ public class Popupscript : MonoBehaviour
             CameraTutorial.gameObject.SetActive(false);
             LichtTutorial.gameObject.SetActive(false);
             Canvas.gameObject.SetActive(false);
-            //CameraBord.gameObject.SetActive(true);
             this.gameObject.SetActive(false);
 
         }

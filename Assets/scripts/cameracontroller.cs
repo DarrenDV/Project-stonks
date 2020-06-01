@@ -9,63 +9,61 @@ public class cameracontroller : MonoBehaviour
 
 
     #region Public Vars
-    public GameObject[] b;
-    public GameObject[] a;
+    public GameObject[] bankRunLocaties;
+    public GameObject[] locaties;
     public GameObject[] pawns;
     public GameObject[] knoppies;
     public int inplay;
     public int time;
-    public int plase;
+    public int place;
     public int startPos = 0;
     public int bankrunCount;
     public int toMove;
     public int playerCount;
     public int location;
-    public bool SecondDice;
-    public bool moving;
+    public bool secondDice;
 
     public GameObject activator;
     public GameObject cam;
     public GameObject rotator;
     public GameObject popup;
     public GameObject bank;
-    public GameObject numDice;
-    public GameObject makDice1;
-    public GameObject makDice2;
-    public GameObject makDice1B;
-    public GameObject makDice2B;
+    public GameObject numberDice;
+    public GameObject marktDice1;
+    public GameObject marktDice2;
+    public GameObject marktDice1B;
+    public GameObject marktDice2B;
     public GameObject klaar;
     public GameObject regels;
     public GameObject exit;
-    public GameObject tutorial;
-    //public GameObject tutorialChoose;
+    public GameObject tutorialKnop;
 
-    GameObject PopUpPanelColor;
-    GameObject CameraTutorial;
-    GameObject LichtTutorial;
-    GameObject Canvas;
-    GameObject turorial;
+    GameObject popUpPanelColor;
+    GameObject cameraTutorial;
+    GameObject lichtTutorial;
+    GameObject canvas;
+    GameObject tutorial;
     GameObject tutorialChoose;
 
     public float display;
 
     public bool blueDice;
-    public bool Blue10;
-    public bool Blue20;
+    public bool blue10;
+    public bool blue20;
 
-    public bool Windmill;
-    public bool Fish;
-    public bool Flower;
-    public bool Boat;
-    public bool Wheel;
-    public bool Stones;
+    public bool windmill;
+    public bool fish;
+    public bool flower;
+    public bool boat;
+    public bool wheel;
+    public bool stones;
 
-    public bool Windmill2;
-    public bool Fish2;
-    public bool Flower2;
-    public bool Boat2;
-    public bool Wheel2;
-    public bool Stones2;
+    public bool windmill2;
+    public bool fish2;
+    public bool flower2;
+    public bool boat2;
+    public bool wheel2;
+    public bool stones2;
     #endregion
 
     #region Serialized Vars
@@ -81,19 +79,19 @@ public class cameracontroller : MonoBehaviour
 
     void Start()
     {
-        PopUpPanelColor = GameObject.Find("PopUpPanelColor");
-        CameraTutorial = GameObject.Find("Main CameraT");
-        LichtTutorial = GameObject.Find("Directional Light");
+        popUpPanelColor = GameObject.Find("PopUpPanelColor");
+        cameraTutorial = GameObject.Find("Main CameraT");
+        lichtTutorial = GameObject.Find("Directional Light");
 
 
-        Popupscript popupscript = PopUpPanelColor.GetComponent<Popupscript>();
+        Popupscript popupscript = popUpPanelColor.GetComponent<Popupscript>();
 
         startPos = (popupscript.playerCount - 6) * -1;
         bankrunCount = popupscript.bankrunCount;
 
         for (int i = 0; i < 6; i++)
         {
-            pawns[i].transform.position = new Vector3(a[startPos].transform.position.x, pawns[i].transform.position.y, a[startPos].transform.position.z);
+            pawns[i].transform.position = new Vector3(locaties[startPos].transform.position.x, pawns[i].transform.position.y, locaties[startPos].transform.position.z);
         }
 
         if (bankrunCount==1)
@@ -143,48 +141,46 @@ public class cameracontroller : MonoBehaviour
 
     void Awake()
     {
-        PopUpPanelColor = GameObject.Find("PopUpPanelColor");
-        CameraTutorial = GameObject.Find("Main CameraT");
-        LichtTutorial = GameObject.Find("Directional Light");
-        Canvas =  GameObject.Find("Canvas");
-        turorial = GameObject.Find("Panel");
+        popUpPanelColor = GameObject.Find("PopUpPanelColor");
+        cameraTutorial = GameObject.Find("Main CameraT");
+        lichtTutorial = GameObject.Find("Directional Light");
+        canvas =  GameObject.Find("Canvas");
+        tutorial = GameObject.Find("Panel");
         tutorialChoose = GameObject.Find("TutorialChoose");
-
-        //DontDestroyOnLoad(this.gameObject);
     }
 
     void LateUpdate()
     {
 
         blueDice = activator.GetComponent<NumberDiceCheckZoneScript>().blueDice;
-        Blue10 = activator.GetComponent<NumberDiceCheckZoneScript>().blue10;
-        Blue20 = activator.GetComponent<NumberDiceCheckZoneScript>().blue20;
+        blue10 = activator.GetComponent<NumberDiceCheckZoneScript>().blue10;
+        blue20 = activator.GetComponent<NumberDiceCheckZoneScript>().blue20;
 
-        Windmill = activator.GetComponent<NumberDiceCheckZoneScript>().windmill;
-        Fish = activator.GetComponent<NumberDiceCheckZoneScript>().fish;
-        Flower = activator.GetComponent<NumberDiceCheckZoneScript>().flower;
-        Boat = activator.GetComponent<NumberDiceCheckZoneScript>().boat;
-        Wheel = activator.GetComponent<NumberDiceCheckZoneScript>().wheel;
-        Stones = activator.GetComponent<NumberDiceCheckZoneScript>().stones;
+        windmill = activator.GetComponent<NumberDiceCheckZoneScript>().windmill;
+        fish = activator.GetComponent<NumberDiceCheckZoneScript>().fish;
+        flower = activator.GetComponent<NumberDiceCheckZoneScript>().flower;
+        boat = activator.GetComponent<NumberDiceCheckZoneScript>().boat;
+        wheel = activator.GetComponent<NumberDiceCheckZoneScript>().wheel;
+        stones = activator.GetComponent<NumberDiceCheckZoneScript>().stones;
 
-        Windmill2 = activator.GetComponent<NumberDiceCheckZoneScript>().windmill2;
-        Fish2 = activator.GetComponent<NumberDiceCheckZoneScript>().fish2;
-        Flower2 = activator.GetComponent<NumberDiceCheckZoneScript>().flower2;
-        Boat2 = activator.GetComponent<NumberDiceCheckZoneScript>().boat2;
-        Wheel2 = activator.GetComponent<NumberDiceCheckZoneScript>().wheel2;
-        Stones2 = activator.GetComponent<NumberDiceCheckZoneScript>().stones2;
+        windmill2 = activator.GetComponent<NumberDiceCheckZoneScript>().windmill2;
+        fish2 = activator.GetComponent<NumberDiceCheckZoneScript>().fish2;
+        flower2 = activator.GetComponent<NumberDiceCheckZoneScript>().flower2;
+        boat2 = activator.GetComponent<NumberDiceCheckZoneScript>().boat2;
+        wheel2 = activator.GetComponent<NumberDiceCheckZoneScript>().wheel2;
+        stones2 = activator.GetComponent<NumberDiceCheckZoneScript>().stones2;
 
         location = rotator.GetComponent<CamMove>().location;
 
         for (int i = 0; i < 12; i++)
         {
-            if (pawns[inplay].transform.position.x > a[i].transform.position.x - 1 && pawns[inplay].transform.position.x < a[i].transform.position.x + 1 && pawns[inplay].transform.position.z > a[i].transform.position.z - 1 && pawns[inplay].transform.position.z < a[i].transform.position.z + 1)
+            if (pawns[inplay].transform.position.x > locaties[i].transform.position.x - 1 && pawns[inplay].transform.position.x < locaties[i].transform.position.x + 1 && pawns[inplay].transform.position.z > locaties[i].transform.position.z - 1 && pawns[inplay].transform.position.z < locaties[i].transform.position.z + 1)
             {
-                plase = i;
+                place = i;
             }
         }
 
-        if ((pawns[inplay].transform.position.x == b[inplay].transform.position.x && pawns[inplay].transform.position.z == b[inplay].transform.position.z) && inplay < 5)
+        if ((pawns[inplay].transform.position.x == bankRunLocaties[inplay].transform.position.x && pawns[inplay].transform.position.z == bankRunLocaties[inplay].transform.position.z) && inplay < 5)
         {
             inplay++;
             Bankrun();
@@ -192,7 +188,7 @@ public class cameracontroller : MonoBehaviour
 
         if (inplay > 2)
         {
-            SecondDice = true;
+            secondDice = true;
         }
 
         //Raycast Actions
@@ -228,7 +224,6 @@ public class cameracontroller : MonoBehaviour
                         selected.GetComponent<Rigidbody>().useGravity = true;
                         selected = null;
                     }
-
                 }
             }
 
@@ -243,21 +238,21 @@ public class cameracontroller : MonoBehaviour
                             toMove = i;
                             if (location == 0)
                             {
-                                numDice.transform.rotation = Quaternion.Euler(60, 270, 0);
-                                makDice1.transform.rotation = Quaternion.Euler(60, 270, 0);
-                                makDice2.transform.rotation = Quaternion.Euler(60, 270, 0);
+                                numberDice.transform.rotation = Quaternion.Euler(60, 270, 0);
+                                marktDice1.transform.rotation = Quaternion.Euler(60, 270, 0);
+                                marktDice2.transform.rotation = Quaternion.Euler(60, 270, 0);
                             }
                             else if (location == 1)
                             {
-                                numDice.transform.rotation = Quaternion.Euler(60, 0, 0);
-                                makDice1.transform.rotation = Quaternion.Euler(60, 0, 0);
-                                makDice2.transform.rotation = Quaternion.Euler(60, 0, 0);
+                                numberDice.transform.rotation = Quaternion.Euler(60, 0, 0);
+                                marktDice1.transform.rotation = Quaternion.Euler(60, 0, 0);
+                                marktDice2.transform.rotation = Quaternion.Euler(60, 0, 0);
                             }
                             else if (location == -1)
                             {
-                                numDice.transform.rotation = Quaternion.Euler(60, 180, 0);
-                                makDice1.transform.rotation = Quaternion.Euler(60, 180, 0);
-                                makDice2.transform.rotation = Quaternion.Euler(60, 180, 0);
+                                numberDice.transform.rotation = Quaternion.Euler(60, 180, 0);
+                                marktDice1.transform.rotation = Quaternion.Euler(60, 180, 0);
+                                marktDice2.transform.rotation = Quaternion.Euler(60, 180, 0);
                             }
 
                             popup.SetActive(false);
@@ -269,27 +264,24 @@ public class cameracontroller : MonoBehaviour
                         bank.SetActive(false);
                     }
                     if (hit.collider.gameObject == regels)
-                    {
-                        
-                        CameraTutorial.gameObject.SetActive(true);
-                        LichtTutorial.gameObject.SetActive(true);
-                        Canvas.gameObject.SetActive(true);
-                        //turorial.gameObject.SetActive(true);
+                    {          
+                        cameraTutorial.gameObject.SetActive(true);
+                        lichtTutorial.gameObject.SetActive(true);
+                        canvas.gameObject.SetActive(true);
                         tutorialChoose.gameObject.SetActive(false);
-                        PopUpPanelColor.gameObject.SetActive(false);
+                        popUpPanelColor.gameObject.SetActive(false);
 
-                        ButtonHandler other = (ButtonHandler)turorial.GetComponent(typeof(ButtonHandler));
+                        ButtonHandler other = (ButtonHandler)tutorial.GetComponent(typeof(ButtonHandler));
                         other.TutorialBankrun();
                     }
-                    if (hit.collider.gameObject == tutorial)
+                    if (hit.collider.gameObject == tutorialKnop)
                     {
-                        PopUpPanelColor.gameObject.SetActive(false);
-                        CameraTutorial.gameObject.SetActive(true);
-                        LichtTutorial.gameObject.SetActive(true);
-                        Canvas.gameObject.SetActive(true);
-                        turorial.gameObject.SetActive(false);
+                        popUpPanelColor.gameObject.SetActive(false);
+                        cameraTutorial.gameObject.SetActive(true);
+                        lichtTutorial.gameObject.SetActive(true);
+                        canvas.gameObject.SetActive(true);
+                        tutorial.gameObject.SetActive(false);
                         tutorialChoose.gameObject.SetActive(true);
-                        // this.gameObject.SetActive(false);
                     }
                     if (hit.collider.gameObject == exit)
                     {
@@ -299,7 +291,6 @@ public class cameracontroller : MonoBehaviour
             }
         }
 
-
         if (Input.GetMouseButtonDown(1))
         {
             if (selected != null)
@@ -308,23 +299,12 @@ public class cameracontroller : MonoBehaviour
                 selected = null;
             }
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            pawns[inplay].transform.position = new Vector3(a[plase + 1].transform.position.x, 2f, a[plase + 1].transform.position.z);
-            Debug.Log("up");
-        }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            pawns[inplay].transform.position = new Vector3(a[plase - 1].transform.position.x, 2f, a[plase - 1].transform.position.z);
-            Debug.Log("down");
-        }
-        */
+
         if (toMove > 0)
         {
             if (time % 60 == 0)
             {
-                pawns[inplay].transform.position = new Vector3(a[plase + 1].transform.position.x, 2f, a[plase + 1].transform.position.z);
+                pawns[inplay].transform.position = new Vector3(locaties[place + 1].transform.position.x, 2f, locaties[place + 1].transform.position.z);
                 toMove--;
             }
             time++;
@@ -335,63 +315,61 @@ public class cameracontroller : MonoBehaviour
             if (display == 1)
             {
                 popup.SetActive(true);
-                if (Blue10)
+                if (blue10)
                 {
-                    numDice.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+                    numberDice.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
                 }
-                else if (Blue20)
+                else if (blue20)
                 {
-                    numDice.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
+                    numberDice.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
                 }
-
-                if (Windmill)
+                if (windmill)
                 {
-                    makDice1.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice1.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
                 }
-                else if (Fish)
+                else if (fish)
                 {
-                    makDice1.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+                    marktDice1.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
                 }
-                else if (Flower)
+                else if (flower)
                 {
-                    makDice1.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice1.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
                 }
-                else if (Boat)
+                else if (boat)
                 {
-                    makDice1.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice1.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
                 }
-                else if (Wheel)
+                else if (wheel)
                 {
-                    makDice1.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
+                    marktDice1.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
                 }
-                else if (Stones)
+                else if (stones)
                 {
-                    makDice1.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice1.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
                 }
-
-                if (Windmill2)
+                if (windmill2)
                 {
-                    makDice2.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice2.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
                 }
-                else if (Fish2)
+                else if (fish2)
                 {
-                    makDice2.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+                    marktDice2.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
                 }
-                else if (Flower2)
+                else if (flower2)
                 {
-                    makDice2.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice2.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
                 }
-                else if (Boat2)
+                else if (boat2)
                 {
-                    makDice2.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice2.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
                 }
-                else if (Wheel2)
+                else if (wheel2)
                 {
-                    makDice2.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
+                    marktDice2.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
                 }
-                else if (Stones2)
+                else if (stones2)
                 {
-                    makDice2.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
+                    marktDice2.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
                 }
             }
             display++;
@@ -402,13 +380,13 @@ public class cameracontroller : MonoBehaviour
             display = 0;
         }
 
-        if (SecondDice)
+        if (secondDice)
         {
-            makDice2.SetActive(true);
+            marktDice2.SetActive(true);
         }
         else
         {
-            makDice2.SetActive(false);
+            marktDice2.SetActive(false);
         }
     }
 
@@ -417,79 +395,79 @@ public class cameracontroller : MonoBehaviour
         toMove = 0;
         bank.SetActive(true);
 
-        if (SecondDice)
+        if (secondDice)
         {
-            makDice2B.SetActive(true);
+            marktDice2B.SetActive(true);
         }
         else
         {
-            makDice2B.SetActive(false);
+            marktDice2B.SetActive(false);
         }
 
         if (location == 0)
         {
-            makDice1B.transform.rotation = Quaternion.Euler(60, 270, 0);
-            makDice2B.transform.rotation = Quaternion.Euler(60, 270, 0);
+            marktDice1B.transform.rotation = Quaternion.Euler(60, 270, 0);
+            marktDice2B.transform.rotation = Quaternion.Euler(60, 270, 0);
         }
         else if (location == 1)
         {
-            makDice1B.transform.rotation = Quaternion.Euler(60, 0, 0);
-            makDice2B.transform.rotation = Quaternion.Euler(60, 0, 0);
+            marktDice1B.transform.rotation = Quaternion.Euler(60, 0, 0);
+            marktDice2B.transform.rotation = Quaternion.Euler(60, 0, 0);
         }
         else if (location == -1)
         {
-            makDice1B.transform.rotation = Quaternion.Euler(60, 180, 0);
-            makDice2B.transform.rotation = Quaternion.Euler(60, 180, 0);
+            marktDice1B.transform.rotation = Quaternion.Euler(60, 180, 0);
+            marktDice2B.transform.rotation = Quaternion.Euler(60, 180, 0);
         }
 
-        if (Windmill)
+        if (windmill)
         {
-            makDice1B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+            marktDice1B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
         }
-        else if (Fish)
+        else if (fish)
         {
-            makDice1B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+            marktDice1B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
         }
-        else if (Flower)
+        else if (flower)
         {
-            makDice1B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
+            marktDice1B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
         }
-        else if (Boat)
+        else if (boat)
         {
-            makDice1B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+            marktDice1B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
         }
-        else if (Wheel)
+        else if (wheel)
         {
-            makDice1B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
+            marktDice1B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
         }
-        else if (Stones)
+        else if (stones)
         {
-            makDice1B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
+            marktDice1B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
         }
 
-        if (Windmill2)
+        if (windmill2)
         {
-            makDice2B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+            marktDice2B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
         }
-        else if (Fish2)
+        else if (fish2)
         {
-            makDice2B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
+            marktDice2B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
         }
-        else if (Flower2)
+        else if (flower2)
         {
-            makDice2B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
+            marktDice2B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
         }
-        else if (Boat2)
+        else if (boat2)
         {
-            makDice2B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
+            marktDice2B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
         }
-        else if (Wheel2)
+        else if (wheel2)
         {
-            makDice2B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
+            marktDice2B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
         }
-        else if (Stones2)
+        else if (stones2)
         {
-            makDice2B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
+            marktDice2B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
         }
     }
 }

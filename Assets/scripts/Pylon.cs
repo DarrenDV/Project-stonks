@@ -45,9 +45,7 @@ public class Pylon : MonoBehaviour
                         selected1 = null;
                     }
                 }
-
             }
-
         }
 
         if (Input.GetMouseButtonDown(1)) selected1 = null;

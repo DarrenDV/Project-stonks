@@ -9,8 +9,6 @@ public class ButtonHandler : MonoBehaviour
     public int counterMin = 0;
     public int counterMax = 15;
 
-    Image myImageComponent;
-
     public Sprite tutorial1;
     public Sprite tutorial2;
     public Sprite tutorial3;
@@ -37,12 +35,6 @@ public class ButtonHandler : MonoBehaviour
     public Sprite tutorial24;
 
     GameObject tutorial;
-
-    // Start wordt aangeroepen voor het eerste frame
-    void Start()
-    {
-        myImageComponent = GetComponent<Image>();
-    }
 
     // awake wordt gebruikt om te zorgen dat objecten te vinden zijn als ze niet actief zijn
     void Awake()
@@ -170,7 +162,7 @@ public class ButtonHandler : MonoBehaviour
         tutorial.GetComponent<Image>().sprite = tutorial17;
 
     }
-    public void Tutorialpromote()
+    public void TutorialPromote()
     {
         counter = 20;
         counterMin = 20;

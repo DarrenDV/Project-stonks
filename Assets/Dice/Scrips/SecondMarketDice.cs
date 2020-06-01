@@ -20,7 +20,7 @@ public class SecondMarketDice : MonoBehaviour
 
     public void Update()
     {
-        secondDice = Camera.GetComponent<cameracontroller>().SecondDice;
+        secondDice = Camera.GetComponent<cameracontroller>().secondDice;
         //Checks if the second marketdice is throwable
         if (secondDice)
         {

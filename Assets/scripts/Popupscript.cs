@@ -27,19 +27,18 @@ public class Popupscript : MonoBehaviour
     public Button promote;
     public Button tutorialChooseB;
     public Button back;
-    public GameObject mindrie;
-
-    GameObject CameraBord;
-    GameObject CameraTutorial;
-    GameObject LichtTutorial;
-    GameObject Canvas;
-    public GameObject Panel;
+    public GameObject minDrie;
+    GameObject cameraBord;
+    GameObject cameraTutorial;
+    GameObject lichtTutorial;
+    GameObject canvas;
+    public GameObject panel;
     public GameObject tutorialChoose;
 
     // Start wordt aangeroepen voor het eerste frame
     void Start()
     {
-        Panel.gameObject.SetActive(false);
+        panel.gameObject.SetActive(false);
         tutorialChoose.SetActive(false);
 
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
@@ -57,7 +56,7 @@ public class Popupscript : MonoBehaviour
             bankrunCount = (int)bankrunSlider.value;
             text.text = text.text = bankrunCount.ToString() + " Bankruns";
         }
-        if (playerCount<3)
+        if (playerCount < 3)
         {
             // buttons werken niet bij minder dan drie spelers
             button.enabled = false;
@@ -66,7 +65,7 @@ public class Popupscript : MonoBehaviour
             bankrun.enabled = false;
             promote.enabled = false;
             tutorialChooseB.enabled = false;
-            mindrie.SetActive(true);
+            minDrie.SetActive(true);
         }
         else
         {
@@ -76,7 +75,7 @@ public class Popupscript : MonoBehaviour
             bankrun.enabled = true;
             promote.enabled = true;
             tutorialChooseB.enabled = true;
-            mindrie.SetActive(false);
+            minDrie.SetActive(false);
         }
     }
 
@@ -186,13 +185,13 @@ public class Popupscript : MonoBehaviour
     // awake wordt gebruikt om te zorgen dat objecten te vinden zijn als ze niet actief zijn
     private void Awake()
     {
-        CameraTutorial = GameObject.Find("Main CameraT");
-        LichtTutorial = GameObject.Find("Directional Light");
-        Canvas = GameObject.Find("Canvas");
+        cameraTutorial = GameObject.Find("Main CameraT");
+        lichtTutorial = GameObject.Find("Directional Light");
+        canvas = GameObject.Find("Canvas");
     }
 
     // verandert de scene naar het bord
-    public void switchScreen()
+    public void SwitchScreen()
     {
         if (playerCount > 2 && !bordActive)
         {
@@ -202,11 +201,10 @@ public class Popupscript : MonoBehaviour
         }
         else if (bordActive)
         {
-            CameraTutorial.gameObject.SetActive(false);
-            LichtTutorial.gameObject.SetActive(false);
-            Canvas.gameObject.SetActive(false);
+            cameraTutorial.gameObject.SetActive(false);
+            lichtTutorial.gameObject.SetActive(false);
+            canvas.gameObject.SetActive(false);
             this.gameObject.SetActive(false);
-
         }
     }
 }

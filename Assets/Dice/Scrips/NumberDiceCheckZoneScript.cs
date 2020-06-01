@@ -41,7 +41,7 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
         {
             blueDice = false;
             blue10 = false;
-            blue10 = false;
+            blue20 = false;
 
             windmill = false;
             fish = false;
@@ -76,7 +76,7 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
                     //Numbered dices
                     case "Side1":
                         blueDice = true;
-                        blue10 = true;
+                        blue20 = true;
                         break;
                     case "Side2":
                         break;
@@ -88,11 +88,11 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
                         break;
                     case "Side6":
                         blueDice = true;
-                        blue20 = true;
+                        blue10 = true;
                         break;
                     
                     //First MarketDice
-                    case "windmill":
+                    case "Windmill":
                         stones = true;
                         break;
                     case "Fish":

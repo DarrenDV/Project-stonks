@@ -11,8 +11,8 @@ public class CamMove : MonoBehaviour
     public int location;
     public int time;
 
-    public GameObject L;
-    public GameObject R;
+    public GameObject leftButton;
+    public GameObject rightButton;
 
 
     // Update is called once per frame
@@ -33,12 +33,12 @@ public class CamMove : MonoBehaviour
             {
                 if (hit.collider.CompareTag("GameController"))
                 {
-                    if (hit.collider.gameObject == R)
+                    if (hit.collider.gameObject == rightButton)
                     {
                         rechts = true;
                         links = false;
                     }
-                    if (hit.collider.gameObject == L)
+                    if (hit.collider.gameObject == leftButton)
                     {
                         rechts = false;
                         links = true;
@@ -46,18 +46,7 @@ public class CamMove : MonoBehaviour
                 }
             }
         }
-        /*
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            rechts = true;
-            links = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            rechts = false;
-            links = true;
-        }
-        */
+
         if (rechts && location != -1)
         {
             speed = -100;

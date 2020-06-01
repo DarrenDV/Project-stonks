@@ -9,14 +9,18 @@ using System.Collections.Specialized;
 
 public class Popupscript : MonoBehaviour
 {
+
     public int playerCount;
     public int bankrunCount;
+
+    //Bools voor de kleuren
     public bool oranje;
     public bool blauw;
     public bool paars;
     public bool roze;
     public bool grijs;
     public bool groen;
+    
     public bool bordActive;
     public Slider bankrunSlider;
     public Text text;

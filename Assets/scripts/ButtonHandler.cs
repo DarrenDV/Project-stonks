@@ -9,6 +9,7 @@ public class ButtonHandler : MonoBehaviour
     public int counterMin = 0;
     public int counterMax = 15;
 
+    //Tutorial sprites
     public Sprite tutorial1;
     public Sprite tutorial2;
     public Sprite tutorial3;
@@ -134,6 +135,7 @@ public class ButtonHandler : MonoBehaviour
         if (counter > counterMin) counter--;
     }
 
+    //Zet de bankruntext op het aantal geselecteerde bankruns
     public void SetText(string text)
     {
         Text txt = transform.Find("Text").GetComponent<Text>();

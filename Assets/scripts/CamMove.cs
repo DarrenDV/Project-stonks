@@ -25,6 +25,7 @@ public class CamMove : MonoBehaviour
             this.gameObject.SetActive(false);
         }
 
+        //Kijkt waar je op klikt
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -47,6 +48,7 @@ public class CamMove : MonoBehaviour
             }
         }
 
+        //Beweging van naar welke kant ie moet
         if (rechts && location != -1)
         {
             speed = -100;
@@ -59,7 +61,9 @@ public class CamMove : MonoBehaviour
             time++;
             location = 0;
         }
+
         transform.Rotate(0, speed * Time.deltaTime, 0);
+
         if (transform.rotation.y > 0.705)
         {
             speed = 0;
@@ -74,6 +78,8 @@ public class CamMove : MonoBehaviour
             links = false;
             location = -1;
         }
+
+        //Specefiek voor de frame dat hij in t midden is
         if (transform.rotation.y > -0.002 && transform.rotation.y < 0.002)
         {
             speed = 0;

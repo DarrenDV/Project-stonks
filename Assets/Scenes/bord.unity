@@ -10900,7 +10900,6 @@ MonoBehaviour:
   toMove: 0
   playerCount: 0
   location: 0
-  secondDice: 0
   activator: {fileID: 1072434434}
   cam: {fileID: 963194225}
   rotator: {fileID: 1949667311}
@@ -10916,6 +10915,7 @@ MonoBehaviour:
   exit: {fileID: 153342384}
   tutorialKnop: {fileID: 1714841128}
   display: 0
+  secondDice: 0
   blueDice: 0
   blue10: 0
   blue20: 0
@@ -13569,7 +13569,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1200301824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca2255ea5c602e54cb3c079211ac3399, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a108fdb563377347a1cecd71482cfee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1201828001
@@ -22580,7 +22580,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074683082}
   m_LocalRotation: {x: -0.05199279, y: 0.9455429, z: 0.2595522, w: 0.18941514}
-  m_LocalPosition: {x: 4.2690887, y: 3.623023, z: 10.652803}
+  m_LocalPosition: {x: -14.614267, y: -25.483986, z: 55.893223}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200301825}

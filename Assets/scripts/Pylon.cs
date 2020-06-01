@@ -21,7 +21,8 @@ public class Pylon : MonoBehaviour
 
                 if (hit.collider.CompareTag("Pylon"))
                 {
-
+                    
+                    //Zet de player omhoog om aan te geven dat de pylon is aangeklikt
                     if (selected1 == null)
                     {
 
@@ -36,6 +37,8 @@ public class Pylon : MonoBehaviour
                         selected1 = null;
                     }
                 }
+
+                //Verplaatst de pylon naar het gekozen level
                 if (hit.collider.CompareTag("playerLevel"))
                 {
                     if (selected1 != null)

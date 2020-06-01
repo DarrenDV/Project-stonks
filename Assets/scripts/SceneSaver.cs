@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ObjectDisable : MonoBehaviour
+public class SceneSaver : MonoBehaviour
 {
+    //Merged beide scenes in een DontDestroyOnLoad()
     void Update()
     {
         Scene scene = SceneManager.GetActiveScene();
+    }
 
-        if (scene.name == "bord")
-        {
-            this.gameObject.SetActive(false);
-        }
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
     }
 }

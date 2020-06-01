@@ -9,6 +9,8 @@ public class cameracontroller : MonoBehaviour
 
 
     #region Public Vars
+
+    //Gameobjectlist van fiches en plaatsen en popupknoppen
     public GameObject[] bankRunLocaties;
     public GameObject[] locaties;
     public GameObject[] pawns;
@@ -21,7 +23,6 @@ public class cameracontroller : MonoBehaviour
     public int toMove;
     public int playerCount;
     public int location;
-    public bool secondDice;
 
     public GameObject activator;
     public GameObject cam;
@@ -38,6 +39,7 @@ public class cameracontroller : MonoBehaviour
     public GameObject exit;
     public GameObject tutorialKnop;
 
+    //GameObjecten uit tutorialscene
     GameObject popUpPanelColor;
     GameObject cameraTutorial;
     GameObject lichtTutorial;
@@ -47,6 +49,8 @@ public class cameracontroller : MonoBehaviour
 
     public float display;
 
+    //Booleans van de dobbelsteen kanten
+    public bool secondDice;
     public bool blueDice;
     public bool blue10;
     public bool blue20;
@@ -86,6 +90,7 @@ public class cameracontroller : MonoBehaviour
 
         Popupscript popupscript = popUpPanelColor.GetComponent<Popupscript>();
 
+        //Starpositie van de bankrunfiches en aantal bepaald
         startPos = (popupscript.playerCount - 6) * -1;
         bankrunCount = popupscript.bankrunCount;
 
@@ -151,7 +156,7 @@ public class cameracontroller : MonoBehaviour
 
     void LateUpdate()
     {
-
+        //Haalt alle booleans uit checkscript
         blueDice = activator.GetComponent<NumberDiceCheckZoneScript>().blueDice;
         blue10 = activator.GetComponent<NumberDiceCheckZoneScript>().blue10;
         blue20 = activator.GetComponent<NumberDiceCheckZoneScript>().blue20;
@@ -172,6 +177,7 @@ public class cameracontroller : MonoBehaviour
 
         location = rotator.GetComponent<CamMove>().location;
 
+        //Checked de locatie van het fiche
         for (int i = 0; i < 12; i++)
         {
             if (pawns[inplay].transform.position.x > locaties[i].transform.position.x - 1 && pawns[inplay].transform.position.x < locaties[i].transform.position.x + 1 && pawns[inplay].transform.position.z > locaties[i].transform.position.z - 1 && pawns[inplay].transform.position.z < locaties[i].transform.position.z + 1)
@@ -180,18 +186,20 @@ public class cameracontroller : MonoBehaviour
             }
         }
 
+        //Activeert de bankrunpopup al komt er een fiche op een bankrunplaats
         if ((pawns[inplay].transform.position.x == bankRunLocaties[inplay].transform.position.x && pawns[inplay].transform.position.z == bankRunLocaties[inplay].transform.position.z) && inplay < 5)
         {
             inplay++;
             Bankrun();
         }
 
+        //Zet de 2e dobbelsteen aan
         if (inplay > 2)
         {
             secondDice = true;
         }
 
-        //Raycast Actions
+        //Checked waar de muis op klikt
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -205,6 +213,8 @@ public class cameracontroller : MonoBehaviour
                 {
                     if (hit.collider.CompareTag("pawn"))
                     {
+
+                        //Verplaatst de geselecteerde fiche omhoog, aangeven dat je hem hebt geselecteerd
                         if (hit.collider.gameObject == pawns[inplay])
                         {
                             selected = hit.collider.gameObject;
@@ -214,6 +224,8 @@ public class cameracontroller : MonoBehaviour
                     }
                 }
             }
+
+            //Verplaatst het fiche naar een nieuwe locatie
             else
             {
                 if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask2))
@@ -227,6 +239,7 @@ public class cameracontroller : MonoBehaviour
                 }
             }
 
+            //Checked waar je op klikt in de bluedicepopup
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask3))
             {
                 if (hit.collider.CompareTag("GameController"))
@@ -259,6 +272,7 @@ public class cameracontroller : MonoBehaviour
                         }
                     }
 
+                    //Checked waar je op klikt
                     if (hit.collider.gameObject == klaar)
                     {
                         bank.SetActive(false);
@@ -291,6 +305,7 @@ public class cameracontroller : MonoBehaviour
             }
         }
 
+        //Deselecteerd op misklik
         if (Input.GetMouseButtonDown(1))
         {
             if (selected != null)
@@ -300,6 +315,7 @@ public class cameracontroller : MonoBehaviour
             }
         }
 
+        //Verplaatst het fiche op mooie wijze naar de nieuwe plaats
         if (toMove > 0)
         {
             if (time % 60 == 0)
@@ -310,6 +326,7 @@ public class cameracontroller : MonoBehaviour
             time++;
         }
 
+        //Zet de dobbelsteen op de goede kant in de bluedicepopup
         if (blueDice)
         {
             if (display == 1)
@@ -390,6 +407,7 @@ public class cameracontroller : MonoBehaviour
         }
     }
 
+    //Zet de dobbelstenen op de juiste kant in de bankrunpopup
     void Bankrun()
     {
         toMove = 0;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PylonUsed : MonoBehaviour
 {
+    #region Public variables
     public bool oranje;
     public bool blauw;
     public bool paars;
@@ -17,6 +18,7 @@ public class PylonUsed : MonoBehaviour
     public GameObject grey;
     public GameObject green;
     public int timer;
+    #endregion
 
     void Start()
     {
@@ -40,6 +42,11 @@ public class PylonUsed : MonoBehaviour
         groen = popupscript.groen;
     }
 
+    #region Update
+    /// <summary>
+    /// Hier word gechecked welke pylon (kleur) word geselecteerd in het startscherm
+    /// en vervolgens worden said pylons geketend op het bord
+    /// </summary>
     void Update()
     {
         timer++;
@@ -122,4 +129,5 @@ public class PylonUsed : MonoBehaviour
             }
         }
     }
+    #endregion
 }

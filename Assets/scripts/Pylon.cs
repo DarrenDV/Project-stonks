@@ -9,6 +9,7 @@ public class Pylon : MonoBehaviour
 
     void Update()
     {
+        // Checked of de linker muisknop ingedrukt is
         if (Input.GetMouseButtonDown(0))
         {
 

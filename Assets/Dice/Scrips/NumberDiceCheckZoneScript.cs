@@ -4,70 +4,70 @@ using UnityEngine;
 
 public class NumberDiceCheckZoneScript : MonoBehaviour
 {
-    public int Timer;
-    public int CheckTime = 450;
+    public int timer;
+    public int checkTime = 450;
 
     //Bools for numberdice
     public bool blueDice;
-    public bool Blue10;
-    public bool Blue20;
+    public bool blue10;
+    public bool blue20;
 
     //Bools for firstmarketdice
-    public bool Windmill;
-    public bool Fish;
-    public bool Flower;
-    public bool Boat;
-    public bool Wheel;
-    public bool Stones;
+    public bool windmill;
+    public bool fish;
+    public bool flower;
+    public bool boat;
+    public bool wheel;
+    public bool stones;
 
     //Bools for secondmarketdice
-    public bool Windmill2;
-    public bool Fish2;
-    public bool Flower2;
-    public bool Boat2;
-    public bool Wheel2;
-    public bool Stones2;
+    public bool windmill2;
+    public bool fish2;
+    public bool flower2;
+    public bool boat2;
+    public bool wheel2;
+    public bool stones2;
 
-    public bool AutoEN;
+    public bool autoEN;
 
     [SerializeField] private ButtonPress ButtonPress;
 
     void Update()
     {
-        AutoEN = ButtonPress.AutomaticEnabled;
+        autoEN = ButtonPress.automaticEnabled;
 
         //Resets all bools when the button is pressed
-        if (ButtonPress.Pressed)
+        if (ButtonPress.pressed)
         {
             blueDice = false;
-            Blue10 = false;
-            Blue20 = false;
+            blue10 = false;
+            blue10 = false;
 
-            Windmill = false;
-            Fish = false;
-            Flower = false;
-            Boat = false;
-            Wheel = false;
-            Stones = false;
+            windmill = false;
+            fish = false;
+            flower = false;
+            boat = false;
+            wheel = false;
+            stones = false;
 
-            Windmill2 = false;
-            Fish2 = false;
-            Flower2 = false;
-            Boat2 = false;
-            Wheel2 = false;
-            Stones2 = false;
+            windmill2 = false;
+            fish2 = false;
+            flower2 = false;
+            boat2 = false;
+            wheel2 = false;
+            stones2 = false;
 
-            Timer = 0;
+            timer = 0;
         }
 
-        Timer++;
+        timer++;
     }
 
     void OnTriggerStay(Collider col)
     {
-        if (AutoEN)
+        if (autoEN)
         {
-            if (Timer >= CheckTime)
+            if (timer >= checkTime)
             {
 
                 //Checks what object collides with the checkzone and acts according to the name
@@ -76,7 +76,7 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
                     //Numbered dices
                     case "Side1":
                         blueDice = true;
-                        Blue20 = true;
+                        blue10 = true;
                         break;
                     case "Side2":
                         break;
@@ -88,47 +88,47 @@ public class NumberDiceCheckZoneScript : MonoBehaviour
                         break;
                     case "Side6":
                         blueDice = true;
-                        Blue10 = true;
+                        blue20 = true;
                         break;
                     
                     //First MarketDice
-                    case "Windmill":
-                        Stones = true;
+                    case "windmill":
+                        stones = true;
                         break;
                     case "Fish":
-                        Wheel = true;
+                        wheel = true;
                         break;
                     case "Flower":
-                        Boat = true;
+                        boat = true;
                         break;
                     case "Boat":
-                        Flower = true;
+                        flower = true;
                         break;
                     case "Wheel":
-                        Fish = true;
+                        fish = true;
                         break;
                     case "Stones":
-                        Windmill = true;
+                        windmill = true;
                         break;
                     
                     //Second MarketDice
                     case "Windmill2":
-                        Stones2 = true;
+                        stones2 = true;
                         break;
                     case "Fish2":
-                        Wheel2 = true;
+                        wheel2 = true;
                         break;
                     case "Flower2":
-                        Boat2 = true;
+                        boat2 = true;
                         break;
                     case "Boat2":
-                        Flower2 = true;
+                        flower2 = true;
                         break;
                     case "Wheel2":
-                        Fish2 = true;
+                        fish2 = true;
                         break;
                     case "Stones2":
-                        Windmill2 = true;
+                        windmill2 = true;
                         break;
                 }
             }

@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class SecondMarketDice : MonoBehaviour
 {
-    public bool SecondDice;
+    public bool secondDice;
     static Rigidbody rb;
     public static Vector3 diceVelocity;
     public int moveTimer;
     public GameObject Camera;
-    bool Throwable;
+    bool throwable;
 
     public void Start()
     {
@@ -20,13 +20,13 @@ public class SecondMarketDice : MonoBehaviour
 
     public void Update()
     {
-        SecondDice = Camera.GetComponent<cameracontroller>().SecondDice;
+        secondDice = Camera.GetComponent<cameracontroller>().SecondDice;
         //Checks if the second marketdice is throwable
-        if (SecondDice)
+        if (secondDice)
         {
             if (moveTimer == 0)
             {
-                Throwable = true;
+                throwable = true;
                 transform.position = new Vector3(2, 5, 10);
                 moveTimer++;
             }
@@ -35,7 +35,7 @@ public class SecondMarketDice : MonoBehaviour
     
     public void Throw()
     {
-        if (Throwable)
+        if (throwable)
         {
             diceVelocity = rb.velocity;
 

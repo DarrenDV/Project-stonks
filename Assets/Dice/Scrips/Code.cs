@@ -5,7 +5,7 @@ using UnityEngine;
 public class Code : MonoBehaviour
 {
     //Float for max time to wait
-    private const float WaitTime = 0.5f;
+    private const float waitTime = 0.5f;
 
     //KonamiCode in order
     private KeyCode[] keys = new KeyCode[]
@@ -24,7 +24,7 @@ public class Code : MonoBehaviour
 
     public bool success;
 
-    public bool Activated;
+    public bool activated;
     public GameObject plane;
 
     IEnumerator Start()
@@ -46,7 +46,7 @@ public class Code : MonoBehaviour
                 }
                 else
                 {
-                    timer = WaitTime;
+                    timer = waitTime;
                 }
             }
             else if (Input.anyKeyDown)
@@ -76,16 +76,16 @@ public class Code : MonoBehaviour
         //Plays Rick Astley when Konami Code succeeds
         if (success)
         {
-            Activated = true;
+            activated = true;
         }
-        if (Activated == true)
+        if (activated == true)
         {
             plane.SetActive(true);
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 plane.SetActive(false);
                 success = false;
-                Activated = false;
+                activated = false;
             }
         }
     }

@@ -157,22 +157,22 @@ public class cameracontroller : MonoBehaviour
     {
 
         blueDice = activator.GetComponent<NumberDiceCheckZoneScript>().blueDice;
-        Blue10 = activator.GetComponent<NumberDiceCheckZoneScript>().Blue10;
-        Blue20 = activator.GetComponent<NumberDiceCheckZoneScript>().Blue20;
+        Blue10 = activator.GetComponent<NumberDiceCheckZoneScript>().blue10;
+        Blue20 = activator.GetComponent<NumberDiceCheckZoneScript>().blue20;
 
-        Windmill = activator.GetComponent<NumberDiceCheckZoneScript>().Windmill;
-        Fish = activator.GetComponent<NumberDiceCheckZoneScript>().Fish;
-        Flower = activator.GetComponent<NumberDiceCheckZoneScript>().Flower;
-        Boat = activator.GetComponent<NumberDiceCheckZoneScript>().Boat;
-        Wheel = activator.GetComponent<NumberDiceCheckZoneScript>().Wheel;
-        Stones = activator.GetComponent<NumberDiceCheckZoneScript>().Stones;
+        Windmill = activator.GetComponent<NumberDiceCheckZoneScript>().windmill;
+        Fish = activator.GetComponent<NumberDiceCheckZoneScript>().fish;
+        Flower = activator.GetComponent<NumberDiceCheckZoneScript>().flower;
+        Boat = activator.GetComponent<NumberDiceCheckZoneScript>().boat;
+        Wheel = activator.GetComponent<NumberDiceCheckZoneScript>().wheel;
+        Stones = activator.GetComponent<NumberDiceCheckZoneScript>().stones;
 
-        Windmill2 = activator.GetComponent<NumberDiceCheckZoneScript>().Windmill2;
-        Fish2 = activator.GetComponent<NumberDiceCheckZoneScript>().Fish2;
-        Flower2 = activator.GetComponent<NumberDiceCheckZoneScript>().Flower2;
-        Boat2 = activator.GetComponent<NumberDiceCheckZoneScript>().Boat2;
-        Wheel2 = activator.GetComponent<NumberDiceCheckZoneScript>().Wheel2;
-        Stones2 = activator.GetComponent<NumberDiceCheckZoneScript>().Stones2;
+        Windmill2 = activator.GetComponent<NumberDiceCheckZoneScript>().windmill2;
+        Fish2 = activator.GetComponent<NumberDiceCheckZoneScript>().fish2;
+        Flower2 = activator.GetComponent<NumberDiceCheckZoneScript>().flower2;
+        Boat2 = activator.GetComponent<NumberDiceCheckZoneScript>().boat2;
+        Wheel2 = activator.GetComponent<NumberDiceCheckZoneScript>().wheel2;
+        Stones2 = activator.GetComponent<NumberDiceCheckZoneScript>().stones2;
 
         location = rotator.GetComponent<CamMove>().location;
 

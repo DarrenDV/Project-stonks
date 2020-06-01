@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class ButtonPress : MonoBehaviour
 {
-    int MoveTimer;
+    int moveTimer;
     Vector3 pos;
-    public bool Pressed;
-    public bool AutomaticEnabled;
+    public bool pressed;
+    public bool automaticEnabled;
 
     //Creates dices to be linked for throwing
-    [SerializeField] private MarketDiceRoll MarketDR;
-    [SerializeField] private NumberDiceRoll NumberDR;
-    [SerializeField] private SecondMarketDice SecondMD;
+    [SerializeField] private MarketDiceRoll marketDR;
+    [SerializeField] private NumberDiceRoll numberDR;
+    [SerializeField] private SecondMarketDice secondMD;
 
     void Start()
     {
@@ -32,10 +32,10 @@ public class ButtonPress : MonoBehaviour
             {
                 if (hit.collider.CompareTag("DiceButton"))
                 {
-                    Pressed = true;
+                    pressed = true;
 
                     //Sets a boolean on so that the bluedice detection can start
-                    AutomaticEnabled = true;
+                    automaticEnabled = true;
                 }
             }
         }
@@ -47,33 +47,33 @@ public class ButtonPress : MonoBehaviour
     void Throw()
     {
         //Executes each dices script for throwing the die
-        MarketDR.Throw();
-        NumberDR.Throw();
-        SecondMD.Throw();
+        marketDR.Throw();
+        numberDR.Throw();
+        secondMD.Throw();
     }
 
     void ButtonDown()
     {
         //Moves the button down and up to give a "pressed" effect
-        if (Pressed)
+        if (pressed)
         {
-            MoveTimer++;
-            if(MoveTimer == 1)
+            moveTimer++;
+            if(moveTimer == 1)
             {
                 Throw();
             }
-            if (MoveTimer < 53)
+            if (moveTimer < 53)
             {
                 pos.y -= 0.008f;
             }
-            else if (MoveTimer < 105)
+            else if (moveTimer < 105)
             {
                 pos.y += 0.008f;
             }
             else
             {
-                Pressed = false;
-                MoveTimer = 0;
+                pressed = false;
+                moveTimer = 0;
             }
         }
     }

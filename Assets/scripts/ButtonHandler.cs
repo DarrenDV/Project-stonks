@@ -9,31 +9,7 @@ public class ButtonHandler : MonoBehaviour
     public int counterMin = 0;
     public int counterMax = 15;
 
-    //Tutorial sprites
-    public Sprite tutorial1;
-    public Sprite tutorial2;
-    public Sprite tutorial3;
-    public Sprite tutorial4;
-    public Sprite tutorial5;
-    public Sprite tutorial6;
-    public Sprite tutorial7;
-    public Sprite tutorial8;
-    public Sprite tutorial9;
-    public Sprite tutorial10;
-    public Sprite tutorial11;
-    public Sprite tutorial12;
-    public Sprite tutorial13;
-    public Sprite tutorial14;
-    public Sprite tutorial15;
-    public Sprite tutorial16;
-    public Sprite tutorial17;
-    public Sprite tutorial18;
-    public Sprite tutorial19;
-    public Sprite tutorial20;
-    public Sprite tutorial21;
-    public Sprite tutorial22;
-    public Sprite tutorial23;
-    public Sprite tutorial24;
+    public Sprite[] tutorialSprite = new Sprite[24];
 
     GameObject tutorial;
 
@@ -46,83 +22,7 @@ public class ButtonHandler : MonoBehaviour
     // switch veranderd de achtergrond van de tutorial naar de juiste sprite
     public void Switch()
     {
-        switch (counter)
-        {
-            case 0:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial1;
-                break;
-            case 1:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial2;
-                break;
-            case 2:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial3;
-                break;
-            case 3:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial4;
-                break;
-            case 4:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial5;
-                break;
-            case 5:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial6;
-                break;
-            case 6:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial7;
-                break;
-            case 7:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial8;
-                break;
-            case 8:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial9;
-                break;
-            case 9:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial10;
-                break;
-            case 10:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial11;
-                break;
-            case 11:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial12;
-                break;
-            case 12:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial13;
-                break;
-            case 13:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial14;
-                break;
-            case 14:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial15;
-                break;
-            case 15:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial16;
-                break;
-            case 16:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial17;
-                break;
-            case 17:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial18;
-                break;
-            case 18:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial19;
-                break;
-            case 19:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial20;
-                break;
-            case 20:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial21;
-                break;
-            case 21:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial22;
-                break;
-            case 22:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial23;
-                break;
-            case 23:
-                GameObject.Find("Panel").GetComponent<Image>().sprite = tutorial24;
-                break;
-        }
-        counter++;
-        counter--;
+        tutorial.GetComponent<Image>().sprite = tutorialSprite[counter];
     }
 
     public void ChangeForward()
@@ -161,7 +61,7 @@ public class ButtonHandler : MonoBehaviour
         counter = 16;
         counterMin = 16;
         counterMax = 19;
-        tutorial.GetComponent<Image>().sprite = tutorial17;
+        tutorial.GetComponent<Image>().sprite = tutorialSprite[16];
 
     }
     public void TutorialPromote()

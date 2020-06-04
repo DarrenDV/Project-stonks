@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PylonUsed : MonoBehaviour
 {
@@ -34,12 +35,15 @@ public class PylonUsed : MonoBehaviour
         canvas.gameObject.SetActive(false);
 
 
-        oranje = popupscript.oranje;
-        blauw = popupscript.blauw;
-        paars = popupscript.paars;
-        roze = popupscript.roze;
-        grijs = popupscript.grijs;
-        groen = popupscript.groen;
+        foreach(Toggle t in popupscript.toggleArray)
+        {
+            if (t.name == "Oranje") oranje = t.isOn;
+            if (t.name == "Blauw") blauw = t.isOn;
+            if (t.name == "Paars") paars = t.isOn;
+            if (t.name == "Roze") roze = t.isOn;
+            if (t.name == "Grijs") grijs = t.isOn;
+            if (t.name == "Groen") groen = t.isOn;
+        }
     }
 
     #region Update

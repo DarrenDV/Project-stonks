@@ -6,38 +6,33 @@ using UnityEngine.UI;
 using System;
 using System.Diagnostics;
 using System.Collections.Specialized;
+using System.Security.Cryptography.X509Certificates;
 
 public class Popupscript : MonoBehaviour
 {
 
     public int playerCount;
     public int bankrunCount;
-
-    //Bools voor de kleuren
-    public bool oranje;
-    public bool blauw;
-    public bool paars;
-    public bool roze;
-    public bool grijs;
-    public bool groen;
     
     public bool bordActive;
     public Slider bankrunSlider;
     public Text text;
-    public Button button;
-    public Button tutorial;
     public Button spel;
-    public Button bankrun;
-    public Button promote;
     public Button tutorialChooseB;
     public Button back;
     public GameObject minDrie;
+
     GameObject cameraBord;
     GameObject cameraTutorial;
     GameObject lichtTutorial;
     GameObject canvas;
+
     public GameObject panel;
     public GameObject tutorialChoose;
+
+    public Toggle[] toggleArray = new Toggle[5];
+
+    static int MIN_PLAYERS = 3;
 
     // Start wordt aangeroepen voor het eerste frame
     void Start()
@@ -47,7 +42,9 @@ public class Popupscript : MonoBehaviour
 
         bankrunSlider = GameObject.Find("BankrunCount").GetComponent<Slider>();
         text = GameObject.Find("BankrunText").GetComponent<Text>();
-        button = GameObject.Find("Spel").GetComponent<Button>();
+        spel = GameObject.Find("Spel").GetComponent<Button>();
+
+        toggleArray = FindObjectsOfType<Toggle>();
     }
 
     // Update wordt 1x per frame aangeroepen
@@ -60,129 +57,30 @@ public class Popupscript : MonoBehaviour
             bankrunCount = (int)bankrunSlider.value;
             text.text = text.text = bankrunCount.ToString() + " Bankruns";
         }
-        if (playerCount < 3)
+        if (playerCount < MIN_PLAYERS)
         {
             // buttons werken niet bij minder dan drie spelers
-            button.enabled = false;
-            tutorial.enabled = false;
             spel.enabled = false;
-            bankrun.enabled = false;
-            promote.enabled = false;
             tutorialChooseB.enabled = false;
             minDrie.SetActive(true);
         }
         else
         {
-            button.enabled = true;
-            tutorial.enabled = true;
             spel.enabled = true;
-            bankrun.enabled = true;
-            promote.enabled = true;
             tutorialChooseB.enabled = true;
             minDrie.SetActive(false);
         }
     }
 
-    // kleuren om aan het bord door te geven hoeveel spelers er mee spelen
-    public void Orange()
+    public void ToggleValueChanged(Toggle changed)
     {
-        if (!bordActive)
+        if (changed.isOn == true)
         {
-            if (oranje == true)
-            {
-                oranje = false;
-                playerCount--;
-            }
-            else
-            {
-                oranje = true;
-                playerCount++;
-            }
+            playerCount++;
         }
-    }
-
-    public void Blauw()
-    {
-        if (!bordActive)
+        else
         {
-            if (blauw == true)
-            {
-                blauw = false;
-                playerCount--;
-            }
-            else
-            {
-                blauw = true;
-                playerCount++;
-            }
-        }
-    }
-
-    public void Pink()
-    {
-        if (!bordActive)
-        {
-            if (roze == true)
-            {
-                roze = false;
-                playerCount--;
-            }
-            else
-            {
-                roze = true;
-                playerCount++;
-            }
-        }
-    }
-
-    public void Paars()
-    {
-        if (!bordActive)
-        {
-            if (paars == true)
-            {
-                paars = false;
-                playerCount--;
-            }
-            else
-            {
-                paars = true;
-                playerCount++;
-            }
-        }
-    }
-
-    public void Grijs()
-    {
-        if (!bordActive)
-        {
-            if (grijs == true)
-            {
-                grijs = false;
-                playerCount--;
-            }
-            else
-            {
-                grijs = true;
-                playerCount++;
-            }
-        }
-    }
-
-    public void Groen()
-    {
-        if (!bordActive)
-        {
-            if (groen == true)
-            {
-                groen = false;
-                playerCount--;
-            }
-            else
-            {
-                groen = true;
-                playerCount++;
-            }
+            playerCount--;
         }
     }
 

@@ -19,6 +19,7 @@ public class Pylon : MonoBehaviour
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask1))
             {
 
+                //Checked of en welke pylon geselecteerd word
                 if (hit.collider.CompareTag("Pylon"))
                 {
                     
@@ -51,6 +52,7 @@ public class Pylon : MonoBehaviour
             }
         }
 
+        //deselecteerd de gekozen pylon
         if (Input.GetMouseButtonDown(1)) selected1 = null;
 
     }

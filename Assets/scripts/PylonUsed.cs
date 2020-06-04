@@ -46,6 +46,7 @@ public class PylonUsed : MonoBehaviour
     /// <summary>
     /// Hier word gechecked welke pylon (kleur) word geselecteerd in het startscherm
     /// en vervolgens worden said pylons geketend op het bord
+    /// (By default staan alle pylonnen uit)
     /// </summary>
     void Update()
     {

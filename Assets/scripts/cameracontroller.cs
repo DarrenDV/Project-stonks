@@ -180,14 +180,18 @@ public class cameracontroller : MonoBehaviour
         //Checked de locatie van het fiche
         for (int i = 0; i < 12; i++)
         {
-            if (pawns[inplay].transform.position.x > locaties[i].transform.position.x - 1 && pawns[inplay].transform.position.x < locaties[i].transform.position.x + 1 && pawns[inplay].transform.position.z > locaties[i].transform.position.z - 1 && pawns[inplay].transform.position.z < locaties[i].transform.position.z + 1)
+            if (pawns[inplay].transform.position.x > locaties[i].transform.position.x - 1 &&
+                pawns[inplay].transform.position.x < locaties[i].transform.position.x + 1 &&
+                pawns[inplay].transform.position.z > locaties[i].transform.position.z - 1 &&
+                pawns[inplay].transform.position.z < locaties[i].transform.position.z + 1)
             {
                 place = i;
             }
         }
 
         //Activeert de bankrunpopup al komt er een fiche op een bankrunplaats
-        if ((pawns[inplay].transform.position.x == bankRunLocaties[inplay].transform.position.x && pawns[inplay].transform.position.z == bankRunLocaties[inplay].transform.position.z) && inplay < 5)
+        if ((pawns[inplay].transform.position.x == bankRunLocaties[inplay].transform.position.x &&
+            pawns[inplay].transform.position.z == bankRunLocaties[inplay].transform.position.z) && inplay < 5)
         {
             inplay++;
             Bankrun();

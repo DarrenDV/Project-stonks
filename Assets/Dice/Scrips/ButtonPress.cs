@@ -11,7 +11,7 @@ public class ButtonPress : MonoBehaviour
 
     public GameObject camera;
     public bool secondDice;
-    bool throwable;
+    bool throwable, always;
 
     //Creates dices to be linked for throwing
     //[SerializeField] private MarketDiceRoll marketDR;
@@ -23,6 +23,7 @@ public class ButtonPress : MonoBehaviour
 
     void Start()
     {
+        always = true;
         pos = transform.position;
     }
 
@@ -59,13 +60,10 @@ public class ButtonPress : MonoBehaviour
         //Executes each dices script for throwing the die
         // marketDR.Throw();
         // numberDR.Throw();
-        marketD.Throw();
-        numberD.Throw();
+        secondMD.Throw(throwable);
 
-        if(throwable)
-        {
-        secondMD.Throw();
-        }
+        marketD.Throw(always);
+        numberD.Throw(always);
     }
 
     void EnableSecondMarketDice()

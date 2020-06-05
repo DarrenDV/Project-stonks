@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DiceRoll : MonoBehaviour
 {
@@ -9,12 +7,9 @@ public class DiceRoll : MonoBehaviour
     public static Vector3 diceVelocity;
     public int moveTimer;
     //public GameObject Camera;
-   // public bool throwable;
 
     public void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        
     }
 
     public void Update()
@@ -30,12 +25,14 @@ public class DiceRoll : MonoBehaviour
         //         moveTimer++;
         //     }
         // }
-    }  
-    
-    public void Throw()
+    }
+
+    public void Throw(bool throwable)
     {
-        // if (throwable)
-        // {
+        if (throwable)
+        {
+            rb = GetComponent<Rigidbody>();
+
             diceVelocity = rb.velocity;
 
             //Makes random dirs for the torque
@@ -47,8 +44,8 @@ public class DiceRoll : MonoBehaviour
             transform.position = new Vector3(2, 5, 10);
 
             transform.rotation = UnityEngine.Random.rotation;
-            //rb.AddForce(transform.up * 500);
-            //rb.AddTorque(dirX, dirY, dirZ);
-        //}
+            rb.AddForce(transform.up * 500);
+            rb.AddTorque(dirX, dirY, dirZ);
+        }
     }
 }

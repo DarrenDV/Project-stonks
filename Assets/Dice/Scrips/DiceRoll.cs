@@ -47,8 +47,8 @@ public class DiceRoll : MonoBehaviour
             transform.position = new Vector3(2, 5, 10);
 
             transform.rotation = UnityEngine.Random.rotation;
-            rb.AddForce(transform.up * 500);
-            rb.AddTorque(dirX, dirY, dirZ);
+            //rb.AddForce(transform.up * 500);
+            //rb.AddTorque(dirX, dirY, dirZ);
         //}
     }
 }

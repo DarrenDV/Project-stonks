@@ -54,7 +54,7 @@ public class ButtonPress : MonoBehaviour
         transform.position = pos;
     }
 
-    void Throw()
+    void Throw2()
     {
         //Executes each dices script for throwing the die
         // marketDR.Throw();
@@ -92,7 +92,7 @@ public class ButtonPress : MonoBehaviour
             moveTimer++;
             if(moveTimer == 1)
             {
-                Throw();
+                Throw2();
             }
             if (moveTimer < 53)
             {

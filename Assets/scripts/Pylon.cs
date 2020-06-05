@@ -5,18 +5,22 @@ using UnityEngine;
 public class Pylon : MonoBehaviour
 {
 
+    private int raycastLength = 1000;
+    int LMB = 0;
+    int RMB = 1;
+
     GameObject selected1;
 
     void Update()
     {
         // Checked of de linker muisknop ingedrukt is
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(LMB))
         {
 
             RaycastHit hit;
             int layerMask1 = LayerMask.GetMask("Water");
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000, layerMask1))
+            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, raycastLength, layerMask1))
             {
 
                 //Checked of en welke pylon geselecteerd word
@@ -53,7 +57,11 @@ public class Pylon : MonoBehaviour
         }
 
         //deselecteerd de gekozen pylon
-        if (Input.GetMouseButtonDown(1)) selected1 = null;
+        if (Input.GetMouseButtonDown(RMB))
+        {
+            selected1.GetComponent<Rigidbody>().useGravity = true;
+            selected1 = null;
+        }
 
     }
 }

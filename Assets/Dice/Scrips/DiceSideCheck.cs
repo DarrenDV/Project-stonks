@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NumberDiceCheckZoneScript : MonoBehaviour
+public class DiceSideCheck : MonoBehaviour
 {
     public int timer;
     public int checkTime = 450;

@@ -6221,8 +6221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7540d581db36fa947991cf8c620a127b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondDice: 0
-  moveTimer: 0
+  posX: 2
+  posY: 5
+  posZ: 8
 --- !u!1 &523272843
 GameObject:
   m_ObjectHideFlags: 0
@@ -10375,7 +10376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   automaticEnabled: 0
-  camera: {fileID: 963194225}
+  mainCamera: {fileID: 963194225}
   secondDice: 0
   secondMD: {fileID: 2106316522}
   marketD: {fileID: 520248558}
@@ -14804,8 +14805,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7540d581db36fa947991cf8c620a127b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondDice: 0
-  moveTimer: 0
+  posX: 2
+  posY: 5
+  posZ: 10
 --- !u!65 &1281929098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22665,8 +22667,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074683082}
-  m_LocalRotation: {x: 0.10708094, y: 0.7845349, z: 0.14139485, w: -0.5941769}
-  m_LocalPosition: {x: 25.72019, y: -0.2577772, z: 4.7658315}
+  m_LocalRotation: {x: 0.21606481, y: 0.70001024, z: 0.23690756, w: -0.6381039}
+  m_LocalPosition: {x: 33.01893, y: -8.871052, z: 2.8639746}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200301825}
@@ -23311,8 +23313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7540d581db36fa947991cf8c620a127b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  secondDice: 0
-  moveTimer: 0
+  posX: 3
+  posY: 5
+  posZ: 11
 --- !u!65 &2106316523
 BoxCollider:
   m_ObjectHideFlags: 0

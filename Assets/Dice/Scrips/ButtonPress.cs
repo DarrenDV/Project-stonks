@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class ButtonPress : MonoBehaviour
 {
-    int moveTimer;
+    
     Vector3 pos;
     public bool pressed;
     public bool automaticEnabled;
-
-    public GameObject camera;
+    public GameObject mainCamera;
     public bool secondDice;
     bool throwable, always;
 
+    //Variables for the moving of the button
+    float posChangePerFrame = 0.008f;
+    int maxDownFrames = 53;
+    int maxUpFrames = 105;
+    int moveTimer;
+
     //Creates dices to be linked for throwing
-    //[SerializeField] private MarketDiceRoll marketDR;
-    //[SerializeField] private NumberDiceRoll numberDR;
-    //[SerializeField] private SecondMarketDice secondMD;
     [SerializeField] private DiceRoll secondMD;
     [SerializeField] private DiceRoll marketD;
     [SerializeField] private DiceRoll numberD;
@@ -45,7 +47,7 @@ public class ButtonPress : MonoBehaviour
                 {
                     pressed = true;
 
-                    //Sets a boolean on so that the bluedice detection can start
+                    //Sets a boolean on so that the bluedice detection can start, used in NumberDiceCheckZone.cs
                     automaticEnabled = true;
                 }
             }
@@ -55,29 +57,26 @@ public class ButtonPress : MonoBehaviour
         transform.position = pos;
     }
 
-    void Throw2()
+    void ThrowDice()
     {
         //Executes each dices script for throwing the die
-        // marketDR.Throw();
-        // numberDR.Throw();
         secondMD.Throw(throwable);
-
         marketD.Throw(always);
         numberD.Throw(always);
     }
 
     void EnableSecondMarketDice()
     {
-        secondDice = camera.GetComponent<cameracontroller>().secondDice;
+        secondDice = mainCamera.GetComponent<cameracontroller>().secondDice;
 
-        int moveTimer = 0;
+        int secondDiceTimer = 0;
 
         if (secondDice)
         {
-            if (moveTimer == 0)
+            if (secondDiceTimer == 0)
             {
                 throwable = true;
-                moveTimer++;
+                secondDiceTimer++;
             }
         }
     }
@@ -90,15 +89,15 @@ public class ButtonPress : MonoBehaviour
             moveTimer++;
             if(moveTimer == 1)
             {
-                Throw2();
+                ThrowDice();
             }
-            if (moveTimer < 53)
+            if (moveTimer < maxDownFrames)
             {
-                pos.y -= 0.008f;
+                pos.y -= posChangePerFrame;
             }
-            else if (moveTimer < 105)
+            else if (moveTimer < maxUpFrames)
             {
-                pos.y += 0.008f;
+                pos.y += posChangePerFrame;
             }
             else
             {

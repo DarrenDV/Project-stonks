@@ -2,31 +2,15 @@
 
 public class DiceRoll : MonoBehaviour
 {
-    public bool secondDice;
     static Rigidbody rb;
     public static Vector3 diceVelocity;
-    public int moveTimer;
-    //public GameObject Camera;
+    float torqueMultiplier = 500f;
+    int maxTorqueRange = 1000;
 
-    public void Start()
-    {
-    }
+    //Variables for the position of the dice - changed in unity inspector - standard = new Vector3(2, 5, 10);
+    public float posX, posY, posZ;
 
-    public void Update()
-    {
-        //secondDice = Camera.GetComponent<cameracontroller>().secondDice;
-        //Checks if the second marketdice is throwable
-        // if (secondDice)
-        // {
-        //     if (moveTimer == 0)
-        //     {
-        //         throwable = true;
-        //         transform.position = new Vector3(2, 5, 10);
-        //         moveTimer++;
-        //     }
-        // }
-    }
-
+    //Gets the "throwable" bool from ButtonPress.cs
     public void Throw(bool throwable)
     {
         if (throwable)
@@ -35,16 +19,16 @@ public class DiceRoll : MonoBehaviour
 
             diceVelocity = rb.velocity;
 
-            //Makes random dirs for the torque
-            float dirX = UnityEngine.Random.Range(0, 1000);
-            float dirY = UnityEngine.Random.Range(0, 1000);
-            float dirZ = UnityEngine.Random.Range(0, 1000);
+            //Makes random dirs for the torque, this cannot be lower than 0
+            float dirX = UnityEngine.Random.Range(0, maxTorqueRange);
+            float dirY = UnityEngine.Random.Range(0, maxTorqueRange);
+            float dirZ = UnityEngine.Random.Range(0, maxTorqueRange);
 
             //Standard position for the die
-            transform.position = new Vector3(2, 5, 10);
+            transform.position = new Vector3(posX, posY, posZ);
 
             transform.rotation = UnityEngine.Random.rotation;
-            rb.AddForce(transform.up * 500);
+            rb.AddForce(transform.up * torqueMultiplier);
             rb.AddTorque(dirX, dirY, dirZ);
         }
     }

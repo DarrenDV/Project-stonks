@@ -157,23 +157,23 @@ public class cameracontroller : MonoBehaviour
     void LateUpdate()
     {
         //Haalt alle booleans uit checkscript
-        blueDice = activator.GetComponent<NumberDiceCheckZoneScript>().blueDice;
-        blue10 = activator.GetComponent<NumberDiceCheckZoneScript>().blue10;
-        blue20 = activator.GetComponent<NumberDiceCheckZoneScript>().blue20;
+        blueDice = activator.GetComponent<DiceSideCheck>().blueDice;
+        blue10 = activator.GetComponent<DiceSideCheck>().blue10;
+        blue20 = activator.GetComponent<DiceSideCheck>().blue20;
 
-        windmill = activator.GetComponent<NumberDiceCheckZoneScript>().windmill;
-        fish = activator.GetComponent<NumberDiceCheckZoneScript>().fish;
-        flower = activator.GetComponent<NumberDiceCheckZoneScript>().flower;
-        boat = activator.GetComponent<NumberDiceCheckZoneScript>().boat;
-        wheel = activator.GetComponent<NumberDiceCheckZoneScript>().wheel;
-        stones = activator.GetComponent<NumberDiceCheckZoneScript>().stones;
+        windmill = activator.GetComponent<DiceSideCheck>().windmill;
+        fish = activator.GetComponent<DiceSideCheck>().fish;
+        flower = activator.GetComponent<DiceSideCheck>().flower;
+        boat = activator.GetComponent<DiceSideCheck>().boat;
+        wheel = activator.GetComponent<DiceSideCheck>().wheel;
+        stones = activator.GetComponent<DiceSideCheck>().stones;
 
-        windmill2 = activator.GetComponent<NumberDiceCheckZoneScript>().windmill2;
-        fish2 = activator.GetComponent<NumberDiceCheckZoneScript>().fish2;
-        flower2 = activator.GetComponent<NumberDiceCheckZoneScript>().flower2;
-        boat2 = activator.GetComponent<NumberDiceCheckZoneScript>().boat2;
-        wheel2 = activator.GetComponent<NumberDiceCheckZoneScript>().wheel2;
-        stones2 = activator.GetComponent<NumberDiceCheckZoneScript>().stones2;
+        windmill2 = activator.GetComponent<DiceSideCheck>().windmill2;
+        fish2 = activator.GetComponent<DiceSideCheck>().fish2;
+        flower2 = activator.GetComponent<DiceSideCheck>().flower2;
+        boat2 = activator.GetComponent<DiceSideCheck>().boat2;
+        wheel2 = activator.GetComponent<DiceSideCheck>().wheel2;
+        stones2 = activator.GetComponent<DiceSideCheck>().stones2;
 
         location = rotator.GetComponent<CamMove>().location;
 

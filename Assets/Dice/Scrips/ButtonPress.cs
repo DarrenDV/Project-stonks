@@ -9,10 +9,17 @@ public class ButtonPress : MonoBehaviour
     public bool pressed;
     public bool automaticEnabled;
 
+    public GameObject camera;
+    public bool secondDice;
+    bool throwable;
+
     //Creates dices to be linked for throwing
-    [SerializeField] private MarketDiceRoll marketDR;
-    [SerializeField] private NumberDiceRoll numberDR;
-    [SerializeField] private SecondMarketDice secondMD;
+    //[SerializeField] private MarketDiceRoll marketDR;
+    //[SerializeField] private NumberDiceRoll numberDR;
+    //[SerializeField] private SecondMarketDice secondMD;
+    [SerializeField] private DiceRoll secondMD;
+    [SerializeField] private DiceRoll marketD;
+    [SerializeField] private DiceRoll numberD;
 
     void Start()
     {
@@ -21,6 +28,9 @@ public class ButtonPress : MonoBehaviour
 
     void Update()
     {
+
+        EnableSecondMarketDice();
+
         //Checks if the mouse is pressed on the button
         if (Input.GetMouseButtonDown(0))
         {
@@ -47,9 +57,31 @@ public class ButtonPress : MonoBehaviour
     void Throw()
     {
         //Executes each dices script for throwing the die
-        marketDR.Throw();
-        numberDR.Throw();
+        // marketDR.Throw();
+        // numberDR.Throw();
+        marketD.Throw();
+        numberD.Throw();
+
+        if(throwable)
+        {
         secondMD.Throw();
+        }
+    }
+
+    void EnableSecondMarketDice()
+    {
+        secondDice = camera.GetComponent<cameracontroller>().secondDice;
+
+        int moveTimer = 0;
+
+        if (secondDice)
+        {
+            if (moveTimer == 0)
+            {
+                throwable = true;
+                moveTimer++;
+            }
+        }
     }
 
     void ButtonDown()

@@ -6218,9 +6218,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 520248554}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c38a5d3bdff18164fa1fa307a638510c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7540d581db36fa947991cf8c620a127b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secondDice: 0
+  moveTimer: 0
 --- !u!1 &523272843
 GameObject:
   m_ObjectHideFlags: 0
@@ -10373,9 +10375,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressed: 0
   automaticEnabled: 0
-  marketDR: {fileID: 520248558}
-  numberDR: {fileID: 1281929097}
+  camera: {fileID: 963194225}
+  secondDice: 0
   secondMD: {fileID: 2106316522}
+  marketD: {fileID: 520248558}
+  numberD: {fileID: 1281929097}
 --- !u!114 &938753966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14797,9 +14801,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1281929095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f55753b70d91f6498d00a6dfd19b9d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 7540d581db36fa947991cf8c620a127b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  secondDice: 0
+  moveTimer: 0
 --- !u!65 &1281929098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22659,8 +22665,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074683082}
-  m_LocalRotation: {x: 0.037264615, y: 0.7767076, z: 0.046214793, w: -0.6270574}
-  m_LocalPosition: {x: 20.114836, y: 8.192521, z: 7.085675}
+  m_LocalRotation: {x: 0.15235515, y: 0.7502132, z: 0.18548667, w: -0.6160867}
+  m_LocalPosition: {x: 40.05964, y: -4.665058, z: 7.1336102}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200301825}
@@ -23302,12 +23308,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2106316520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeb61cb610d43124d84a2e4c609ae3f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7540d581db36fa947991cf8c620a127b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   secondDice: 0
   moveTimer: 0
-  Camera: {fileID: 963194225}
 --- !u!65 &2106316523
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,20 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Net;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PylonUsed : MonoBehaviour
 {
     #region Public variables
-    public GameObject orange;
-    public GameObject blue;
-    public GameObject purple;
-    public GameObject pink;
-    public GameObject grey;
-    public GameObject green;
     public int timer;
     public Toggle[] toggleArray = new Toggle[5];
+    public GameObject[] pylons = new GameObject[5];
     #endregion
 
     void Start()
@@ -30,6 +27,8 @@ public class PylonUsed : MonoBehaviour
         cameraTutorial.gameObject.SetActive(false);
         lichtTutorial.gameObject.SetActive(false);
         canvas.gameObject.SetActive(false);
+
+        pylons = GameObject.FindGameObjectsWithTag("Pylon");
     }
 
     #region Update
@@ -43,48 +42,16 @@ public class PylonUsed : MonoBehaviour
         timer++;
         if (timer < 8)
         {
-
-            foreach (Toggle t in toggleArray)
+            foreach (GameObject p in pylons)
             {
-                if (t.name == "Oranje") 
-                { 
-                    orange.SetActive(t.isOn);
-                    GameObject.FindWithTag("pylonRed").SetActive(t.isOn);
-                }
-
-                if (t.name == "Blauw")
+                foreach (Toggle t in toggleArray)
                 {
-                    blue.SetActive(t.isOn);
-                    GameObject.FindWithTag("pylonBlue").SetActive(t.isOn);
-
-                }
-
-                if (t.name == "Paars")
-                {
-                    purple.SetActive(t.isOn);
-                    GameObject.FindWithTag("pylonPurple").SetActive(t.isOn);
-
-                }
-
-                if (t.name == "Roze")
-                {
-                    pink.SetActive(t.isOn);
-                    GameObject.FindWithTag("pylonOrange").SetActive(t.isOn);
-
-                }
-
-                if (t.name == "Grijs")
-                {
-                    grey.SetActive(t.isOn);
-                    GameObject.FindWithTag("pylonGrey").SetActive(t.isOn);
-
-                }
-
-                if (t.name == "Groen")
-                {
-                    green.SetActive(t.isOn);
-                    GameObject.FindWithTag("pylonGreen").SetActive(t.isOn);
-
+                    if (t.name == p.name)
+                    {
+                        GameObject.FindWithTag(t.name).SetActive(t.isOn);
+                        p.SetActive(t.isOn);
+                    }
+                    
                 }
             }
         }

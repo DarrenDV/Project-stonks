@@ -15,6 +15,12 @@ TagManager:
   - DiceButton
   - Pylon
   - playerLevel
+  - Oranje
+  - Blauw
+  - Roze
+  - Paars
+  - Grijs
+  - Groen
   layers:
   - Default
   - TransparentFX

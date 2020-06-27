@@ -11,7 +11,7 @@ public class Pylon : MonoBehaviour
 
     GameObject selected1;
 
-    void Update()
+    void FixedUpdate()
     {
         // Checked of de linker muisknop ingedrukt is
         if (Input.GetMouseButtonDown(LMB))

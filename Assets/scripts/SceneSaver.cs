@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneSaver : MonoBehaviour
 {
     //Merged beide scenes in een DontDestroyOnLoad()
-    void Update()
+    void FixedUpdate()
     {
         Scene scene = SceneManager.GetActiveScene();
     }

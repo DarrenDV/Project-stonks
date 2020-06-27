@@ -37,7 +37,7 @@ public class PylonUsed : MonoBehaviour
     /// en vervolgens worden said pylons geketend op het bord
     /// (By default staan alle pylonnen uit)
     /// </summary>
-    void Update()
+    void FixedUpdate()
     {
         timer++;
         if (timer < 8)

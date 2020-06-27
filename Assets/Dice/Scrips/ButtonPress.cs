@@ -29,7 +29,7 @@ public class ButtonPress : MonoBehaviour
         pos = transform.position;
     }
 
-    void Update()
+    void FixedUpdate()
     {
 
         EnableSecondMarketDice();

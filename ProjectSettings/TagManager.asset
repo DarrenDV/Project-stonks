@@ -21,6 +21,8 @@ TagManager:
   - Paars
   - Grijs
   - Groen
+  - NumDice
+  - MarketDice
   layers:
   - Default
   - TransparentFX

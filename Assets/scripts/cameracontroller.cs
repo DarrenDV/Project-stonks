@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class cameracontroller : MonoBehaviour
 {
@@ -15,6 +12,8 @@ public class cameracontroller : MonoBehaviour
     public GameObject[] locaties;
     public GameObject[] pawns;
     public GameObject[] knoppies;
+    public GameObject[] bankRunBlauwDobbels;
+    public GameObject[] bankRunDobbels;
     public int inplay;
     public int time;
     public int place;
@@ -52,22 +51,10 @@ public class cameracontroller : MonoBehaviour
     //Booleans van de dobbelsteen kanten
     public bool secondDice;
     public bool blueDice;
-    public bool blue10;
-    public bool blue20;
 
-    public bool windmill;
-    public bool fish;
-    public bool flower;
-    public bool boat;
-    public bool wheel;
-    public bool stones;
-
-    public bool windmill2;
-    public bool fish2;
-    public bool flower2;
-    public bool boat2;
-    public bool wheel2;
-    public bool stones2;
+    public string diceNumSide;
+    public string diceMarketdice;
+    public string diceMarketdice2;
     #endregion
 
     #region Serialized Vars
@@ -99,7 +86,7 @@ public class cameracontroller : MonoBehaviour
             pawns[i].transform.position = new Vector3(locaties[startPos].transform.position.x, pawns[i].transform.position.y, locaties[startPos].transform.position.z);
         }
 
-        if (bankrunCount==1)
+        if (bankrunCount == 1)
         {
             pawns[0].SetActive(true);
             pawns[1].SetActive(false);
@@ -149,31 +136,19 @@ public class cameracontroller : MonoBehaviour
         popUpPanelColor = GameObject.Find("PopUpPanelColor");
         cameraTutorial = GameObject.Find("Main CameraT");
         lichtTutorial = GameObject.Find("Directional Light");
-        canvas =  GameObject.Find("Canvas");
+        canvas = GameObject.Find("Canvas");
         tutorial = GameObject.Find("Panel");
         tutorialChoose = GameObject.Find("TutorialChoose");
     }
 
-    void LateUpdate()
+    void FixedUpdate()
     {
         //Haalt alle booleans uit checkscript
         blueDice = activator.GetComponent<DiceSideCheck>().blueDice;
-        blue10 = activator.GetComponent<DiceSideCheck>().blue10;
-        blue20 = activator.GetComponent<DiceSideCheck>().blue20;
 
-        windmill = activator.GetComponent<DiceSideCheck>().windmill;
-        fish = activator.GetComponent<DiceSideCheck>().fish;
-        flower = activator.GetComponent<DiceSideCheck>().flower;
-        boat = activator.GetComponent<DiceSideCheck>().boat;
-        wheel = activator.GetComponent<DiceSideCheck>().wheel;
-        stones = activator.GetComponent<DiceSideCheck>().stones;
-
-        windmill2 = activator.GetComponent<DiceSideCheck>().windmill2;
-        fish2 = activator.GetComponent<DiceSideCheck>().fish2;
-        flower2 = activator.GetComponent<DiceSideCheck>().flower2;
-        boat2 = activator.GetComponent<DiceSideCheck>().boat2;
-        wheel2 = activator.GetComponent<DiceSideCheck>().wheel2;
-        stones2 = activator.GetComponent<DiceSideCheck>().stones2;
+        diceNumSide = activator.GetComponent<DiceSideCheck>().diceNumSide;
+        diceMarketdice = activator.GetComponent<DiceSideCheck>().diceMarketdice;
+        diceMarketdice2 = activator.GetComponent<DiceSideCheck>().diceMarketdice2;
 
         location = rotator.GetComponent<CamMove>().location;
 
@@ -253,25 +228,6 @@ public class cameracontroller : MonoBehaviour
                         if (hit.collider.gameObject == knoppies[i])
                         {
                             toMove = i;
-                            if (location == 0)
-                            {
-                                numberDice.transform.rotation = Quaternion.Euler(60, 270, 0);
-                                marktDice1.transform.rotation = Quaternion.Euler(60, 270, 0);
-                                marktDice2.transform.rotation = Quaternion.Euler(60, 270, 0);
-                            }
-                            else if (location == 1)
-                            {
-                                numberDice.transform.rotation = Quaternion.Euler(60, 0, 0);
-                                marktDice1.transform.rotation = Quaternion.Euler(60, 0, 0);
-                                marktDice2.transform.rotation = Quaternion.Euler(60, 0, 0);
-                            }
-                            else if (location == -1)
-                            {
-                                numberDice.transform.rotation = Quaternion.Euler(60, 180, 0);
-                                marktDice1.transform.rotation = Quaternion.Euler(60, 180, 0);
-                                marktDice2.transform.rotation = Quaternion.Euler(60, 180, 0);
-                            }
-
                             popup.SetActive(false);
                         }
                     }
@@ -282,7 +238,7 @@ public class cameracontroller : MonoBehaviour
                         bank.SetActive(false);
                     }
                     if (hit.collider.gameObject == regels)
-                    {          
+                    {
                         cameraTutorial.gameObject.SetActive(true);
                         lichtTutorial.gameObject.SetActive(true);
                         canvas.gameObject.SetActive(true);
@@ -336,62 +292,16 @@ public class cameracontroller : MonoBehaviour
             if (display == 1)
             {
                 popup.SetActive(true);
-                if (blue10)
+
+                foreach (GameObject dobbel in bankRunBlauwDobbels)
                 {
-                    numberDice.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
+                    dobbel.GetComponent<DobbelDraai>().location = location;
+                    dobbel.GetComponent<DobbelDraai>().set = true;
                 }
-                else if (blue20)
-                {
-                    numberDice.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
-                }
-                if (windmill)
-                {
-                    marktDice1.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
-                }
-                else if (fish)
-                {
-                    marktDice1.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
-                }
-                else if (flower)
-                {
-                    marktDice1.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
-                }
-                else if (boat)
-                {
-                    marktDice1.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
-                }
-                else if (wheel)
-                {
-                    marktDice1.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
-                }
-                else if (stones)
-                {
-                    marktDice1.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
-                }
-                if (windmill2)
-                {
-                    marktDice2.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
-                }
-                else if (fish2)
-                {
-                    marktDice2.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
-                }
-                else if (flower2)
-                {
-                    marktDice2.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
-                }
-                else if (boat2)
-                {
-                    marktDice2.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
-                }
-                else if (wheel2)
-                {
-                    marktDice2.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
-                }
-                else if (stones2)
-                {
-                    marktDice2.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
-                }
+
+                numberDice.GetComponent<DobbelDraai>().side = diceNumSide;
+                marktDice1.GetComponent<DobbelDraai>().side = diceMarketdice;
+                marktDice2.GetComponent<DobbelDraai>().side = diceMarketdice2;
             }
             display++;
         }
@@ -426,70 +336,13 @@ public class cameracontroller : MonoBehaviour
             marktDice2B.SetActive(false);
         }
 
-        if (location == 0)
+        foreach (GameObject dobbel in bankRunDobbels)
         {
-            marktDice1B.transform.rotation = Quaternion.Euler(60, 270, 0);
-            marktDice2B.transform.rotation = Quaternion.Euler(60, 270, 0);
-        }
-        else if (location == 1)
-        {
-            marktDice1B.transform.rotation = Quaternion.Euler(60, 0, 0);
-            marktDice2B.transform.rotation = Quaternion.Euler(60, 0, 0);
-        }
-        else if (location == -1)
-        {
-            marktDice1B.transform.rotation = Quaternion.Euler(60, 180, 0);
-            marktDice2B.transform.rotation = Quaternion.Euler(60, 180, 0);
+            dobbel.GetComponent<DobbelDraai>().location = location;
+            dobbel.GetComponent<DobbelDraai>().set = true;
         }
 
-        if (windmill)
-        {
-            marktDice1B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
-        }
-        else if (fish)
-        {
-            marktDice1B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
-        }
-        else if (flower)
-        {
-            marktDice1B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
-        }
-        else if (boat)
-        {
-            marktDice1B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
-        }
-        else if (wheel)
-        {
-            marktDice1B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
-        }
-        else if (stones)
-        {
-            marktDice1B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
-        }
-
-        if (windmill2)
-        {
-            marktDice2B.transform.Rotate(270.0f, 180.0f, 0.0f, Space.Self);
-        }
-        else if (fish2)
-        {
-            marktDice2B.transform.Rotate(0.0f, 90.0f, 0.0f, Space.Self);
-        }
-        else if (flower2)
-        {
-            marktDice2B.transform.Rotate(180.0f, 180.0f, 0.0f, Space.Self);
-        }
-        else if (boat2)
-        {
-            marktDice2B.transform.Rotate(0.0f, 180.0f, 0.0f, Space.Self);
-        }
-        else if (wheel2)
-        {
-            marktDice2B.transform.Rotate(0.0f, 90.0f, 180.0f, Space.Self);
-        }
-        else if (stones2)
-        {
-            marktDice2B.transform.Rotate(90.0f, 180.0f, 0.0f, Space.Self);
-        }
+        marktDice1B.GetComponent<DobbelDraai>().side = diceMarketdice;
+        marktDice2B.GetComponent<DobbelDraai>().side = diceMarketdice2;
     }
 }

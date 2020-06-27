@@ -48,7 +48,7 @@ public class Popupscript : MonoBehaviour
     }
 
     // Update wordt 1x per frame aangeroepen
-    void Update()
+    void FixedUpdate()
     {
         Scene scene = SceneManager.GetActiveScene();
 

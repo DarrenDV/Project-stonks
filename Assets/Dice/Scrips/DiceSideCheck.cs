@@ -7,32 +7,18 @@ public class DiceSideCheck : MonoBehaviour
     public int timer;
     public int checkTime = 450;
 
-    //Bools for numberdice
+    //Bool for numberdice
     public bool blueDice;
-    public bool blue10;
-    public bool blue20;
 
-    //Bools for firstmarketdice
-    public bool windmill;
-    public bool fish;
-    public bool flower;
-    public bool boat;
-    public bool wheel;
-    public bool stones;
-
-    //Bools for secondmarketdice
-    public bool windmill2;
-    public bool fish2;
-    public bool flower2;
-    public bool boat2;
-    public bool wheel2;
-    public bool stones2;
+    public string diceNumSide;
+    public string diceMarketdice;
+    public string diceMarketdice2;
 
     public bool autoEN;
 
     [SerializeField] private ButtonPress ButtonPress;
 
-    void Update()
+    void FixedUpdate()
     {
         autoEN = ButtonPress.automaticEnabled;
 
@@ -40,22 +26,6 @@ public class DiceSideCheck : MonoBehaviour
         if (ButtonPress.pressed)
         {
             blueDice = false;
-            blue10 = false;
-            blue20 = false;
-
-            windmill = false;
-            fish = false;
-            flower = false;
-            boat = false;
-            wheel = false;
-            stones = false;
-
-            windmill2 = false;
-            fish2 = false;
-            flower2 = false;
-            boat2 = false;
-            wheel2 = false;
-            stones2 = false;
 
             timer = 0;
         }
@@ -76,7 +46,7 @@ public class DiceSideCheck : MonoBehaviour
                     //Numbered dices
                     case "Side1":
                         blueDice = true;
-                        blue20 = true;
+                        diceNumSide = "20";
                         break;
                     case "Side2":
                         break;
@@ -88,47 +58,47 @@ public class DiceSideCheck : MonoBehaviour
                         break;
                     case "Side6":
                         blueDice = true;
-                        blue10 = true;
+                        diceNumSide = "10";
                         break;
                     
                     //First MarketDice
                     case "Windmill":
-                        stones = true;
+                        diceMarketdice = "stones"; 
                         break;
                     case "Fish":
-                        wheel = true;
+                        diceMarketdice = "wheel";
                         break;
                     case "Flower":
-                        boat = true;
+                        diceMarketdice = "boat";
                         break;
                     case "Boat":
-                        flower = true;
+                        diceMarketdice = "flower";
                         break;
                     case "Wheel":
-                        fish = true;
+                        diceMarketdice = "fish";
                         break;
                     case "Stones":
-                        windmill = true;
+                        diceMarketdice = "windmill";
                         break;
                     
                     //Second MarketDice
                     case "Windmill2":
-                        stones2 = true;
+                        diceMarketdice2 = "stones";
                         break;
                     case "Fish2":
-                        wheel2 = true;
+                        diceMarketdice2 = "wheel";
                         break;
                     case "Flower2":
-                        boat2 = true;
+                        diceMarketdice2 = "boat";
                         break;
                     case "Boat2":
-                        flower2 = true;
+                        diceMarketdice2 = "flower";
                         break;
                     case "Wheel2":
-                        fish2 = true;
+                        diceMarketdice2 = "fish";
                         break;
                     case "Stones2":
-                        windmill2 = true;
+                        diceMarketdice2 = "windmill";
                         break;
                 }
             }

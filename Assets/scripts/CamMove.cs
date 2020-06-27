@@ -16,7 +16,7 @@ public class CamMove : MonoBehaviour
 
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Scene scene = SceneManager.GetActiveScene();
 

@@ -1799,6 +1799,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SecondMarketDice
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d6fc857bc47f02b4e877afc5cb186158,
+        type: 3}
+      propertyPath: m_TagString
+      value: MarketDice
+      objectReference: {fileID: 0}
     - target: {fileID: 856365191234717131, guid: d6fc857bc47f02b4e877afc5cb186158,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -6675,9 +6680,10 @@ GameObject:
   - component: {fileID: 577741094}
   - component: {fileID: 577741096}
   - component: {fileID: 577741095}
+  - component: {fileID: 577741097}
   m_Layer: 0
   m_Name: mark1
-  m_TagString: Untagged
+  m_TagString: MarketDice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6743,6 +6749,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577741093}
   m_Mesh: {fileID: 4068373912626513877, guid: d6fc857bc47f02b4e877afc5cb186158, type: 3}
+--- !u!114 &577741097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577741093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e237754c292d74aa68f19c3cefeefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 
+  set: 0
+  location: 0
 --- !u!1 &585158185
 GameObject:
   m_ObjectHideFlags: 0
@@ -7235,6 +7256,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32438b16d39d8c741bcce95ddb1776df, type: 3}
+--- !u!1 &673873588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3046855141860107348, guid: 32438b16d39d8c741bcce95ddb1776df,
+    type: 3}
+  m_PrefabInstance: {fileID: 673873587}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &687667489
 GameObject:
   m_ObjectHideFlags: 0
@@ -10902,6 +10929,13 @@ MonoBehaviour:
   - {fileID: 192357843}
   - {fileID: 811540524}
   - {fileID: 1074821426}
+  bankRunBlauwDobbels:
+  - {fileID: 2080154752}
+  - {fileID: 1685529758}
+  - {fileID: 2106745455}
+  bankRunDobbels:
+  - {fileID: 577741093}
+  - {fileID: 2059146690}
   inplay: 0
   time: 0
   place: 0
@@ -10927,20 +10961,9 @@ MonoBehaviour:
   display: 0
   secondDice: 0
   blueDice: 0
-  blue10: 0
-  blue20: 0
-  windmill: 0
-  fish: 0
-  flower: 0
-  boat: 0
-  wheel: 0
-  stones: 0
-  windmill2: 0
-  fish2: 0
-  flower2: 0
-  boat2: 0
-  wheel2: 0
-  stones2: 0
+  diceNumSide: 
+  diceMarketdice: 
+  diceMarketdice2: 
 --- !u!1 &968895638
 GameObject:
   m_ObjectHideFlags: 0
@@ -12396,20 +12419,9 @@ MonoBehaviour:
   timer: 0
   checkTime: 500
   blueDice: 0
-  blue10: 0
-  blue20: 0
-  windmill: 0
-  fish: 0
-  flower: 0
-  boat: 0
-  wheel: 0
-  stones: 0
-  windmill2: 0
-  fish2: 0
-  flower2: 0
-  boat2: 0
-  wheel2: 0
-  stones2: 0
+  diceNumSide: 
+  diceMarketdice: 
+  diceMarketdice2: 
   autoEN: 0
   ButtonPress: {fileID: 938753965}
 --- !u!65 &1072434437
@@ -13614,10 +13626,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f1ff76032a07d24b9f9fc36e8113b39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  purple: {fileID: 1421157118}
-  pink: {fileID: 1256098141}
-  grey: {fileID: 817512169}
-  green: {fileID: 1855700377}
   timer: 0
   toggleArray:
   - {fileID: 0}
@@ -13631,8 +13639,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  stringArray:
-  - Oranje
 --- !u!65 &1201828003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14065,6 +14071,11 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: d6fc857bc47f02b4e877afc5cb186158,
         type: 3}
       propertyPath: m_Name
+      value: MarketDice
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d6fc857bc47f02b4e877afc5cb186158,
+        type: 3}
+      propertyPath: m_TagString
       value: MarketDice
       objectReference: {fileID: 0}
     - target: {fileID: 856365191234717131, guid: d6fc857bc47f02b4e877afc5cb186158,
@@ -15440,6 +15451,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32438b16d39d8c741bcce95ddb1776df, type: 3}
+--- !u!1 &1355611027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3046855141860107348, guid: 32438b16d39d8c741bcce95ddb1776df,
+    type: 3}
+  m_PrefabInstance: {fileID: 1355611026}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1383597068
 GameObject:
   m_ObjectHideFlags: 0
@@ -17851,9 +17868,10 @@ GameObject:
   - component: {fileID: 1685529759}
   - component: {fileID: 1685529761}
   - component: {fileID: 1685529760}
+  - component: {fileID: 1685529762}
   m_Layer: 0
   m_Name: mark1
-  m_TagString: Untagged
+  m_TagString: MarketDice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17919,6 +17937,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685529758}
   m_Mesh: {fileID: 4068373912626513877, guid: d6fc857bc47f02b4e877afc5cb186158, type: 3}
+--- !u!114 &1685529762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1685529758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e237754c292d74aa68f19c3cefeefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 
+  set: 0
+  location: 0
 --- !u!1 &1686979872
 GameObject:
   m_ObjectHideFlags: 0
@@ -21802,8 +21835,8 @@ MonoBehaviour:
   speed: 0
   location: 0
   time: 0
-  leftButton: {fileID: 0}
-  rightButton: {fileID: 0}
+  leftButton: {fileID: 1355611027}
+  rightButton: {fileID: 673873588}
 --- !u!1 &2004385316 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8205675348467981879, guid: 9ac7fd90aead08e4dabd6dc392332289,
@@ -22409,9 +22442,10 @@ GameObject:
   - component: {fileID: 2059146691}
   - component: {fileID: 2059146693}
   - component: {fileID: 2059146692}
+  - component: {fileID: 2059146694}
   m_Layer: 0
   m_Name: mark2
-  m_TagString: Untagged
+  m_TagString: MarketDice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22477,6 +22511,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2059146690}
   m_Mesh: {fileID: 4068373912626513877, guid: d6fc857bc47f02b4e877afc5cb186158, type: 3}
+--- !u!114 &2059146694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059146690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e237754c292d74aa68f19c3cefeefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 
+  set: 0
+  location: 0
 --- !u!1 &2060559657
 GameObject:
   m_ObjectHideFlags: 0
@@ -22594,6 +22643,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: NumberDice
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: d6fc857bc47f02b4e877afc5cb186158,
+        type: 3}
+      propertyPath: m_TagString
+      value: NumDice
+      objectReference: {fileID: 0}
     - target: {fileID: 856365191234717131, guid: d6fc857bc47f02b4e877afc5cb186158,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -22678,8 +22732,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074683082}
-  m_LocalRotation: {x: 0.087172285, y: 0.89959055, z: 0.21045254, w: -0.37262255}
-  m_LocalPosition: {x: 27.29143, y: -5.494398, z: 20.281504}
+  m_LocalRotation: {x: -0.2957165, y: 0.6146812, z: 0.267327, w: 0.6806285}
+  m_LocalPosition: {x: -11.855873, y: -9.351175, z: 0.5942302}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200301825}
@@ -22696,9 +22750,10 @@ GameObject:
   - component: {fileID: 2080154753}
   - component: {fileID: 2080154755}
   - component: {fileID: 2080154754}
+  - component: {fileID: 2080154756}
   m_Layer: 0
   m_Name: num
-  m_TagString: Untagged
+  m_TagString: NumDice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22764,6 +22819,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2080154752}
   m_Mesh: {fileID: 4068373912626513877, guid: d6fc857bc47f02b4e877afc5cb186158, type: 3}
+--- !u!114 &2080154756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2080154752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e237754c292d74aa68f19c3cefeefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 
+  set: 0
+  location: 0
 --- !u!1 &2082814842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 330564193243508211, guid: 13269afa3a2a51545b40ecb7f24595af,
@@ -23367,9 +23437,10 @@ GameObject:
   - component: {fileID: 2106745456}
   - component: {fileID: 2106745458}
   - component: {fileID: 2106745457}
+  - component: {fileID: 2106745459}
   m_Layer: 0
   m_Name: mark2
-  m_TagString: Untagged
+  m_TagString: MarketDice
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23435,6 +23506,21 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106745455}
   m_Mesh: {fileID: 4068373912626513877, guid: d6fc857bc47f02b4e877afc5cb186158, type: 3}
+--- !u!114 &2106745459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106745455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e237754c292d74aa68f19c3cefeefa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  side: 
+  set: 0
+  location: 0
 --- !u!1 &2112697563
 GameObject:
   m_ObjectHideFlags: 0

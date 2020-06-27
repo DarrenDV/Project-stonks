@@ -141,7 +141,7 @@ public class cameracontroller : MonoBehaviour
         tutorialChoose = GameObject.Find("TutorialChoose");
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         //Haalt alle booleans uit checkscript
         blueDice = activator.GetComponent<DiceSideCheck>().blueDice;
@@ -278,7 +278,7 @@ public class cameracontroller : MonoBehaviour
         //Verplaatst het fiche op mooie wijze naar de nieuwe plaats
         if (toMove > 0)
         {
-            if (time % 60 == 0)
+            if (time % 30 == 0)
             {
                 pawns[inplay].transform.position = new Vector3(locaties[place + 1].transform.position.x, 2f, locaties[place + 1].transform.position.z);
                 toMove--;

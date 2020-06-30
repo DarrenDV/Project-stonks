@@ -10964,6 +10964,7 @@ MonoBehaviour:
   diceNumSide: 
   diceMarketdice: 
   diceMarketdice2: 
+  tutorialData: {fileID: 11400000, guid: 00525b727ebd25a49a296358946bfa7e, type: 2}
 --- !u!1 &968895638
 GameObject:
   m_ObjectHideFlags: 0
@@ -22732,8 +22733,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074683082}
-  m_LocalRotation: {x: -0.2957165, y: 0.6146812, z: 0.267327, w: 0.6806285}
-  m_LocalPosition: {x: -11.855873, y: -9.351175, z: 0.5942302}
+  m_LocalRotation: {x: 0.087172285, y: 0.89959055, z: 0.21045254, w: -0.37262255}
+  m_LocalPosition: {x: 27.29143, y: -5.494398, z: 20.281504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1200301825}

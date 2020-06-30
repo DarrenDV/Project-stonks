@@ -43,31 +43,12 @@ public class ButtonHandler : MonoBehaviour
     }
 
     // zet de tutorial op de juiste achtergrond voor het juiste tutorial onderdeel
-    public void TutorialSetup()
+    public void SetTutorial(TutorialData tutorialData)
     {
-        counter = 0;
-        counterMin = 0;
-        counterMax = 4;
-    }
-    public void TutorialSpel()
-    {
-        counter = 5;
-        counterMin = 5;
-        counterMax = 15;
-    }
-    public void TutorialBankrun()
-    {
-        
-        counter = 16;
-        counterMin = 16;
-        counterMax = 19;
-        tutorial.GetComponent<Image>().sprite = tutorialSprite[16];
+        counter = tutorialData.counter;
+        counterMin = tutorialData.counterMin;
+        counterMax = tutorialData.counterMax;
 
-    }
-    public void TutorialPromote()
-    {
-        counter = 20;
-        counterMin = 20;
-        counterMax = 23;
+        tutorial.GetComponent<Image>().sprite = tutorialSprite[counter];
     }
 }

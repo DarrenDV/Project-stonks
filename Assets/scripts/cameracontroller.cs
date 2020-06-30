@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Configuration;
+using System.Runtime.Versioning;
+using UnityEngine;
 
 public class cameracontroller : MonoBehaviour
 {
@@ -58,6 +60,8 @@ public class cameracontroller : MonoBehaviour
     #endregion
 
     #region Serialized Vars
+    [SerializeField]
+    public TutorialData tutorialData;
     #endregion
 
     #region Private Vars
@@ -246,7 +250,7 @@ public class cameracontroller : MonoBehaviour
                         popUpPanelColor.gameObject.SetActive(false);
 
                         ButtonHandler other = (ButtonHandler)tutorial.GetComponent(typeof(ButtonHandler));
-                        other.TutorialBankrun();
+                        other.SetTutorial(tutorialData);
                     }
                     if (hit.collider.gameObject == tutorialKnop)
                     {
